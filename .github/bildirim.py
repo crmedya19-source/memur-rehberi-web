@@ -4,7 +4,9 @@ import json, os, subprocess, datetime, sys
 
 def load_prev():
     try:
-        return json.loads(subprocess.check_output(["git", "show", "HEAD~1:haberler.json"], stderr=subprocess.DEVNULL))
+        dirty = subprocess.call(["git", "diff", "--quiet", "HEAD", "--", "haberler.json"]) != 0
+        ref = "HEAD" if dirty else "HEAD~1"
+        return json.loads(subprocess.check_output(["git", "show", ref + ":haberler.json"], stderr=subprocess.DEVNULL))
     except Exception:
         return {"items": []}
 
