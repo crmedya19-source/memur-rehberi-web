@@ -912,8 +912,8 @@ var NETF={uid:null,ready:null,
   r:function(p){return this.D.ref(this.db,p)},
   createRoom:function(code,me,pub){var D=this.D,self=this,p={};p[this.uid]=me;
     return D.get(this.r("rooms/"+code)).then(function(s){if(s.exists())return false;
-      return D.onDisconnect(self.r("msgs/"+code)).remove().then(function(){return D.onDisconnect(self.r("rooms/"+code)).remove()})
-        .then(function(){return D.set(self.r("rooms/"+code),{h:self.uid,s:"lobby",pub:!!pub,c:D.serverTimestamp(),p:p})}).then(function(){return true})})},
+      return D.set(self.r("rooms/"+code),{h:self.uid,s:"lobby",pub:!!pub,c:D.serverTimestamp(),p:p})
+        .then(function(){return D.onDisconnect(self.r("msgs/"+code)).remove()}).then(function(){return D.onDisconnect(self.r("rooms/"+code)).remove()}).then(function(){return true})})},
   joinRoom:function(code,me){var D=this.D,self=this;return D.get(this.r("rooms/"+code)).then(function(s){var x=s.val();if(!x||x.s!=="lobby"||Object.keys(x.p||{}).length>=4)return false;
     return D.onDisconnect(self.r("rooms/"+code+"/p/"+self.uid)).remove().then(function(){return D.set(self.r("rooms/"+code+"/p/"+self.uid),me)}).then(function(){return true})})},
   getRoom:function(code){return this.D.get(this.r("rooms/"+code)).then(function(s){return s.val()})},
@@ -1082,7 +1082,7 @@ function onMenu(){if(!ONLINE_OK()){modal("<button class='x' data-x='mOv'>✕</bu
   $("onJoin").onclick=function(){var c=String($("onCode").value).toUpperCase().replace(/[^A-Z0-9]/g,"");if(c.length!==4){toast("4 haneli kodu yaz");return}onJoinCode(c)}}
 function meObj(){return{n:myNick(),av:myAv(),j:Date.now()}}
 function onBusy(t){modal("<h3>🌐 "+t+"</h3><p class='mut'>Bağlanıyor…</p>")}
-function onNetErr(e){console.error(e);modal("<button class='x' data-x='mOv'>✕</button><h3>Bağlantı kurulamadı</h3><p>İnternet bağlantını kontrol edip tekrar dene.</p>")}
+function onNetErr(e){console.error(e);var c=String((e&&(e.code||e.message))||e||"").slice(0,120);modal("<button class='x' data-x='mOv'>✕</button><h3>Bağlantı kurulamadı</h3><p>İnternet bağlantını kontrol edip tekrar dene.</p><p class='mut' style='font-size:11px;word-break:break-all'>Hata: "+esc(c)+"</p>")}
 function onCreate(pub){onBusy(pub?"Hızlı maç":"Oda kuruluyor");netPick().init().then(function(){var tries=0;function go(){var c=rcode();return NET.createRoom(c,meObj(),pub).then(function(ok){if(ok)return c;if(++tries>5)throw new Error("kod");return go()})}return go()})
   .then(function(code){ON.code=code;ON.host=true;onAttach(code,pub)}).catch(onNetErr)}
 function onJoinCode(code){onBusy("Odaya katılınıyor");netPick().init().then(function(){return NET.joinRoom(code,meObj())}).then(function(ok){if(!ok){modal("<button class='x' data-x='mOv'>✕</button><h3>Odaya girilemedi</h3><p>Oda dolu, maç başlamış ya da kod yanlış olabilir.</p><button class='btn' id='onBack' style='width:100%'>Geri</button>");$("onBack").onclick=onMenu;return}
