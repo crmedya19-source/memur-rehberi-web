@@ -1,0 +1,37 @@
+name: Haber bildirimi
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ haberler.json ]
+  workflow_dispatch:
+    inputs:
+      baslik:
+        description: "Bildirim başlığı (boş bırakırsan yeni haberlerden otomatik)"
+        required: false
+      metin:
+        description: "Bildirim metni"
+        required: false
+      hedef:
+        description: "Konu: haberler (herkes) ya da meslek_o, meslek_s ..."
+        required: false
+        default: haberler
+
+jobs:
+  gonder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install google-auth requests
+      - name: Bildirimi gönder
+        env:
+          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+          BASLIK: ${{ github.event.inputs.baslik }}
+          METIN: ${{ github.event.inputs.metin }}
+          HEDEF: ${{ github.event.inputs.hedef }}
+        run: python .github/bildirim.py
