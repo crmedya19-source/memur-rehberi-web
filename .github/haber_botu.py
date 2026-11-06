@@ -22,7 +22,12 @@ KEY = ["memur", "kamu personel", "kamu çalışan", "kamu görevli", "ek göster
 EXCL = ["alımı", "alacak", "alım ilan", "iş ilanı", "personel alım", "başvuru şart", "kpss tercih", "sözleşmeli personel alı", "burç", "fal",
         "gözaltı", "tutuklan", "cinayet", "kaza", "öldü", "hayatını kaybet", "operasyon", "rüşvet", "darp", "intihar", "maç", "bahis"]
 BIG = ["zam", "maaş", "ikramiye", "ek gösterge", "idari izin", "tatil", "enflasyon farkı", "katsayı", "toplu sözleşme", "bayram", "ek ödeme", "seyyanen"]
-CAP_NOTIFY = 5
+CAP_NOTIFY = 3
+TRUST = ["memurlar.net", "anadolu ajansı", "aa", "trt haber", "kamudanhaber", "ntv", "hürriyet", "sabah", "milliyet", "türkiye gazetesi",
+         "yeni şafak", "sözcü", "cumhuriyet", "dha", "iha", "milli gazete", "bloomberg ht", "dünya", "ekonomim", "haberler.com", "cnn türk", "star"]
+SPEC = ["?", "senaryo", "son durum", "olabilir", "olacak mı", "ne kadar olacak", "hesapla", "beklenti", "tahmin", "kulis", "iddia", "mı ", "mi ",
+        "indirim", "kampanya", "sorgulama", "nasıl yapılır", "ne zaman", "kimler", "foto", "galeri", "video", "uyarı", "müjde"]
+SURE = ["belli oldu", "kesinleşti", "açıklandı", "yayımlandı", "yürürlüğe girdi", "onaylandı", "imzalandı", "uzatıldı", "verildi", "karar"]
 
 def norm(t):
     t = t.lower().replace("ı", "i").replace("İ", "i")
@@ -68,9 +73,14 @@ def fetch(url):
         out.append({"t": " ".join(t.split()), "u": u, "src": src.strip()[:40], "dt": dt})
     return out
 
+def trusted(x):
+    s = x["src"].lower()
+    return any(s == t or s.startswith(t + " ") for t in TRUST)
+
 def relevant(x):
     l = " " + x["t"].lower() + " "
     if any(k in l for k in EXCL): return False
+    if not trusted(x) or any(k in l for k in SPEC): return False
     if not any(k in l for k in KEY): return False
     return (NOW - x["dt"]).total_seconds() < 36 * 3600 and x["dt"] <= NOW + datetime.timedelta(hours=1)
 
@@ -90,9 +100,12 @@ def main():
     cand.sort(key=lambda x: x["dt"], reverse=True)
     if os.environ.get("DENE") == "1":
         print("DENEME MODU - aday sayısı", len(cand))
-        for x in cand[:40]:
+        shown = []
+        for x in cand[:60]:
+            if any(similar(x["t"], y["t"]) for y in shown): continue
+            shown.append(x)
             dup = any(similar(x["t"], y["t"]) for y in items)
-            print(("  (var) " if dup else "  YENI  ") + x["dt"].strftime("%d.%m %H:%M") + " | " + x["src"] + " | " + x["t"] + (" | BILDIRIM" if any(k in x["t"].lower() for k in BIG) else ""))
+            print(("  (var) " if dup else "  YENI  ") + x["dt"].strftime("%d.%m %H:%M") + " | " + x["src"] + " | " + x["t"] + (" | BILDIRIM" if any(k in x["t"].lower() for k in BIG) and any(k in x["t"].lower() for k in SURE) else ""))
         return
     added = []
     for x in cand:
@@ -118,7 +131,8 @@ def main():
     msgs = []
     for x in added:
         if st["bildirim"] >= CAP_NOTIFY: break
-        if any(k in x["t"].lower() for k in BIG):
+        l = x["t"].lower()
+        if any(k in l for k in BIG) and any(k in l for k in SURE):
             tgt = {"topic": "haberler"} if not x["p"] else {"condition": " || ".join("'meslek_%s' in topics" % c for c in x["p"][:5])}
             msgs.append((tgt, "📰 " + bildirim.short(x["t"], 70), x["src"] + " · dokun ve oku"))
             st["bildirim"] += 1
