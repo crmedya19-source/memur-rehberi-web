@@ -9,6 +9,9 @@ on:
         description: "1 = sadece göster, kaydetme"
         required: false
         default: "0"
+      incele:
+        description: "İncelenecek ilan numaraları (boşlukla)"
+        required: false
 
 permissions:
   contents: write
@@ -29,6 +32,7 @@ jobs:
       - name: İlanları oku
         env:
           DENE: ${{ github.event.inputs.dene }}
+          INCELE: ${{ github.event.inputs.incele }}
         run: python .github/ilan_botu.py
       - name: Kaydet
         if: ${{ github.event.inputs.dene != '1' }}

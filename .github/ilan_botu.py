@@ -1,7 +1,7 @@
 """ilan.gov.tr (Basın İlan Kurumu) kamu personel alım ilanlarını okuyup ilanlar.json'a yazar.
 Yalnızca başlık, kurum, il, tarih ve resmî ilan bağlantısı tutulur; ilan metni kopyalanmaz.
 DENE=1 ise dosyaya yazmaz, sadece gösterir."""
-import json, os, re, ssl, time, datetime, html
+import json, os, re, ssl, time, datetime, html, urllib.parse
 import requests, certifi
 from zoneinfo import ZoneInfo
 from cryptography import x509
@@ -111,6 +111,15 @@ def son_basvuru(content, yayin):
 def main():
     dene = os.environ.get("DENE") == "1"
     ca = ca_bundle()
+    inc = os.environ.get("INCELE", "").split()
+    if inc:
+        for aid in inc:
+            d = requests.get(API + "AdDetail/GetAdDetail", params={"id": aid}, headers=H, timeout=45, verify=ca).json().get("result", {})
+            txt = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", d.get("content") or "")))
+            print("====", aid, d.get("title"))
+            for m in re.finditer(r"[Bb]aşvuru|BAŞVURU", txt):
+                print("  ..", txt[max(0, m.start() - 60):m.start() + 220])
+        return
     ads, skip = [], 0
     while skip < 600:
         r = requests.post(API + "Ad/AdsByFilter", json={"keys": {"ats": [5]}, "skipCount": skip, "maxResultCount": 20}, headers=H, timeout=45, verify=ca)
@@ -139,11 +148,12 @@ def main():
         k = " ".join(str(a.get("advertiserName", "")).split())
         f = {x.get("key"): x.get("value") for x in a.get("adTypeFilters") or []}
         yayin = parse_date(f.get("Resmî Gazete Yayım Tarihi", "") or "") or datetime.date.fromisoformat(str(a.get("publishStartDate", ""))[:10]) + datetime.timedelta(days=1)
-        url = "https://www.ilan.gov.tr" + str(a.get("urlStr", ""))
+        url = "https://www.ilan.gov.tr" + urllib.parse.quote(str(a.get("urlStr", "")), safe="/-_.~%")
         no = str(a.get("adNo", ""))
         tur = "akademik" if no.startswith("YOK") or "akademik-personel-alimlari" in url else "kamu"
         if aid in old:
             it = old[aid]
+            it["u"] = url
         else:
             sb = None
             try:
