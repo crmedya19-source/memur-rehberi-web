@@ -24,7 +24,7 @@ def build_messages(cur, prev, today):
         if not items:
             return
         if len(items) == 1:
-            t, b = "📰 " + short(items[0]["t"], 70), short(items[0].get("s", ""), 160)
+            t0 = items[0]["t"]; t, b = (t0 if not t0[:1].isalnum() else "📰 " + t0), short(items[0].get("s", ""), 160); t = short(t, 75)
         else:
             t = "📰 %d yeni memur haberi" % len(items)
             b = short(" • ".join(x["t"] for x in items[:3]), 160)
