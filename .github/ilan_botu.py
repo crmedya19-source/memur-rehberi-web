@@ -72,27 +72,37 @@ def parse_date(s):
     except ValueError:
         return None
 
-DT = r"(\d{1,2}[./]\d{1,2}[./]\d{4}|\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4})"
+DT = r"(?<!\d)(\d{1,2}[./]\d{1,2}[./]\d{4}|\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4})"
 
 def son_basvuru(content, yayin):
     txt = html.unescape(re.sub(r"<[^>]+>", " ", content or ""))
     txt = re.sub(r"\s+", " ", txt)
-    adaylar = []
     pats = [
         r"[Ss]on [Bb]aşvuru [Tt]arihi\s*[:：]?\s*" + DT,
         r"[Bb]aşvuru [Tt]arihleri?\s*[:：]?\s*" + DT + r"\s*[-–]\s*" + DT,
-        DT + r"\s*[-–]\s*" + DT + r"[^.]{0,40}?tarihleri arasında",
-        r"[Bb]aşvurular.{0,120}?" + DT + r".{0,70}?(?:sona erecek|bitecek|kadar)",
+        "PENCERE",
+        r"[Bb]aşvuru.{0,100}?" + DT + r"\s*[-–]\s*" + DT + r".{0,40}?tarihleri arasında",
         r"[Bb]aşvuru.{0,60}?(?:bitiş|son gün)\D{0,20}?" + DT,
     ]
+    lo, hi = yayin - datetime.timedelta(days=3), yayin + datetime.timedelta(days=60)
     for rx in pats:
+        bul = []
+        if rx == "PENCERE":
+            for w in re.finditer(r"[Bb]aşvurular", txt):
+                win = txt[w.start():w.start() + 220]
+                for m in re.finditer(DT + r"(?=.{0,50}?(?:sona erecek|bitecek|kadar))", win):
+                    d = parse_date(m.group(1))
+                    if d and lo <= d <= hi:
+                        bul.append(d)
+            if bul:
+                return max(bul)
+            continue
         for m in re.finditer(rx, txt):
             d = parse_date(m.groups()[-1])
-            if d:
-                adaylar.append(d)
-    adaylar = [d for d in adaylar if yayin - datetime.timedelta(days=3) <= d <= yayin + datetime.timedelta(days=120)]
-    if adaylar:
-        return max(adaylar)
+            if d and lo <= d <= hi:
+                bul.append(d)
+        if bul:
+            return max(bul)
     m = re.search(r"yayımlandığı tarihten itibaren (\d{1,2}) \(?[a-zçğıöşü ]*\)? ?(?:gün|iş günü)", tr_lower(txt))
     if m:
         return yayin + datetime.timedelta(days=int(m.group(1)))
@@ -102,16 +112,19 @@ def main():
     dene = os.environ.get("DENE") == "1"
     ca = ca_bundle()
     ads, skip = [], 0
-    while skip < 400:
-        r = requests.post(API + "Ad/AdsByFilter", json={"keys": {"ats": [5]}, "skipCount": skip, "maxResultCount": 100}, headers=H, timeout=45, verify=ca)
+    while skip < 600:
+        r = requests.post(API + "Ad/AdsByFilter", json={"keys": {"ats": [5]}, "skipCount": skip, "maxResultCount": 20}, headers=H, timeout=45, verify=ca)
         r.raise_for_status()
         res = r.json()["result"]
         batch = res.get("ads", [])
+        if not batch:
+            break
         ads += batch
-        skip += 100
-        if len(batch) < 100 or skip >= res.get("numFound", 0):
+        skip += len(batch)
+        if skip >= res.get("numFound", 0):
             break
         time.sleep(1)
+    seen = set(); ads = [a for a in ads if not (str(a.get("id")) in seen or seen.add(str(a.get("id"))))]
     print("İlan.gov.tr personel ilanı:", len(ads))
     try:
         old = {x["id"]: x for x in json.load(open(OUT, encoding="utf-8")).get("items", [])}
