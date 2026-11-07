@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install requests
+      - run: pip install requests cryptography certifi
       - run: python .github/ilan_dene.py
