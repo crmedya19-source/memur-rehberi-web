@@ -74,7 +74,10 @@ def parse_date(s):
 
 DT = r"(?<!\d)(\d{1,2}[./]\d{1,2}[./]\d{4}|\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4})"
 
+BAS = [None]
+
 def son_basvuru(content, yayin):
+    BAS[0] = None
     txt = html.unescape(re.sub(r"<[^>]+>", " ", content or ""))
     txt = re.sub(r"\s+", " ", txt)
     pats = [
@@ -97,11 +100,17 @@ def son_basvuru(content, yayin):
             if bul:
                 return max(bul)
             continue
+        bas = None
         for m in re.finditer(rx, txt):
             d = parse_date(m.groups()[-1])
             if d and lo <= d <= hi:
                 bul.append(d)
+                if len(m.groups()) >= 2:
+                    b0 = parse_date(m.groups()[-2])
+                    if b0 and lo <= b0 <= d and (bas is None or b0 < bas):
+                        bas = b0
         if bul:
+            BAS[0] = bas
             return max(bul)
     m = re.search(r"yayımlandığı tarihten itibaren (\d{1,2}) \(?[a-zçğıöşü ]*\)? ?(?:gün|iş günü)", tr_lower(txt))
     if m:
@@ -155,16 +164,17 @@ def main():
             it = old[aid]
             it["u"] = url
         else:
-            sb = None
+            sb = bb = None
             try:
                 d = requests.get(API + "AdDetail/GetAdDetail", params={"id": aid}, headers=H, timeout=45, verify=ca)
                 if d.ok:
                     sb = son_basvuru(d.json().get("result", {}).get("content", ""), yayin)
+                    bb = BAS[0]
                 time.sleep(0.7)
             except Exception as e:
                 print("detay alınamadı", aid, e)
             it = {"id": aid, "t": t[:160], "k": k[:120], "il": str(a.get("addressCityName") or "")[:30], "d": yayin.isoformat(),
-                  "sb": sb.isoformat() if sb else "", "u": url, "c": tur, "p": meslek(t, k), "x": 1 if "iptal" in tr_lower(t) else 0}
+                  "sb": sb.isoformat() if sb else "", "bb": bb.isoformat() if (sb and bb) else "", "u": url, "c": tur, "p": meslek(t, k), "x": 1 if "iptal" in tr_lower(t) else 0}
             yeni += 1
         items.append(it)
     # Süresi geçenleri at; son başvurusu bilinmeyenleri yayından 30 gün sonra at
