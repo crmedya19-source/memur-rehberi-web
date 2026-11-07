@@ -30,6 +30,14 @@ print("CATS",json.dumps([(c.get("taxId"),c.get("name"),c.get("count")) for c in 
 for a in j["ads"][:30]:
   print("AD",json.dumps({k:a.get(k) for k in ("id","adNo","title","advertiserName","addressCityName","publishStartDate","urlStr","isArchived")},ensure_ascii=False),json.dumps(a.get("adTypeFilters"),ensure_ascii=False)[:400])
 print("KEYS",list(j["ads"][0].keys()))
-d=requests.post(U+"AdDetail/GetAdDetail",json={"id":j["ads"][0]["id"]},headers=H,timeout=40,verify=CA)
-print("DSTATUS",d.status_code)
-dr=d.json().get("result",{});print("DKEYS",list(dr.keys()));print("DFILT",json.dumps(dr.get("adTypeFilters"),ensure_ascii=False)[:800]);print("DCAT",json.dumps(dr.get("categories"),ensure_ascii=False)[:500]);print("DCONTENT",(dr.get("content") or "")[:1500])
+for aid in [a["id"] for a in j["ads"] if a["adNo"].startswith("DPB")][:3]:
+  d=requests.get(U+"AdDetail/GetAdDetail",params={"id":aid},headers=H,timeout=40,verify=CA)
+  print("DSTATUS",d.status_code)
+  dr=d.json().get("result",{});print("DKEYS",list(dr.keys()));print("DFILT",json.dumps(dr.get("adTypeFilters"),ensure_ascii=False)[:800]);print("DVAL",json.dumps(dr.get("values"),ensure_ascii=False)[:500])
+  import re;txt=re.sub(r"<[^>]+>"," ",dr.get("content") or "");txt=re.sub(r"\s+"," ",txt);print("DLEN",len(txt));
+  for m in re.finditer(r"[Bb]aşvuru",txt): print("DCTX",txt[max(0,m.start()-150):m.start()+200])
+print("ALLDPB",len([a for a in j["ads"] if a["adNo"].startswith("DPB")]))
+r2=requests.post(U+"Ad/AdsByFilter",json={"keys":{"ats":[5]},"skipCount":30,"maxResultCount":80},headers=H,timeout=40,verify=CA).json()["result"]
+for a in r2["ads"]:
+  if not a["adNo"].startswith("YOK"): print("NONYOK",a["adNo"],a["title"][:90],a["publishStartDate"][:10])
+print("PREFIX",sorted({a["adNo"][:3] for a in j["ads"]+r2["ads"]}))
