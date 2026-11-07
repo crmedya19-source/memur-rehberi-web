@@ -1,0 +1,41 @@
+name: İlan botu
+
+on:
+  schedule:
+    - cron: "41 3,6,9,12,15,18 * * *"
+  workflow_dispatch:
+    inputs:
+      dene:
+        description: "1 = sadece göster, kaydetme"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ilanlar
+  cancel-in-progress: false
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests certifi cryptography
+      - name: İlanları oku
+        env:
+          DENE: ${{ github.event.inputs.dene }}
+        run: python .github/ilan_botu.py
+      - name: Kaydet
+        if: ${{ github.event.inputs.dene != '1' }}
+        run: |
+          git config user.name "ilan-botu"
+          git config user.email "ilan-botu@users.noreply.github.com"
+          git add ilanlar.json
+          if git diff --cached --quiet; then echo "değişiklik yok"; exit 0; fi
+          git commit -q -m "İlan botu: kamu alım ilanları"
+          for i in 1 2 3 4 5; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 7; done
