@@ -1,6 +1,29 @@
 """haberler.json'a yeni haber eklenince Firebase Cloud Messaging ile bildirim gönderir.
 Anahtar: GitHub gizli değişkeni FCM_SERVICE_ACCOUNT (Firebase hizmet hesabı JSON'u). Yoksa sadece ne gönderileceğini yazar."""
-import json, os, subprocess, datetime, sys
+import json, os, subprocess, datetime, sys, hashlib
+from zoneinfo import ZoneInfo
+
+KAYIT = ".github/bildirim_kayit.json"
+OZET = ("📋", "☀️")
+
+def tr_today():
+    return datetime.datetime.now(ZoneInfo("Europe/Istanbul")).date()
+
+def key(x):
+    return hashlib.sha1((x.get("t", "") + "|" + x.get("s", "")).encode("utf-8")).hexdigest()[:16]
+
+def load_kayit():
+    try:
+        return json.load(open(KAYIT, encoding="utf-8"))
+    except Exception:
+        return {"gonderilen": []}
+
+def save_kayit(k, items):
+    now = datetime.datetime.now(ZoneInfo("Europe/Istanbul")).isoformat(timespec="minutes")
+    for x in items:
+        k["gonderilen"].append({"t": x.get("t", ""), "k": key(x), "d": x.get("d", ""), "at": now})
+    k["gonderilen"] = k["gonderilen"][-150:]
+    json.dump(k, open(KAYIT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 def load_prev():
     try:
@@ -18,7 +41,16 @@ def build_messages(cur, prev, today):
     old_keys = {(x.get("d"), x.get("t")) for x in prev.get("items", [])}
     old_titles = {x.get("t") for x in prev.get("items", [])}
     cutoff = (today - datetime.timedelta(days=2)).isoformat()
-    new = [x for x in cur.get("items", []) if (x.get("d"), x.get("t")) not in old_keys and x.get("t") not in old_titles and x.get("d", "") >= cutoff]
+    old_k = {key(x) for x in prev.get("items", [])}
+    sent = {g["k"] for g in load_kayit().get("gonderilen", [])}
+    def is_new(x):
+        if x.get("d", "") < cutoff or key(x) in sent:
+            return False
+        if x.get("t", "").startswith(OZET):
+            # Günün özeti: başlık aynı kalsa da metni değiştiyse yeni sayılır
+            return key(x) not in old_k
+        return (x.get("d"), x.get("t")) not in old_keys and x.get("t") not in old_titles
+    new = [x for x in cur.get("items", []) if is_new(x)]
     msgs = []
     def one(items, target):
         if not items:
@@ -62,16 +94,51 @@ def send(msgs):
         print(r.status_code, r.text[:300])
         if r.status_code != 200:
             bad += 1
-    return 1 if bad else 0
+    return bad
 
 if __name__ == "__main__":
     title, body, target = os.environ.get("BASLIK", "").strip(), os.environ.get("METIN", "").strip(), os.environ.get("HEDEF", "").strip() or "haberler"
+    mod = os.environ.get("MOD", "").strip()
+    today = tr_today()
+    logged = []
     if title:
         msgs = [({"topic": target}, short(title, 80), short(body, 200))]
+        logged = [{"t": title, "s": body, "d": today.isoformat()}]
+    elif mod == "kontrol":
+        # Saat 09:20 ve 20:20 güvencesi: günün özeti bildirim olarak gitmediyse şimdi gönder
+        cur = json.load(open("haberler.json", encoding="utf-8"))
+        hour = datetime.datetime.now(ZoneInfo("Europe/Istanbul")).hour
+        emo = "☀️" if hour < 14 else "📋"
+        sent_today = [g for g in load_kayit().get("gonderilen", []) if g.get("t", "").startswith(emo) and g.get("d") == today.isoformat()]
+        oz = [x for x in cur.get("items", []) if x.get("d") == today.isoformat() and x.get("t", "").startswith(emo)]
+        msgs = []
+        if sent_today:
+            print("Bugünün", emo, "bildirimi zaten gitmiş:", sent_today[-1]["t"])
+        elif oz:
+            x = oz[0]
+            msgs = [({"topic": "haberler"}, short(x["t"], 75), short(x.get("s", ""), 160))]
+            logged = [x]
+            print("Özet vardı ama bildirimi gitmemişti; şimdi gönderiliyor.")
+        else:
+            yday = (today - datetime.timedelta(days=1)).isoformat()
+            top = [x for x in cur.get("items", []) if x.get("d", "") >= yday and not x.get("t", "").startswith(OZET)][:3]
+            if top:
+                ay = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"][today.month - 1]
+                t = "%s %d %s: Günün memur başlıkları" % (emo, today.day, ay)
+                b = short(" • ".join(x["t"] for x in top), 160)
+                msgs = [({"topic": "haberler"}, t, b)]
+                logged = [{"t": t, "s": b, "d": today.isoformat()}]
+                print("Günün özeti hazırlanamamış; yedek bildirim gönderiliyor.")
+            else:
+                print("Gönderilecek haber yok.")
     else:
         cur = json.load(open("haberler.json", encoding="utf-8"))
-        new, msgs = build_messages(cur, load_prev(), datetime.date.today())
+        new, msgs = build_messages(cur, load_prev(), today)
+        logged = new
         print("Yeni haber:", len(new))
     for tg, t, b in msgs:
         print("->", tg, "|", t, "|", b)
-    sys.exit(send(msgs) if msgs else 0)
+    bad = send(msgs) if msgs else 0
+    if msgs and not bad and os.environ.get("FCM_SERVICE_ACCOUNT", "").strip():
+        save_kayit(load_kayit(), logged)
+    sys.exit(1 if bad else 0)

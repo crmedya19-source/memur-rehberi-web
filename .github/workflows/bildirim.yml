@@ -4,6 +4,9 @@ on:
   push:
     branches: [ main ]
     paths: [ haberler.json ]
+  schedule:
+    # Güvence: 09:20 ve 20:20 (İstanbul) günün özeti bildirimi gitmiş mi, gitmediyse gönder
+    - cron: "20 6,17 * * *"
   workflow_dispatch:
     inputs:
       baslik:
@@ -16,6 +19,13 @@ on:
         description: "Konu: haberler (herkes) ya da meslek_o, meslek_s ..."
         required: false
         default: haberler
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bildirim
+  cancel-in-progress: false
 
 jobs:
   gonder:
@@ -34,4 +44,13 @@ jobs:
           BASLIK: ${{ github.event.inputs.baslik }}
           METIN: ${{ github.event.inputs.metin }}
           HEDEF: ${{ github.event.inputs.hedef }}
+          MOD: ${{ github.event_name == 'schedule' && 'kontrol' || '' }}
         run: python .github/bildirim.py
+      - name: Gönderilenleri kaydet
+        run: |
+          git config user.name "haber-botu"
+          git config user.email "haber-botu@users.noreply.github.com"
+          git add .github/bildirim_kayit.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "kayıt değişmedi"; exit 0; fi
+          git commit -q -m "Bildirim kaydı"
+          for i in 1 2 3 4 5; do git pull --rebase -q origin main && git push -q origin HEAD:main && break; sleep 7; done
