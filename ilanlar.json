@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-08",
+"updated": "2026-11-09",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -796,19 +796,6 @@
 "x": 0
 },
 {
-"id": "2271555",
-"t": "Cumhurbaşkanlığı Milli Saraylar İdaresi Başkanlığı Sözleşmeli Personel Alım İlanı",
-"k": "CUMHURBAŞKANLIĞI MİLLİ SARAYLAR İDARESİ BAŞKANLIĞI",
-"il": "İSTANBUL",
-"d": "2026-10-28",
-"sb": "2026-11-08",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2271555/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-cumhurbaskanligi-milli-saraylar-idaresi-baskanligi-sozlesmeli-personel-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
 "id": "2271489",
 "t": "Burdur Mehmet Akif Ersoy Üniversitesi Sözleşmeli Bilişim Personeli Alım İlanı",
 "k": "BURDUR M.AKİF ERSOY ÜNİVERSİTESİ REKTÖRLÜĞÜ",
@@ -1082,19 +1069,6 @@
 "x": 0
 },
 {
-"id": "2268404",
-"t": "İzmir Büyükşehir Belediye Başkanlığı Zabıta Memur Alım İlanı",
-"k": "İZMİR BÜYÜKŞEHİR BELEDİYE BAŞKANLIĞI",
-"il": "İZMİR",
-"d": "2026-10-25",
-"sb": "2026-12-04",
-"bb": "2026-11-30",
-"u": "https://www.ilan.gov.tr/ilan/2268404/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-izmir-buyuksehir-belediye-baskanligi-zabita-memur-alim-ilani",
-"c": "akademik",
-"p": "zg",
-"x": 0
-},
-{
 "id": "2266585",
 "t": "Tarım ve Orman Bakanlığı Orman Genel Müdürlüğünden Müfettiş Yardımcısı Alım İlanı",
 "k": "TARIM VE ORMAN BAKANLIĞI ORMAN GENEL MÜDÜRLÜĞÜ (OGM)",
@@ -1194,19 +1168,6 @@
 "sb": "",
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2259136/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-sondor-belgesi-sinav-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2261370",
-"t": "Türkiye İş Kurumu Genel Müdürlüğünden Sözleşmeli Bilişim Personeli Alım İlanı",
-"k": "TÜRKİYE İŞ KURUMU GENEL MÜDÜRLÜĞÜ (İŞKUR)",
-"il": "ANKARA",
-"d": "2026-10-18",
-"sb": "2026-11-08",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2261370/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-turkiye-is-kurumu-genel-mudurlugunden-sozlesmeli-bilisim-personeli-alim-ilani",
 "c": "kamu",
 "p": "",
 "x": 0
