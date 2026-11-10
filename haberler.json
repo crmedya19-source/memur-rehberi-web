@@ -3,23 +3,12 @@
  "items": [
   {
    "d": "2026-11-10",
-   "t": "Yedi ilçede kamu personeline 2 gün idari izin verilecek",
-   "s": "",
-   "src": "Yeni Şafak",
-   "u": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNjk0NnFEdWJJZWV5SC0tcHkwYUhhdGJsZEVxT3JLZWZYXy1pelM1ZERSUkdyMDNQZm54amlRcVVjSnBfOTNvWllqdXM3Y2wyTnY5aThHaE52b1haY2VqMTM2RzJlVDJ3SHZWbmZibDVCVnBwelBiQjhhNkt3VjFkV0lQMnYwUUREc3h2MzlPczh2SHlfR05zX0t2eUc?oc=5",
+   "t": "📋 10 Kasım: Günün memur gündemi",
+   "s": "Antalya Valiliği, COP31 nedeniyle 7 ilçedeki tüm kamu personelini 11-12 Kasım'da idari izinli saydı; yöneticiler ve kritik birimler hariç. Resmî Gazete'de 1.657 hâkim ve savcının derece yükselmesi yayımlandı. AYM yarın memur ek ödemesine ilişkin başvuruyu görüşecek.",
+   "src": "Memur Rehberi",
+   "u": "https://www.aa.com.tr/tr/gundem/antalyada-cop31-nedeniyle-7-ilcedeki-kamu-personeline-2-gun-idari-izin-verilecek/4118941",
    "c": "gundem",
-   "p": "",
-   "a": 1
-  },
-  {
-   "d": "2026-11-10",
-   "t": "COP31 yoğunluğu! 7 ilçede memurlara 2 gün idari izin verildi",
-   "s": "",
-   "src": "Türkiye Gazetesi",
-   "u": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVjBLaXlFaHJwb0w2aEZuTVExZG1ER28zVlpTQmRnOTNKc0ZReDFJQmZoTGZnbHo5M05EUDFDV08tQ1pJdjZJRVJWU1Z5U0MtYm1qUTYzT012V2Q3NF9nX29EbjBERmsxSXhLZ1VfOTNhN0x4WS10aWNIRjFwS3RmZHJhMnZ6TXFYclMtcHdFWkdGT3ZUNWZuUm9VVkVsOUp5ZWsyN1BPTmk0dW13M1E?oc=5",
-   "c": "gundem",
-   "p": "",
-   "a": 1
+   "p": ""
   },
   {
    "d": "2026-11-10",
@@ -69,9 +58,9 @@
   {
    "d": "2026-11-06",
    "t": "Antalya’da 11–12 Kasım’da bazı kadın memurlara idari izin",
-   "s": "COP31 Liderler Zirvesi nedeniyle Aksu, Döşemealtı, Konyaaltı, Kepez, Manavgat, Muratpaşa ve Serik’te okul öncesi veya ilkokul çağında çocuğu olan kadın kamu personeli iki gün idari izinli sayılacak. Kimin kritik görevde kalacağını kurum amirleri belirleyecek.",
-   "src": "Milli Gazete",
-   "u": "https://milligazete.com.tr/antalyada-memurlar-izinli-mi-11-12-kasim-2026-cop31-idari-izin-karari-izinli-sayilacak-personel-ve-7-ilce-aciklandi",
+   "s": "Valilik kapsamı genişletti: COP31 nedeniyle Aksu, Döşemealtı, Kepez, Konyaaltı, Manavgat, Muratpaşa ve Serik'te çalışan tüm kamu personeli 11-12 Kasım'da idari izinli sayılacak. Kurum yöneticileri, zirvede görevliler ile kritik ve acil hizmet birimleri izin kapsamı dışında; yoğun hizmet veren birimlerde nöbetçi personel bulunacak.",
+   "src": "AA",
+   "u": "https://www.aa.com.tr/tr/gundem/antalyada-cop31-nedeniyle-7-ilcedeki-kamu-personeline-2-gun-idari-izin-verilecek/4118941",
    "c": "gundem",
    "p": ""
   },
@@ -162,15 +151,6 @@
    "s": "Teklife göre memurun saat başı fazla çalışma ücreti 16,55 TL’den 19,85 TL’ye yükseliyor; yurt içi gündelikler de artırılıyor. Teklif Plan ve Bütçe Komisyonunda görüşülüyor, kabul edilince kesinleşecek.",
    "src": "Milli Gazete",
    "u": "https://www.milligazete.com.tr/memurlarin-2027-fazla-calisma-ucreti-kac-lira-2026ya-gore-ne-kadar-artacak-hangi-personel-2115-tl-alacak-aylik-sini",
-   "c": "mevzuat",
-   "p": ""
-  },
-  {
-   "d": "2026-03-19",
-   "t": "Memur eğitiminde yeni yönetmelik yürürlükte",
-   "s": "Memurların Yetiştirilmeleri ve Eğitimleri Hakkında Genel Yönetmelik yayımlandı: aday memurlar için temel eğitim, hazırlayıcı eğitim ve en az iki aylık staj zorunlu.",
-   "src": "Alomaliye",
-   "u": "https://www.alomaliye.com/2026/03/19/memurlarin-yetistirilmeleri-ve-egitimleri-hakkinda-genel-yonetmelik-karar-sayisi-11105/",
    "c": "mevzuat",
    "p": ""
   },
