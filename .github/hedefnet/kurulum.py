@@ -15,7 +15,9 @@ def api(method, url, body=None):
         try: j = json.loads(e.read())
         except Exception: j = {}
         return e.code, j
-def ozet(j): return json.dumps(j, ensure_ascii=False)[:400]
+def ozet(j):
+    if isinstance(j,dict) and "error" in j: return str(j["error"].get("message",""))[:200]
+    return "ok"
 print("Proje:", P, "| hizmet hesabı:", sa.get("client_email","").split("@")[0])
 
 # 1) Firestore veritabanı
@@ -32,15 +34,15 @@ if s == 200 and "(default)" not in dbs:
 
 # 2) E-posta/şifre girişi
 s, j = api("GET", f"https://identitytoolkit.googleapis.com/admin/v2/projects/{P}/config")
-print("Auth yapılandırma:", s, ozet({k: j.get(k) for k in ("signIn","authorizedDomains")} if s==200 else j))
+print("Auth yapılandırma:", s, "e-posta:", j.get("signIn",{}).get("email",{}).get("enabled") if s==200 else ozet(j))
 if s == 404 or (s == 200 and not j.get("signIn")):
     s0, j0 = api("POST", f"https://identitytoolkit.googleapis.com/v2/projects/{P}/identityPlatform:initializeAuth", {})
-    print("Auth başlat:", s0, ozet(j0))
+    print("Auth başlat:", s0)
 email_on = s == 200 and j.get("signIn", {}).get("email", {}).get("enabled")
 if not email_on:
     s4, j4 = api("PATCH", f"https://identitytoolkit.googleapis.com/admin/v2/projects/{P}/config?updateMask=signIn.email.enabled,signIn.email.passwordRequired",
                  {"signIn": {"email": {"enabled": True, "passwordRequired": True}}})
-    print("E-posta girişi aç:", s4, ozet(j4.get("signIn", j4)))
+    print("E-posta girişi aç:", s4, "tamam" if s4==200 else str(j4.get("error",{}).get("message",""))[:200])
 
 # 3) Güvenlik kuralları (yalnızca mevcut kurallar boş/varsayılan ya da zaten Hedef Net'e aitse)
 s, j = api("GET", f"https://firebaserules.googleapis.com/v1/projects/{P}/releases/cloud.firestore")
@@ -49,7 +51,6 @@ uygula = True
 if s == 200:
     rs = j.get("rulesetName"); s5, j5 = api("GET", f"https://firebaserules.googleapis.com/v1/{rs}")
     eski = "".join(f.get("content","") for f in j5.get("source", {}).get("files", []))
-    print("Mevcut kurallar (ilk 600):\n", eski[:600])
     yabanci = [l for l in eski.splitlines() if "match /" in l and "databases" not in l and "/hn_" not in l and "{document=**}" not in l]
     if yabanci: uygula = False; print("DİKKAT: Başka koleksiyon kuralları var, otomatik değiştirilmedi:", yabanci)
 if uygula:
