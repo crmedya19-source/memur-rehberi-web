@@ -1,0 +1,72 @@
+rules_version = '2';
+// Hedef Net – Firestore güvenlik kuralları
+// Not: Bu proje memur uygulamasıyla ortak; diğer koleksiyonlara dokunulmaz (varsayılan: kapalı).
+service cloud.firestore {
+  match /databases/{db}/documents {
+    function signed() { return request.auth != null; }
+    function me() { return request.auth.uid; }
+    function rol() { return get(/databases/$(db)/documents/hn_kullanici/$(me())).data.rol; }
+
+    // Kullanıcı kaydı: rol ve görünen ad
+    match /hn_kullanici/{uid} {
+      allow read: if signed() && me() == uid;
+      allow create: if signed() && me() == uid
+        && request.resource.data.rol in ['ogrenci','ogretmen','veli']
+        && request.resource.data.ad is string && request.resource.data.ad.size() <= 40;
+      allow update: if signed() && me() == uid
+        && request.resource.data.rol == resource.data.rol
+        && request.resource.data.ad is string && request.resource.data.ad.size() <= 40;
+      allow delete: if signed() && me() == uid;
+    }
+
+    // Öğrenci verisi (özet, denemeler, konu ilerlemesi)
+    match /hn_ogrenci/{uid} {
+      allow read: if signed() && (me() == uid
+        || me() in resource.data.get('ogretmenler', [])
+        || me() in resource.data.get('veliler', []));
+      // Öğrenci kendi belgesini yazar. Bir sınıfa katılırken ekledigi öğretmen, o sınıfın gerçek öğretmeni olmalı.
+      allow create, update: if signed() && me() == uid
+        && request.resource.data.get('ogretmenler', []).size() <= 10
+        && request.resource.data.get('veliler', []).size() <= 4
+        && request.resource.data.get('siniflar', []).size() <= 10
+        && (!('katil' in request.resource.data) || request.resource.data.katil == null ||
+            get(/databases/$(db)/documents/hn_sinif/$(request.resource.data.katil)).data.ogretmen in request.resource.data.ogretmenler);
+      // Veli: geçerli bir veli kodu ile yalnızca kendini 'veliler' listesine ekleyebilir.
+      allow update: if signed() && me() != uid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['veliler','sonKod'])
+        && request.resource.data.veliler == resource.data.get('veliler', []).concat([me()])
+        && resource.data.get('veliler', []).size() < 4
+        && exists(/databases/$(db)/documents/hn_velikod/$(request.resource.data.sonKod))
+        && get(/databases/$(db)/documents/hn_velikod/$(request.resource.data.sonKod)).data.ogrenci == uid
+        && get(/databases/$(db)/documents/hn_velikod/$(request.resource.data.sonKod)).data.bitis > request.time;
+      // Öğretmen: yalnızca kendini öğrencinin listesinden çıkarabilir (sınıftan çıkarma).
+      allow update: if signed() && me() in resource.data.get('ogretmenler', [])
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['ogretmenler','siniflar'])
+        && !(me() in request.resource.data.ogretmenler);
+      allow delete: if signed() && me() == uid;
+    }
+
+    // Sınıflar
+    match /hn_sinif/{sid} {
+      allow read: if signed();
+      allow create: if signed() && request.resource.data.ogretmen == me() && rol() == 'ogretmen'
+        && request.resource.data.ad is string && request.resource.data.ad.size() <= 60;
+      allow update: if signed() && resource.data.ogretmen == me() && request.resource.data.ogretmen == me();
+      allow delete: if signed() && resource.data.ogretmen == me();
+    }
+    // Sınıf katılım kodu → sınıf
+    match /hn_sinifkod/{kod} {
+      allow get: if signed();
+      allow create: if signed() && get(/databases/$(db)/documents/hn_sinif/$(request.resource.data.sinif)).data.ogretmen == me();
+      allow delete: if signed() && get(/databases/$(db)/documents/hn_sinif/$(resource.data.sinif)).data.ogretmen == me();
+    }
+    // Veli bağlantı kodu (öğrenci üretir, 24 saat geçerli)
+    match /hn_velikod/{kod} {
+      allow get: if signed();
+      allow create: if signed() && request.resource.data.ogrenci == me()
+        && request.resource.data.bitis is timestamp
+        && request.resource.data.bitis < request.time + duration.value(2, 'd');
+      allow delete: if signed() && resource.data.ogrenci == me();
+    }
+  }
+}
