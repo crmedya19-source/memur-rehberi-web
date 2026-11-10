@@ -3,6 +3,32 @@
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
+"id": "2285089",
+"t": "Samsun İli Asarcık Belediye Başkanlığı (İptal İlanı)",
+"k": "ASARCIK BELEDİYE BAŞKANLIĞI",
+"il": "SAMSUN",
+"d": "2026-11-10",
+"sb": "",
+"bb": "",
+"u": "https://www.ilan.gov.tr/ilan/2285089/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-samsun-ili-asarcik-belediye-baskanligi-iptal-ilani-",
+"c": "kamu",
+"p": "g",
+"x": 1
+},
+{
+"id": "2285086",
+"t": "Bahçeşehir Üniversitesi Öğretim Üyesi Alım İlanı",
+"k": "BAHÇEŞEHİR ÜNİVERSİTESİ REKTÖRLÜĞÜ",
+"il": "İSTANBUL",
+"d": "2026-11-10",
+"sb": "",
+"bb": "",
+"u": "https://www.ilan.gov.tr/ilan/2285086/kamu-akademik-personel-akademik-personel-alimlari-bahcesehir-universitesi-ogretim-uyesi-alim-ilani",
+"c": "akademik",
+"p": "",
+"x": 0
+},
+{
 "id": "2285038",
 "t": "Düzeltme İlanı (Toros Üniversitesi Rektörlüğünden)",
 "k": "TOROS ÜNİVERSİTESİ REKTÖRLÜĞÜ",
