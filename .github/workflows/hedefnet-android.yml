@@ -1,0 +1,19 @@
+name: Hedef Net Android kaydı
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths: [ '.github/hedefnet/android.py' ]
+jobs:
+  kayit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q google-auth requests
+      - env:
+          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+          SHA1: "AB:9C:5B:E4:49:57:B8:62:34:95:3D:A7:C0:B7:A5:BC:D8:55:0C:56"
+          SHA256: "84:17:F3:A5:74:32:CB:B1:62:CF:AB:BA:2A:6C:37:77:B6:07:AB:04:CF:B7:EE:30:A3:92:1A:42:A2:4C:9F:8D"
+        run: python .github/hedefnet/android.py
