@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-09",
+"updated": "2026-11-10",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -1238,19 +1238,6 @@
 "x": 0
 },
 {
-"id": "2269837",
-"t": "Düzeltme İlanı (Fırat Üniversitesi Rektörlüğü)",
-"k": "FIRAT ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ELAZIĞ",
-"d": "2026-10-27",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2269837/kamu-akademik-personel-akademik-personel-alimlari-duzeltme-ilani-firat-universitesi-rektorlugu-",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
 "id": "2269836",
 "t": "İptal İlanı (Doğanyol Belediye Başkanlığı)",
 "k": "DOĞANYOL BELEDİYE BAŞKANLIĞI",
@@ -1329,32 +1316,6 @@
 "x": 0
 },
 {
-"id": "2268397",
-"t": "Fırat Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "FIRAT ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ELAZIĞ",
-"d": "2026-10-26",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2268397/kamu-akademik-personel-akademik-personel-alimlari-firat-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2268396",
-"t": "Düzeltme İlanı (Marmara Üniversitesi Rektörlüğü)",
-"k": "MARMARA ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-10-26",
-"sb": "2026-11-09",
-"bb": "2026-10-26",
-"u": "https://www.ilan.gov.tr/ilan/2268396/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-duzeltme-ilani-marmara-universitesi-rektorlugu-",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
 "id": "2268385",
 "t": "Dokuz Eylül Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
 "k": "DOKUZ EYLÜL ÜNİVERSİTESİ REKTÖRLÜĞÜ",
@@ -1364,71 +1325,6 @@
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2268385/kamu-akademik-personel-akademik-personel-alimlari-dokuz-eylul-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
 "c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2268383",
-"t": "Dokuz Eylül Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "DOKUZ EYLÜL ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İZMİR",
-"d": "2026-10-26",
-"sb": "2026-11-10",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2268383/kamu-akademik-personel-akademik-personel-alimlari-dokuz-eylul-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2268380",
-"t": "Türkiye Uluslararası İslam, Bilim ve Teknoloji Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "TÜRKİYE ULUSLARARASI İSLAM, BİLİM VE TEKNOLOJİ ÜNİVERSİTESİ",
-"il": "İSTANBUL",
-"d": "2026-10-26",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2268380/kamu-akademik-personel-akademik-personel-alimlari-turkiye%C2%A0uluslararasi%C2%A0islam-%C2%A0bilim%C2%A0ve%C2%A0teknoloji%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2268379",
-"t": "Nevşehir Hacı Bektaş Veli Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "NEVŞEHİR HACI BEKTAŞ VELİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "NEVŞEHİR",
-"d": "2026-10-26",
-"sb": "2026-11-10",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2268379/kamu-akademik-personel-akademik-personel-alimlari-nevsehir%C2%A0haci%C2%A0bektas%C2%A0veli%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2268378",
-"t": "Hacı Bayram Veli Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "ANKARA HACI BAYRAM VELİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ANKARA",
-"d": "2026-10-26",
-"sb": "2026-11-09",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2268378/kamu-akademik-personel-akademik-personel-alimlari-haci-bayram-veli-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2266585",
-"t": "Tarım ve Orman Bakanlığı Orman Genel Müdürlüğünden Müfettiş Yardımcısı Alım İlanı",
-"k": "TARIM VE ORMAN BAKANLIĞI ORMAN GENEL MÜDÜRLÜĞÜ (OGM)",
-"il": "ANKARA",
-"d": "2026-10-23",
-"sb": "2026-11-09",
-"bb": "2026-10-26",
-"u": "https://www.ilan.gov.tr/ilan/2266585/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-tarim%C2%A0ve%C2%A0orman%C2%A0bakanligi%C2%A0orman%C2%A0genel%C2%A0mudurlugunden-mufettis-yardimcisi-alim-ilani",
-"c": "kamu",
 "p": "",
 "x": 0
 },
@@ -1506,19 +1402,6 @@
 "sb": "2026-12-03",
 "bb": "2026-11-09",
 "u": "https://www.ilan.gov.tr/ilan/2261343/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-orta-anadolu-kalkinma-ajansindan-personel-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2259136",
-"t": "Sondör Belgesi Sınav İlanı",
-"k": "DSİ GENEL MÜDÜRLÜĞÜ YERALTISULARI DAİRESİ BAŞKANLIĞI",
-"il": "ANKARA",
-"d": "2026-10-19",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2259136/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-sondor-belgesi-sinav-ilani",
 "c": "kamu",
 "p": "",
 "x": 0
