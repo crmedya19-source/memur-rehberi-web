@@ -6,6 +6,8 @@ service cloud.firestore {
     function signed() { return request.auth != null; }
     function me() { return request.auth.uid; }
     function rol() { return get(/databases/$(db)/documents/hn_kullanici/$(me())).data.rol; }
+    function uye(sid) { return sid in get(/databases/$(db)/documents/hn_ogrenci/$(me())).data.get('siniflar', []); }
+    function ogretmenMi(sid) { return get(/databases/$(db)/documents/hn_sinif/$(sid)).data.ogretmen == me(); }
 
     // Kullanıcı kaydı: rol ve görünen ad
     match /hn_kullanici/{uid} {
@@ -53,6 +55,27 @@ service cloud.firestore {
         && request.resource.data.ad is string && request.resource.data.ad.size() <= 60;
       allow update: if signed() && resource.data.ogretmen == me() && request.resource.data.ogretmen == me();
       allow delete: if signed() && resource.data.ogretmen == me();
+
+      // Haftalık lig: her öğrenci yalnızca kendi satırını yazar (takma ad + XP)
+      match /lig/{uid} {
+        allow read: if signed() && (uye(sid) || ogretmenMi(sid));
+        allow create, update: if signed() && me() == uid && uye(sid)
+          && request.resource.data.keys().hasOnly(['takma','xp','hafta','haftaXp','guncel'])
+          && request.resource.data.takma is string && request.resource.data.takma.size() <= 24;
+        allow delete: if signed() && (me() == uid || ogretmenMi(sid));
+      }
+      // Ortak deneme: öğretmen tanımlar, öğrenci kendi sonucunu takma adla girer
+      match /deneme/{did} {
+        allow read: if signed() && (uye(sid) || ogretmenMi(sid));
+        allow create, update, delete: if signed() && ogretmenMi(sid);
+        match /sonuc/{uid} {
+          allow read: if signed() && (uye(sid) || ogretmenMi(sid));
+          allow create, update: if signed() && me() == uid && uye(sid)
+            && request.resource.data.keys().hasOnly(['takma','n','toplam','tur','guncel'])
+            && request.resource.data.takma is string && request.resource.data.takma.size() <= 24;
+          allow delete: if signed() && (me() == uid || ogretmenMi(sid));
+        }
+      }
     }
     // Sınıf katılım kodu → sınıf
     match /hn_sinifkod/{kod} {

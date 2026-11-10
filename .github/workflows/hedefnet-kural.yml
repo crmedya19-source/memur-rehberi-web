@@ -1,0 +1,15 @@
+name: Hedef Net kural denetimi
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths: [ '.github/hedefnet/firestore.rules', '.github/hedefnet/kural.py' ]
+jobs:
+  denetle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q google-auth requests
+      - env:
+          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+        run: python .github/hedefnet/kural.py

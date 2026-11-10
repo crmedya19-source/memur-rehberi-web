@@ -1,0 +1,17 @@
+name: Hedef Net duyuru bildirimi
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+concurrency: { group: hedefnet-duyuru, cancel-in-progress: false }
+jobs:
+  gonder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout: .github/hedefnet }
+      - run: pip install -q google-auth requests
+      - env:
+          FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+        run: python .github/hedefnet/duyuru.py
