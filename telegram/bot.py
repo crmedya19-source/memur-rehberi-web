@@ -156,7 +156,7 @@ def tr_baslik(s):
 
 
 def ilan_metni(x, baslik=None, reklam=False):
-    bas = baslik or "🎓 <b>Akademik personel alımı</b>" if x.get("c") == "akademik" else "🏛️ <b>Yeni kamu personel alımı</b>"
+    bas = baslik or ("🎓 <b>Akademik personel alımı</b>" if x.get("c") == "akademik" else "🏛️ <b>Yeni kamu personel alımı</b>")
     m = [bas, "", f"<b>{e(x.get('t'))}</b>"]
     yer = " · ".join(s for s in [e(tr_baslik(x.get("k"))), e(tr_baslik(x.get("il")))] if s)
     if yer:
@@ -267,15 +267,16 @@ class Bot:
     def kanal_gonder(self):
         if self.d["duraklat"] or not self.d["kuyruk"]:
             return
-        zorla = self.d["kuyruk"][0].get("zorla")
-        if self.sessiz_mi() and not zorla:
-            return
         g = self.bugun()
-        if g["gonderilen"] >= self.a["gunluk_sinir"] and not zorla:
+        serbest = not self.sessiz_mi() and g["gonderilen"] < self.a["gunluk_sinir"]
+        # Sessiz saatte / sınır dolunca yalnızca elle istenen (zorla) gönderiler gider; normal olanlar sırada bekler ama önünü tıkamaz
+        sira = 0 if serbest else next((i for i, x in enumerate(self.d["kuyruk"]) if x.get("zorla")), None)
+        if sira is None:
             return
+        zorla = self.d["kuyruk"][sira].get("zorla")
         if time.time() - self.d["son_kanal"] < (60 if zorla else self.a["aralik_dk"] * 60):
             return
-        m = self.d["kuyruk"].pop(0)
+        m = self.d["kuyruk"].pop(sira)
         try:
             self.tg.gonder(self.a["kanal"], m["metin"], self.dugme())
             g["gonderilen"] += 1
@@ -284,7 +285,7 @@ class Bot:
         except RuntimeError as ex:
             log("Gönderilemedi:", ex)
             if "chat not found" in str(ex) or "not enough rights" in str(ex) or "bot is not a member" in str(ex):
-                self.d["kuyruk"].insert(0, m)
+                self.d["kuyruk"].insert(sira, m)
                 self.d["duraklat"] = True
                 self.sahibe(f"⚠️ Kanala yazamıyorum: {e(ex)}\nBotu kanala yönetici olarak ekleyip /devam yaz.")
         self.kaydet()
