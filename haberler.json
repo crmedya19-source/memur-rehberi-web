@@ -3,23 +3,21 @@
  "items": [
   {
    "d": "2026-11-11",
-   "t": "MEB'den Öğretmen ve Okul Yöneticilerine Zorunlu Eğitim",
-   "s": "",
-   "src": "Kamudanhaber",
-   "u": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPOTZvWG42NXNBeFZwd0Uza08tT2xmOXR6RjVLWVFDejJpdVl4RWEyZDlGaWtZWm9qOE9pYVc5M0h2UWd5QmF0dmtoUDh3RlpITTJSVUlhZjNITXNONFZzWWVkTFYzeElzMG9qbXVYemh6Y2w0NGFLcnhfeC1jQmgyQjY4N1hqLVZHNFE?oc=5",
-   "c": "egitim",
-   "p": "o",
-   "a": 1
+   "t": "📋 11 Kasım: Günün memur gündemi",
+   "s": "AYM'nin bugün ele aldığı ek ödeme başvurularıyla ilgili henüz açıklanmış bir sonuç yok. 2024-EKPSS'ye girenler güncellenen branş sıralamalarını ÖSYM AİS'ten görebilir. Okullarda ara tatil cuma akşamı başlıyor; öğretmenlerin ÖBA çalışması 16 Kasım'da açılıyor.",
+   "src": "Memur Rehberi",
+   "u": "https://memurlar.net/haber/1183826/2024-ekpss-brans-bazinda-siralamalar-guncellendi.html",
+   "c": "gundem",
+   "p": ""
   },
   {
    "d": "2026-11-11",
    "t": "Engelli Kamu Personeli Seçme Sınavı'nın branş bazında sıralamaları yayımlandı",
-   "s": "",
+   "s": "ÖSYM, 2024-EKPSS'ye giren adayların puan türü ve eğitim alanına göre sıralamalarını yeniledi; kendi yerinizi ÖSYM AİS'te T.C. kimlik numarası ve şifrenizle görebilirsiniz. Sıralama bilgilendirme amaçlı, yerleştirme sonucunu etkilemiyor.",
    "src": "Anadolu Ajansı",
-   "u": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNGFlM3VmTGxTUE5nSFUxYy04SEo2Ny1yQl85QTV1clNOMzRQSVNqMTJURDJ6RmRNdzNpX0JVWVJMazRFRUdrNTJDVDFoWll5OU8wVlptM2JQQmRoTFpaZnpUTlJTeXVxdEZvWmY3WFNFaHRXMEZqT1hfQU8xNjlGcTlpelZZOTc2RXprWm96TV9YejZhb1BiT2ZlWTZvd0xiemMwa1RzX2ZmWlZCeUJvdGZn?oc=5",
+   "u": "https://memurlar.net/haber/1183826/2024-ekpss-brans-bazinda-siralamalar-guncellendi.html",
    "c": "gundem",
-   "p": "",
-   "a": 1
+   "p": ""
   },
   {
    "d": "2026-11-11",
@@ -63,15 +61,6 @@
    "s": "Teknik hizmetler sınıfından GİH’te 1-4. dereceli bir kadroya ilk kez atananlar, eski kadrolarının ek göstergesini kazanılmış hak derecelerine göre almaya devam ediyor. İlk atama 1-4. derece kadroya yapılmadıysa bu hak doğmuyor.",
    "src": "Memurlar.Net",
    "u": "https://www.memurlar.net/haber/1183178/teknik-hizmetlerden-gih-e-gecenlerin-ek-gostergesi.html",
-   "c": "maas",
-   "p": ""
-  },
-  {
-   "d": "2026-11-06",
-   "t": "Anayasa Mahkemesi 11 Kasım’da memur ek ödemelerini görüşecek",
-   "s": "AYM Genel Kurulu, 375 sayılı KHK’nin ek ödemeyi düzenleyen ek 9. ve ilave ödemeyi düzenleyen ek 40. maddelerine yönelik üç itirazı ve emekli ikramiyesine ilişkin iki başvuruyu ele alacak. Karar çıkana kadar mevcut ödemelerde bir değişiklik yok.",
-   "src": "Kamudanhaber",
-   "u": "https://kamudanhaber.net/memurlarin-ek-odemeleri-degisecek-mi-anayasa-mahkemesi-11-kasimda-gorusecek",
    "c": "maas",
    "p": ""
   },
@@ -126,15 +115,6 @@
    "s": "Temmuz–ekim enflasyonu yaklaşık %8,3 ile %7’lik temmuz zammını aştı ve yaklaşık %1,2 enflasyon farkı oluştu. Ocaktaki %5 toplu sözleşme artışıyla birlikte zam şimdilik %6,27; kesin oran kasım ve aralık enflasyonuyla belli olacak.",
    "src": "Memurlar.net",
    "u": "https://www.memurlar.net/haber/1182940/enflasyon-yuzde-2-58-oldu-memurun-yuzde-7-lik-zammi-asildi.html",
-   "c": "maas",
-   "p": ""
-  },
-  {
-   "d": "2026-11-02",
-   "t": "Ocak 2027 zammı için hesaplar: %7 ile %8,5 arası konuşuluyor",
-   "s": "Ocakta toplu sözleşmeden gelen %5’e enflasyon farkı eklenecek. Orta Vadeli Program tahminiyle toplam yaklaşık %7, Merkez Bankası anketiyle yaklaşık %8 hesaplanıyor. Kesin oran aralık enflasyonu açıklanınca belli olacak.",
-   "src": "Takvim",
-   "u": "https://www.takvim.com.tr/ekonomi/2026/11/02/memura-4-farkli-zam-hesabi",
    "c": "maas",
    "p": ""
   },
