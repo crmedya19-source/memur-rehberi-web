@@ -2,7 +2,8 @@
 # Botu çalıştırır, çökerse 15 sn sonra yeniden başlatır. Aynı anda iki kopya çalışmaz.
 cd "$(dirname "$0")"
 PID=bot.pid
-if [ -f $PID ] && kill -0 "$(cat $PID)" 2>/dev/null; then echo "Bot zaten çalışıyor (pid $(cat $PID))."; exit 0; fi
+# Kayıtlı pid gerçekten bu betiğe aitse çık (yeniden başlatmadan sonra pid başka bir sürece verilmiş olabilir)
+if [ -f $PID ] && grep -q calistir "/proc/$(cat $PID)/cmdline" 2>/dev/null; then echo "Bot zaten çalışıyor (pid $(cat $PID))."; exit 0; fi
 echo $$ > $PID
 command -v termux-wake-lock >/dev/null && termux-wake-lock
 trap 'rm -f $PID; kill $C 2>/dev/null; exit 0' INT TERM
