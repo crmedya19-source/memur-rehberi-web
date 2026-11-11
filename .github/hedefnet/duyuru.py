@@ -29,7 +29,7 @@ while True:
         ids=[sv(x.get("id",{})) for x in du]
         yeni=du[ids.index(son)+1:] if son in ids else [x for x in du if sv(x.get("tarih",{})) and datetime.fromisoformat(sv(x["tarih"]).replace("Z","+00:00"))>esik]
         ad=sv(f.get("ad",{}))[:40] or "Sınıf"
-        for x in yeni[-3:]:
+        for x in [y for y in yeni if not y.get("bildir",{}).get("booleanValue",True)==False][-3:]:
             msg={"message":{"topic":"hn_s_"+sid,"notification":{"title":"📢 "+ad,"body":sv(x.get("metin",{}))[:240]},
                  "android":{"priority":"high","notification":{"channel_id":"duyuru","icon":"ic_stat_icon","color":"#6C4CF5"}},"data":{"tip":"duyuru","sid":sid}}}
             s2,j2=api("POST",f"https://fcm.googleapis.com/v1/projects/{P}/messages:send",msg)
