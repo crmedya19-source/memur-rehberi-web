@@ -17,7 +17,7 @@ KAYIT = os.path.join(KLASOR, "bot.log")
 TR = timezone(timedelta(hours=3))
 VARSAYILAN = {
     "token": "", "kanal": "", "sahip": 0,
-    "uygulama_url": "https://play.google.com/store/apps/details?id=com.memurmevzuat.rehber",
+    "uygulama_url": "",          # boş: düğme ve uygulama tanıtımı yok (uygulama yayınlanınca /link ile eklenir)
     "veri_url": "https://crmedya19-source.github.io/memur-rehberi-web/",
     "akademik": "ozet",          # hepsi | ozet | yok
     "haber": True,               # haberleri de at
@@ -63,9 +63,14 @@ def yaz(yol, veri):
     os.replace(gecici, yol)
 
 
+ESKI_LINK = "https://play.google.com/store/apps/details?id=com.memurmevzuat.rehber"
+
+
 def ayar_yukle():
     a = dict(VARSAYILAN)
     a.update(oku(AYAR, {}))
+    if a.get("uygulama_url") == ESKI_LINK:  # uygulama henüz yayında değil
+        a["uygulama_url"] = ""
     return a
 
 
@@ -150,7 +155,7 @@ def tr_baslik(s):
     return " ".join(kelime(j, w) for j, w in enumerate(s.split(" ")))
 
 
-def ilan_metni(x, baslik=None):
+def ilan_metni(x, baslik=None, reklam=False):
     bas = baslik or "🎓 <b>Akademik personel alımı</b>" if x.get("c") == "akademik" else "🏛️ <b>Yeni kamu personel alımı</b>"
     m = [bas, "", f"<b>{e(x.get('t'))}</b>"]
     yer = " · ".join(s for s in [e(tr_baslik(x.get("k"))), e(tr_baslik(x.get("il")))] if s)
@@ -163,15 +168,19 @@ def ilan_metni(x, baslik=None):
         k = kalan_gun(x["sb"])
         m.append(f"⏳ Son başvuru: <b>{tarih_tr(x['sb'])}</b>" + (f" ({k} gün kaldı)" if k is not None and k >= 0 else ""))
     m.append(f"🗓️ Yayın: {tarih_tr(x.get('d', ''))}")
-    m += ["", f'🔗 <a href="{e(x.get("u"))}">İlanın tamamı (ilan.gov.tr)</a>', "", "📲 Başvuru tarihlerini kaçırmamak için hatırlatmalı takip: <b>Memur Rehberi</b> uygulaması"]
+    m += ["", f'🔗 <a href="{e(x.get("u"))}">İlanın tamamı (ilan.gov.tr)</a>']
+    if reklam:
+        m += ["", "📲 Başvuru tarihlerini kaçırmamak için hatırlatmalı takip: <b>Memur Rehberi</b> uygulaması"]
     return "\n".join(m)
 
 
-def haber_metni(x):
+def haber_metni(x, reklam=False):
     m = [f"📰 <b>{e(x.get('t'))}</b>"]
     if x.get("s"):
         m += ["", e(x["s"])[:900]]
-    m += ["", f'🔗 <a href="{e(x.get("u"))}">Haberin devamı</a>' + (f" · {e(x.get('src'))}" if x.get("src") else ""), "", "📲 Memur gündemi, mevzuat ve maaş hesaplama: <b>Memur Rehberi</b>"]
+    m += ["", f'🔗 <a href="{e(x.get("u"))}">Haberin devamı</a>' + (f" · {e(x.get('src'))}" if x.get("src") else "")]
+    if reklam:
+        m += ["", "📲 Memur gündemi, mevzuat ve maaş hesaplama: <b>Memur Rehberi</b>"]
     return "\n".join(m)
 
 
@@ -205,8 +214,13 @@ class Bot:
             self.d["gun"] = {"t": g, "gonderilen": 0, "kamu": 0, "akademik": 0, "haber": 0, "ozet": False}
         return self.d["gun"]
 
+    def reklam(self):
+        return bool(self.a.get("uygulama_url"))
+
     def dugme(self):
-        return [("📲 Memur Rehberi'ni indir", self.a["uygulama_url"])]
+        if not self.reklam():
+            return None
+        return [("📲 Memur Rehberi'ni indir" if "play.google.com" in self.a["uygulama_url"] else "📲 Memur Rehberi", self.a["uygulama_url"])]
 
     # -- veri kontrolü
     def kontrol(self):
@@ -227,7 +241,7 @@ class Bot:
             g["akademik" if x.get("c") == "akademik" else "kamu"] += 1
             if x.get("c") == "akademik" and self.a["akademik"] != "hepsi":
                 continue
-            self.d["kuyruk"].append({"tur": "ilan", "metin": ilan_metni(x)})
+            self.d["kuyruk"].append({"tur": "ilan", "metin": ilan_metni(x, reklam=self.reklam())})
             yeni += 1
         for x in sorted(haberler, key=lambda x: x.get("d", "")):
             i = x.get("u") or x.get("t")
@@ -237,7 +251,7 @@ class Bot:
             if ilk:
                 continue
             g["haber"] += 1
-            self.d["kuyruk"].append({"tur": "haber", "metin": haber_metni(x)})
+            self.d["kuyruk"].append({"tur": "haber", "metin": haber_metni(x, reklam=self.reklam())})
             yeni += 1
         if ilk:
             log(f"İlk çalıştırma: {len(ilanlar)} ilan ve {len(haberler)} haber görüldü olarak işaretlendi (kanala atılmadı).")
@@ -295,7 +309,8 @@ class Bot:
             for x in yak[:8]:
                 k = kalan_gun(x["sb"])
                 m.append(f'• <a href="{e(x["u"])}">{e(x["t"])[:90]}</a> — ' + ("<b>bugün son gün</b>" if k == 0 else f"{k} gün"))
-        m += ["", "📲 Tüm ilanlar, il/meslek filtresi ve son gün hatırlatması: <b>Memur Rehberi</b>"]
+        if self.reklam():
+            m += ["", "📲 Tüm ilanlar, il/meslek filtresi ve son gün hatırlatması: <b>Memur Rehberi</b>"]
         self.d["kuyruk"].insert(0, {"tur": "ozet", "metin": "\n".join(m)})
         self.d["son_kanal"] = 0
         self.kaydet()
@@ -319,9 +334,9 @@ class Bot:
         if t == "/sahip" and not self.a["sahip"]:
             self.a["sahip"] = kim
             a = oku(AYAR, {}); a["sahip"] = kim; yaz(AYAR, a)
-            return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /test /kanal /tanitim /yayinla /dur /devam")
+            return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /test /kanal /link /tanitim /yayinla /dur /devam")
         if t in ("/start", "/yardim", "/help"):
-            return self.tg.gonder(sohbet, "👋 Merhaba! Kamu personel alımlarını ve memur gündemini takip ediyorum.\n\n/ilanlar – son kamu ilanları\n/yaklasan – son başvurusu yaklaşanlar\n/haberler – memur gündemi\n/uygulama – Memur Rehberi uygulaması", self.dugme())
+            return self.tg.gonder(sohbet, "👋 Merhaba! Kamu personel alımlarını ve memur gündemini takip ediyorum.\n\n/ilanlar – son kamu ilanları\n/yaklasan – son başvurusu yaklaşanlar\n/haberler – memur gündemi" + ("\n/uygulama – Memur Rehberi uygulaması" if self.reklam() else ""), self.dugme())
         if t == "/ilanlar":
             ls = sorted([x for x in il if x.get("c") == "kamu"], key=lambda x: x.get("d", ""), reverse=True)[:8]
             return self.tg.gonder(sohbet, "🏛️ <b>Son kamu ilanları</b>\n\n" + "\n".join(f'• <a href="{e(x["u"])}">{e(x["t"])[:100]}</a> ({tarih_tr(x["d"])})' for x in ls) if ls else "Şu an ilan yok.", self.dugme())
@@ -331,7 +346,7 @@ class Bot:
         if t == "/haberler":
             ls = self.son_veri["haber"][:8]
             return self.tg.gonder(sohbet, "📰 <b>Memur gündemi</b>\n\n" + "\n".join(f'• <a href="{e(x["u"])}">{e(x["t"])}</a>' for x in ls) if ls else "Şu an haber yok.", self.dugme())
-        if t == "/uygulama":
+        if t == "/uygulama" and self.reklam():
             return self.tg.gonder(sohbet, "📲 <b>Memur Rehberi</b>: mevzuat, maaş ve izin hesaplama, kamu ilanları ve son başvuru hatırlatmaları tek uygulamada.", self.dugme())
         if sahip and t == "/durum":
             g = self.bugun()
@@ -343,14 +358,15 @@ class Bot:
             self.d["duraklat"] = False; self.kaydet()
             return self.tg.gonder(sohbet, "▶️ Kanala gönderim sürüyor.")
         if sahip and t == "/tanitim":
-            m = ("📢 <b>Memur Alımları – Güncel İlanlar</b>\n\n"
+            m = (("📢 <b>Memur Alımları – Güncel İlanlar</b>\n\n"
                  "Bu kanalda her gün:\n"
                  "🏛️ Yeni kamu personel alım ilanları (ilan.gov.tr)\n"
                  "⏳ Son başvurusu yaklaşan ilanlar\n"
                  "📰 Memur maaş, mevzuat ve gündem haberleri\n"
                  "🌙 Her akşam günün özeti\n\n"
-                 "Bildirimleri açmayı unutma 🔔\n\n"
-                 "📲 İlanları il ve mesleğe göre filtrelemek, son gün hatırlatması almak, maaş ve izin hesaplamak için <b>Memur Rehberi</b> uygulamasını indir.")
+                 "Bildirimleri açmayı unutma 🔔\n\n")
+                 + ("📲 Mevzuat, maaş tahmini, izin hesabı, dilekçe taslakları ve son başvuru hatırlatıcıları için <b>Memur Rehberi</b> uygulamasını indir." if self.reklam() else
+                    "Kanalı arkadaşlarınla paylaş, kimse ilan kaçırmasın 🤝"))
             self.d["kuyruk"].insert(0, {"tur": "tanitim", "metin": m, "zorla": True}); self.d["son_kanal"] = 0; self.kaydet()
             return self.tg.gonder(sohbet, "Tanıtım mesajı kanala gönderiliyor. Kanalda mesaja uzun basıp <b>Sabitle</b> de.")
         if sahip and t == "/yayinla":
@@ -362,7 +378,7 @@ class Bot:
             aday = [x for x in il if x.get("c") == "kamu" and ((x.get("sb") or "") >= bugun or (not x.get("sb") and x.get("d", "") >= (simdi().date() - timedelta(days=10)).isoformat()))]
             aday.sort(key=lambda x: (x.get("sb") or "9999", x.get("d", "")))
             for x in aday[:n]:
-                self.d["kuyruk"].append({"tur": "ilan", "metin": ilan_metni(x, "📌 <b>Başvurusu devam eden ilan</b>"), "zorla": True})
+                self.d["kuyruk"].append({"tur": "ilan", "metin": ilan_metni(x, "📌 <b>Başvurusu devam eden ilan</b>", self.reklam()), "zorla": True})
             self.kaydet()
             return self.tg.gonder(sohbet, f"📤 Başvurusu açık {min(n, len(aday))} kamu ilanı (toplam {len(aday)}) kuyruğa eklendi; dakikada bir kanala gidecek. Daha fazlası için: /yayinla 30")
         if sahip and t == "/kanal":
@@ -381,6 +397,14 @@ class Bot:
             a = oku(AYAR, {}); a["kanal"] = k; yaz(AYAR, a)
             self.d["duraklat"] = False; self.kaydet()
             return self.tg.gonder(sohbet, f"✅ Kanal {e(k)} olarak ayarlandı, gönderim sürüyor.")
+        if sahip and t == "/link":
+            parca = (msj.get("text") or "").split()
+            if len(parca) < 2 or not (parca[1].startswith("https://") or parca[1] == "kapat"):
+                return self.tg.gonder(sohbet, f"Şu anki link: {e(self.a['uygulama_url']) or 'yok (düğme kapalı)'}\nEklemek için: /link https://...\nKaldırmak için: /link kapat")
+            yeni = "" if parca[1] == "kapat" else parca[1]
+            self.a["uygulama_url"] = yeni
+            a = oku(AYAR, {}); a["uygulama_url"] = yeni; yaz(AYAR, a)
+            return self.tg.gonder(sohbet, "✅ Uygulama düğmesi eklendi." if yeni else "✅ Uygulama düğmesi ve tanıtım satırları kaldırıldı.", self.dugme())
         if sahip and t == "/test":
             try:
                 self.tg.gonder(self.a["kanal"], "✅ Test mesajı: bot bu kanala yazabiliyor.", self.dugme())
@@ -447,7 +471,7 @@ def kurulum():
         kan = ""
     if kan:
         a["kanal"] = kan if kan.startswith("@") or kan.lstrip("-").isdigit() else "@" + kan
-    url = input("Uygulama linki (boş bırak: Play Store linki): ").strip()
+    url = input("Uygulama linki (yoksa boş bırak): ").strip()
     if url:
         a["uygulama_url"] = url
     yaz(AYAR, {**VARSAYILAN, **a})
