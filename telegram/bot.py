@@ -390,7 +390,8 @@ class Bot:
 def kurulum():
     a = oku(AYAR, {})
     print("Memur Rehberi Telegram botu kurulumu\n")
-    tok = input(f"BotFather'dan aldığın token{' (boş bırak: değişmesin)' if a.get('token') else ''}: ").strip()
+    import getpass
+    tok = getpass.getpass(f"BotFather'dan aldığın token (yazarken görünmez){' — boş bırak: değişmesin' if a.get('token') else ''}: ").strip()
     if tok:
         a["token"] = tok
     kan = input(f"Kanal kullanıcı adı, ör. @memuralimlari{' [' + a['kanal'] + ']' if a.get('kanal') else ''}: ").strip()
