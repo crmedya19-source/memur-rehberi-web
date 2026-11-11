@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-10",
+"updated": "2026-11-11",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -1303,19 +1303,6 @@
 "x": 0
 },
 {
-"id": "2269849",
-"t": "İzmir ili Bergama Belediye Başkanlığı Memur Alım İlanı",
-"k": "BERGAMA BELEDİYE BAŞKANLIĞI",
-"il": "İZMİR",
-"d": "2026-10-27",
-"sb": "2026-12-11",
-"bb": "2026-12-09",
-"u": "https://www.ilan.gov.tr/ilan/2269849/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-izmir-ili-bergama-belediye-baskanligi-memur-alim-ilani",
-"c": "kamu",
-"p": "g",
-"x": 0
-},
-{
 "id": "2269836",
 "t": "İptal İlanı (Doğanyol Belediye Başkanlığı)",
 "k": "DOĞANYOL BELEDİYE BAŞKANLIĞI",
@@ -1327,84 +1314,6 @@
 "c": "kamu",
 "p": "g",
 "x": 1
-},
-{
-"id": "2269835",
-"t": "Giresun Üniversitesi Öğretim Üyesi Alım İlanı",
-"k": "GİRESUN ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "GİRESUN",
-"d": "2026-10-27",
-"sb": "2026-11-13",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2269835/kamu-akademik-personel-akademik-personel-alimlari-giresun-universitesi-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2269834",
-"t": "Harran Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "HARRAN ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ŞANLIURFA",
-"d": "2026-10-27",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2269834/kamu-akademik-personel-akademik-personel-alimlari-harran-universitesi-rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2269833",
-"t": "Muş Alparslan Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "MUŞ ALPARSLAN ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "MUŞ",
-"d": "2026-10-27",
-"sb": "2026-11-10",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2269833/kamu-akademik-personel-akademik-personel-alimlari-mus-alparslan-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2269832",
-"t": "Muş Alparslan Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "MUŞ ALPARSLAN ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "MUŞ",
-"d": "2026-10-27",
-"sb": "2026-11-10",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2269832/kamu-akademik-personel-akademik-personel-alimlari-mus-alparslan-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2268403",
-"t": "Fırat Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "FIRAT ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ELAZIĞ",
-"d": "2026-10-26",
-"sb": "2026-11-10",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2268403/kamu-akademik-personel-akademik-personel-alimlari-firat-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2268385",
-"t": "Dokuz Eylül Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "DOKUZ EYLÜL ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İZMİR",
-"d": "2026-10-26",
-"sb": "2026-11-10",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2268385/kamu-akademik-personel-akademik-personel-alimlari-dokuz-eylul-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
 },
 {
 "id": "2266555",
