@@ -141,21 +141,27 @@
    "https://news.google.com/rss/articles/CBMiigFBVV95cUxPOTZvWG42NXNBeFZwd0Uza08tT2xmOXR6RjVLWVFDejJpdVl4RWEyZDlGaWtZWm9qOE9pYVc5M0h2UWd5QmF0dmtoUDh3RlpITTJSVUlhZjNITXNONFZzWWVkTFYzeElzMG9qbXVYemh6Y2w0NGFLcnhfeC1jQmgyQjY4N1hqLVZHNFE?oc=5",
    "https://memurlar.net/haber/1183826/2024-ekpss-brans-bazinda-siralamalar-guncellendi.html",
    "https://memurlar.net/haber/1183826/2024-ekpss-brans-bazinda-siralamalar-guncellendi.html",
-   "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRlNtdGpRcnB1dGwzVVp2WXZjcWlFNG1fZ0p3RXBnSVRpOUM4Y3N5V2hVUTZVSXJEMzhmNURna1UydDZBWVVJVW5Lbm5FSTc0X1JxMjR4Y21VU0tDX3ppRWs1SS03bFFNNzZsVElKVWhnZHZhajdlM1B5cmt4WWxzRg?oc=5"
+   "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRlNtdGpRcnB1dGwzVVp2WXZjcWlFNG1fZ0p3RXBnSVRpOUM4Y3N5V2hVUTZVSXJEMzhmNURna1UydDZBWVVJVW5Lbm5FSTc0X1JxMjR4Y21VU0tDX3ppRWs1SS03bFFNNzZsVElKVWhnZHZhajdlM1B5cmt4WWxzRg?oc=5",
+   "https://news.google.com/rss/articles/CBMimgFBVV95cUxPVklHM3EzUExnMEtZLVhCSUZ1SFFrRGlmUml2bTYyd3RTT3ZaUnJKSE1CemI1cDJWQWVRdkNCUmk1VkV1cGw3dzAxMlRKNjJKV0hUMk1zcEVydEU3RkhpSzZ0Smx4a2x0MjlxZzlNN2ZyY05FUHhiRlA0SUpVWVNjOWdweEtzRlRidENHOHhUNjZkbVA0S1lFeDd3?oc=5"
   ]
  },
- "kuyruk": [],
+ "kuyruk": [
+  {
+   "tur": "haber",
+   "metin": "📰 <b>Öğretmenlerin Kasım Ara Tatil Seminerleri ÖBA Üzerinden Yapılacak</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPVklHM3EzUExnMEtZLVhCSUZ1SFFrRGlmUml2bTYyd3RTT3ZaUnJKSE1CemI1cDJWQWVRdkNCUmk1VkV1cGw3dzAxMlRKNjJKV0hUMk1zcEVydEU3RkhpSzZ0Smx4a2x0MjlxZzlNN2ZyY05FUHhiRlA0SUpVWVNjOWdweEtzRlRidENHOHhUNjZkbVA0S1lFeDd3?oc=5\">Haberin devamı</a> · Kamudanhaber"
+  }
+ ],
  "offset": 575918230,
  "gun": {
-  "t": "2026-11-11",
-  "gonderilen": 21,
+  "t": "2026-11-12",
+  "gonderilen": 0,
   "kamu": 0,
   "akademik": 0,
-  "haber": 4,
-  "ozet": true
+  "haber": 1,
+  "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-11T22:52+03:00",
+ "son_calisma": "2026-11-12T00:25+03:00",
  "sahip_x": "374577208810919338"
 }
