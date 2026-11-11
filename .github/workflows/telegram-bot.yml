@@ -1,0 +1,33 @@
+name: Telegram botu
+# Memur Rehberi Telegram kanal botu. Token: Settings › Secrets › Actions › TELEGRAM_TOKEN
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+concurrency:
+  group: telegram-bot
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Botu çalıştır
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TG_GH: "1"
+        run: python3 telegram/bot.py tek
+      - name: Durumu kaydet
+        run: |
+          # Güvenlik: depoya token yazılmasın
+          if grep -qE '[0-9]{6,12}:[A-Za-z0-9_-]{30,}' telegram/durum-gh.json telegram/ayar-gh.json 2>/dev/null; then echo "Token benzeri değer bulundu, kaydedilmiyor"; exit 1; fi
+          git config user.name "telegram-bot"
+          git config user.email "telegram-bot@users.noreply.github.com"
+          git add telegram/durum-gh.json telegram/ayar-gh.json 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Telegram botu: durum"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q origin main && exit 0; sleep $((i*5)); done
+          exit 1

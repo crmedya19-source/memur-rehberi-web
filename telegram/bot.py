@@ -11,9 +11,10 @@ import json, os, sys, time, html, signal, traceback, urllib.request, urllib.pars
 from datetime import datetime, timedelta, timezone
 
 KLASOR = os.path.dirname(os.path.abspath(__file__))
-AYAR = os.path.join(KLASOR, "ayar.json")
-DURUM = os.path.join(KLASOR, "durum.json")
-KAYIT = os.path.join(KLASOR, "bot.log")
+GH = os.environ.get("TG_GH") == "1"  # GitHub Actions kipi: tek geçiş, token gizli ayardan, durum depoda
+AYAR = os.path.join(KLASOR, "ayar-gh.json" if GH else "ayar.json")
+DURUM = os.path.join(KLASOR, "durum-gh.json" if GH else "durum.json")
+KAYIT = None if GH else os.path.join(KLASOR, "bot.log")
 TR = timezone(timedelta(hours=3))
 VARSAYILAN = {
     "token": "", "kanal": "", "sahip": 0,
@@ -39,6 +40,8 @@ def simdi():
 def log(*a):
     satir = simdi().strftime("%d.%m %H:%M:%S ") + " ".join(str(x) for x in a)
     print(satir, flush=True)
+    if not KAYIT:
+        return
     try:
         if os.path.exists(KAYIT) and os.path.getsize(KAYIT) > 2_000_000:
             os.replace(KAYIT, KAYIT + ".eski")
@@ -69,6 +72,8 @@ ESKI_LINK = "https://play.google.com/store/apps/details?id=com.memurmevzuat.rehb
 def ayar_yukle():
     a = dict(VARSAYILAN)
     a.update(oku(AYAR, {}))
+    if os.environ.get("TELEGRAM_TOKEN"):
+        a["token"] = os.environ["TELEGRAM_TOKEN"].strip()
     if a.get("uygulama_url") == ESKI_LINK:  # uygulama henüz yayında değil
         a["uygulama_url"] = ""
     return a
@@ -112,6 +117,11 @@ class TG:
 
 # ---------------- Veri ----------------
 def veri_al(url):
+    if GH:  # depodaki güncel dosyayı oku
+        yerel = os.path.join(KLASOR, "..", url.rstrip("/").split("/")[-1])
+        if os.path.exists(yerel):
+            with open(yerel, encoding="utf-8") as f:
+                return json.load(f)
     r = urllib.request.Request(url + ("&" if "?" in url else "?") + "t=" + str(int(time.time())), headers={"User-Agent": "MemurRehberiBot/1.0"})
     with urllib.request.urlopen(r, timeout=30) as x:
         return json.loads(x.read().decode("utf-8"))
@@ -272,16 +282,18 @@ class Bot:
         # Sessiz saatte / sınır dolunca yalnızca elle istenen (zorla) gönderiler gider; normal olanlar sırada bekler ama önünü tıkamaz
         sira = 0 if serbest else next((i for i, x in enumerate(self.d["kuyruk"]) if x.get("zorla")), None)
         if sira is None:
-            return
+            return None
         zorla = self.d["kuyruk"][sira].get("zorla")
         if time.time() - self.d["son_kanal"] < (60 if zorla else self.a["aralik_dk"] * 60):
-            return
+            return None
         m = self.d["kuyruk"].pop(sira)
         try:
             self.tg.gonder(self.a["kanal"], m["metin"], self.dugme())
             g["gonderilen"] += 1
             self.d["son_kanal"] = time.time()
             log("Kanala gönderildi:", m["tur"], "| kalan kuyruk", len(self.d["kuyruk"]))
+            self.kaydet()
+            return m
         except RuntimeError as ex:
             log("Gönderilemedi:", ex)
             if "chat not found" in str(ex) or "not enough rights" in str(ex) or "bot is not a member" in str(ex):
@@ -289,12 +301,14 @@ class Bot:
                 self.d["duraklat"] = True
                 self.sahibe(f"⚠️ Kanala yazamıyorum: {e(ex)}\nBotu kanala yönetici olarak ekleyip /devam yaz.")
         self.kaydet()
+        return None
 
     def ozet(self):
         if self.a["ozet_saat"] < 0 or self.d["duraklat"]:
             return
         g = self.bugun()
-        if g["ozet"] or simdi().hour != self.a["ozet_saat"]:
+        h = simdi().hour
+        if g["ozet"] or (not (self.a["ozet_saat"] <= h < 23) if GH else h != self.a["ozet_saat"]):
             return
         g["ozet"] = True
         ilanlar = self.son_veri["ilan"]
@@ -317,10 +331,27 @@ class Bot:
         self.kaydet()
 
     # -- özel sohbet komutları
+    def _anahtar(self):
+        import hashlib
+        return int(hashlib.sha256(("sahip:" + self.a["token"]).encode()).hexdigest()[:15], 16)
+
+    def sahip_id(self):
+        if GH:
+            x = self.d.get("sahip_x")
+            return (int(x) ^ self._anahtar()) if x else 0
+        return self.a.get("sahip") or 0
+
+    def sahip_yaz(self, kim):
+        if GH:
+            self.d["sahip_x"] = str(int(kim) ^ self._anahtar()); self.kaydet()
+        else:
+            self.a["sahip"] = kim
+            a = oku(AYAR, {}); a["sahip"] = kim; yaz(AYAR, a)
+
     def sahibe(self, metin):
-        if self.a["sahip"]:
+        if self.sahip_id():
             try:
-                self.tg.gonder(self.a["sahip"], metin)
+                self.tg.gonder(self.sahip_id(), metin)
             except Exception as ex:
                 log("Sahibe yazılamadı:", ex)
 
@@ -330,11 +361,10 @@ class Bot:
             return
         kim = msj.get("from", {}).get("id")
         t = (msj.get("text") or "").strip().split("@")[0].split()[0].lower() if msj.get("text") else ""
-        sahip = kim == self.a["sahip"]
+        sahip = bool(kim) and kim == self.sahip_id()
         il = [x for x in self.son_veri["ilan"] if not x.get("x")]
-        if t == "/sahip" and not self.a["sahip"]:
-            self.a["sahip"] = kim
-            a = oku(AYAR, {}); a["sahip"] = kim; yaz(AYAR, a)
+        if t == "/sahip" and not self.sahip_id():
+            self.sahip_yaz(kim)
             return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /test /kanal /link /tanitim /yayinla /dur /devam")
         if t in ("/start", "/yardim", "/help"):
             return self.tg.gonder(sohbet, "👋 Merhaba! Kamu personel alımlarını ve memur gündemini takip ediyorum.\n\n/ilanlar – son kamu ilanları\n/yaklasan – son başvurusu yaklaşanlar\n/haberler – memur gündemi" + ("\n/uygulama – Memur Rehberi uygulaması" if self.reklam() else ""), self.dugme())
@@ -351,7 +381,7 @@ class Bot:
             return self.tg.gonder(sohbet, "📲 <b>Memur Rehberi</b>: mevzuat, maaş ve izin hesaplama, kamu ilanları ve son başvuru hatırlatmaları tek uygulamada.", self.dugme())
         if sahip and t == "/durum":
             g = self.bugun()
-            return self.tg.gonder(sohbet, f"🤖 Çalışıyor{' (DURAKLATILDI)' if self.d['duraklat'] else ''}\nKanal: {e(self.a['kanal']) if ':' not in str(self.a['kanal']) else '⚠️ hatalı (/kanal @kanaladi ile düzelt)'}\nKuyruk: {len(self.d['kuyruk'])}\nBugün gönderilen: {g['gonderilen']}/{self.a['gunluk_sinir']}\nBugün ilan: {g['kamu']} kamu, {g['akademik']} akademik · haber {g['haber']}\nSessiz saatler: {self.a['sessiz'][0]}:00–{self.a['sessiz'][1]}:00{' (şu an sessiz)' if self.sessiz_mi() else ''}\nSon hata sayısı: {self.hata_say}")
+            return self.tg.gonder(sohbet, f"🤖 Çalışıyor{' (DURAKLATILDI)' if self.d['duraklat'] else ''}\nKanal: {e(self.a['kanal']) if ':' not in str(self.a['kanal']) else '⚠️ hatalı (/kanal @kanaladi ile düzelt)'}\nKuyruk: {len(self.d['kuyruk'])}\nBugün gönderilen: {g['gonderilen']}/{self.a['gunluk_sinir']}\nBugün ilan: {g['kamu']} kamu, {g['akademik']} akademik · haber {g['haber']}\nSessiz saatler: {self.a['sessiz'][0]}:00–{self.a['sessiz'][1]}:00{' (şu an sessiz)' if self.sessiz_mi() else ''}\nSon hata sayısı: {self.hata_say}" + (f"\nÇalışma yeri: GitHub (son çalışma {self.d.get('son_calisma', '–')[11:16]}, 15–60 dk'da bir)" if GH else ""))
         if sahip and t == "/dur":
             self.d["duraklat"] = True; self.kaydet()
             return self.tg.gonder(sohbet, "⏸️ Kanala gönderim durduruldu. /devam ile sürdür.")
@@ -369,7 +399,7 @@ class Bot:
                  + ("📲 Mevzuat, maaş tahmini, izin hesabı, dilekçe taslakları ve son başvuru hatırlatıcıları için <b>Memur Rehberi</b> uygulamasını indir." if self.reklam() else
                     "Kanalı arkadaşlarınla paylaş, kimse ilan kaçırmasın 🤝"))
             self.d["kuyruk"].insert(0, {"tur": "tanitim", "metin": m, "zorla": True}); self.d["son_kanal"] = 0; self.kaydet()
-            return self.tg.gonder(sohbet, "Tanıtım mesajı kanala gönderiliyor. Kanalda mesaja uzun basıp <b>Sabitle</b> de.")
+            return self.tg.gonder(sohbet, "Tanıtım mesajı kanala gönderiliyor" + (" (birkaç dakika içinde)" if GH else "") + ". Kanalda mesaja uzun basıp <b>Sabitle</b> de.")
         if sahip and t == "/yayinla":
             try:
                 n = max(1, min(40, int((msj.get("text") or "").split()[1])))
@@ -381,7 +411,7 @@ class Bot:
             for x in aday[:n]:
                 self.d["kuyruk"].append({"tur": "ilan", "metin": ilan_metni(x, "📌 <b>Başvurusu devam eden ilan</b>", self.reklam()), "zorla": True})
             self.kaydet()
-            return self.tg.gonder(sohbet, f"📤 Başvurusu açık {min(n, len(aday))} kamu ilanı (toplam {len(aday)}) kuyruğa eklendi; dakikada bir kanala gidecek. Daha fazlası için: /yayinla 30")
+            return self.tg.gonder(sohbet, f"📤 Başvurusu açık {min(n, len(aday))} kamu ilanı (toplam {len(aday)}) kuyruğa eklendi; " + ("botun bir sonraki çalışmalarında kanala gidecek (her çalışmada 10 ilan)." if GH else "dakikada bir kanala gidecek.") + " Daha fazlası için: /yayinla 30")
         if sahip and t == "/kanal":
             parca = (msj.get("text") or "").split()
             if len(parca) < 2:
@@ -430,6 +460,32 @@ class Bot:
                     log("Komut hatası:", ex)
         if gs:
             self.kaydet()
+
+    def tek(self):
+        """GitHub Actions: komutları yanıtla, veriyi kontrol et, kuyruktan sınırlı sayıda gönder, çık."""
+        try:
+            self.kontrol()
+        except Exception as ex:
+            log("Veri okunamadı:", ex)
+        self.guncellemeler(0)
+        self.ozet()
+        normal = zorla = 0
+        for _ in range(30):
+            self.d["son_kanal"] = 0
+            m = self.kanal_gonder()
+            if not m:
+                break
+            if m.get("zorla"):
+                zorla += 1
+            else:
+                normal += 1
+            if zorla >= 10 or normal >= 4:
+                break
+            time.sleep(20 if not m.get("zorla") else 4)
+        self.guncellemeler(0)
+        self.d["son_calisma"] = simdi().isoformat(timespec="minutes")
+        self.kaydet()
+        log(f"Bitti: {normal} yeni + {zorla} elle gönderim, kuyrukta {len(self.d['kuyruk'])}")
 
     def calis(self):
         me = self.tg.cagir("getMe")
@@ -495,6 +551,12 @@ def durdur(*_):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "tek":
+        if not ayar_yukle().get("token"):
+            print("TELEGRAM_TOKEN gizli ayarı yok; atlanıyor.")
+            sys.exit(0)
+        Bot().tek()
+        sys.exit(0)
     if len(sys.argv) > 1 and sys.argv[1] == "kurulum":
         kurulum()
         sys.exit(0)
