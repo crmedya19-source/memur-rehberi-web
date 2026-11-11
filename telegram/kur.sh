@@ -3,8 +3,10 @@
 set -e
 KOK=https://raw.githubusercontent.com/crmedya19-source/memur-rehberi-web/main/telegram
 echo "📦 Paketler kuruluyor…"
-pkg update -y >/dev/null 2>&1 || true
-pkg install -y python curl termux-api >/dev/null 2>&1 || pkg install -y python curl
+O="-o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold"
+apt-get update -y || true
+apt-get -y $O upgrade || true
+apt-get -y $O install python curl
 mkdir -p ~/memurbot && cd ~/memurbot
 curl -fsSL $KOK/bot.py -o bot.py
 curl -fsSL $KOK/calistir.sh -o calistir.sh && chmod +x calistir.sh
