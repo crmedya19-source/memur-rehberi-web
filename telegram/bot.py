@@ -392,8 +392,13 @@ def kurulum():
     print("Memur Rehberi Telegram botu kurulumu\n")
     import getpass
     tok = getpass.getpass(f"BotFather'dan aldığın token (yazarken görünmez){' — boş bırak: değişmesin' if a.get('token') else ''}: ").strip()
-    if tok:
-        a["token"] = tok
+    import re
+    bul = re.search(r"\d{6,12}:[A-Za-z0-9_-]{30,}", tok or "")
+    if tok and not bul:
+        print("⚠️ Bunda token bulamadım. BotFather'daki token'ın üstüne dokunup sadece onu kopyala ve tekrar dene.")
+        return
+    if bul:
+        a["token"] = bul.group(0)
     kan = input(f"Kanal kullanıcı adı, ör. @memuralimlari{' [' + a['kanal'] + ']' if a.get('kanal') else ''}: ").strip()
     if kan:
         a["kanal"] = kan if kan.startswith("@") or kan.lstrip("-").isdigit() else "@" + kan
