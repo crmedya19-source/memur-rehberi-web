@@ -319,7 +319,7 @@ class Bot:
         if t == "/sahip" and not self.a["sahip"]:
             self.a["sahip"] = kim
             a = oku(AYAR, {}); a["sahip"] = kim; yaz(AYAR, a)
-            return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /test /tanitim /yayinla /dur /devam")
+            return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /test /kanal /tanitim /yayinla /dur /devam")
         if t in ("/start", "/yardim", "/help"):
             return self.tg.gonder(sohbet, "👋 Merhaba! Kamu personel alımlarını ve memur gündemini takip ediyorum.\n\n/ilanlar – son kamu ilanları\n/yaklasan – son başvurusu yaklaşanlar\n/haberler – memur gündemi\n/uygulama – Memur Rehberi uygulaması", self.dugme())
         if t == "/ilanlar":
@@ -335,7 +335,7 @@ class Bot:
             return self.tg.gonder(sohbet, "📲 <b>Memur Rehberi</b>: mevzuat, maaş ve izin hesaplama, kamu ilanları ve son başvuru hatırlatmaları tek uygulamada.", self.dugme())
         if sahip and t == "/durum":
             g = self.bugun()
-            return self.tg.gonder(sohbet, f"🤖 Çalışıyor{' (DURAKLATILDI)' if self.d['duraklat'] else ''}\nKanal: {e(self.a['kanal'])}\nKuyruk: {len(self.d['kuyruk'])}\nBugün gönderilen: {g['gonderilen']}/{self.a['gunluk_sinir']}\nBugün ilan: {g['kamu']} kamu, {g['akademik']} akademik · haber {g['haber']}\nSessiz saatler: {self.a['sessiz'][0]}:00–{self.a['sessiz'][1]}:00{' (şu an sessiz)' if self.sessiz_mi() else ''}\nSon hata sayısı: {self.hata_say}")
+            return self.tg.gonder(sohbet, f"🤖 Çalışıyor{' (DURAKLATILDI)' if self.d['duraklat'] else ''}\nKanal: {e(self.a['kanal']) if ':' not in str(self.a['kanal']) else '⚠️ hatalı (/kanal @kanaladi ile düzelt)'}\nKuyruk: {len(self.d['kuyruk'])}\nBugün gönderilen: {g['gonderilen']}/{self.a['gunluk_sinir']}\nBugün ilan: {g['kamu']} kamu, {g['akademik']} akademik · haber {g['haber']}\nSessiz saatler: {self.a['sessiz'][0]}:00–{self.a['sessiz'][1]}:00{' (şu an sessiz)' if self.sessiz_mi() else ''}\nSon hata sayısı: {self.hata_say}")
         if sahip and t == "/dur":
             self.d["duraklat"] = True; self.kaydet()
             return self.tg.gonder(sohbet, "⏸️ Kanala gönderim durduruldu. /devam ile sürdür.")
@@ -365,6 +365,22 @@ class Bot:
                 self.d["kuyruk"].append({"tur": "ilan", "metin": ilan_metni(x, "📌 <b>Başvurusu devam eden ilan</b>"), "zorla": True})
             self.kaydet()
             return self.tg.gonder(sohbet, f"📤 Başvurusu açık {min(n, len(aday))} kamu ilanı (toplam {len(aday)}) kuyruğa eklendi; dakikada bir kanala gidecek. Daha fazlası için: /yayinla 30")
+        if sahip and t == "/kanal":
+            parca = (msj.get("text") or "").split()
+            if len(parca) < 2:
+                return self.tg.gonder(sohbet, "Kullanım: /kanal @kanaladi")
+            k = parca[1].strip()
+            k = k if k.startswith("@") or k.lstrip("-").isdigit() else "@" + k.replace("https://t.me/", "").replace("t.me/", "")
+            if ":" in k or len(k) > 40:
+                return self.tg.gonder(sohbet, "Bu bir kanal adına benzemiyor. Örnek: /kanal @MemurRehberi")
+            try:
+                self.tg.gonder(k, "✅ Bot bu kanala bağlandı.", self.dugme())
+            except Exception as ex:
+                return self.tg.gonder(sohbet, f"{e(k)} kanalına yazılamadı: {e(ex)}\nKullanıcı adını ve botun yönetici olduğunu kontrol et.")
+            self.a["kanal"] = k
+            a = oku(AYAR, {}); a["kanal"] = k; yaz(AYAR, a)
+            self.d["duraklat"] = False; self.kaydet()
+            return self.tg.gonder(sohbet, f"✅ Kanal {e(k)} olarak ayarlandı, gönderim sürüyor.")
         if sahip and t == "/test":
             try:
                 self.tg.gonder(self.a["kanal"], "✅ Test mesajı: bot bu kanala yazabiliyor.", self.dugme())
@@ -426,6 +442,9 @@ def kurulum():
     if bul:
         a["token"] = bul.group(0)
     kan = input(f"Kanal kullanıcı adı, ör. @memuralimlari{' [' + a['kanal'] + ']' if a.get('kanal') else ''}: ").strip()
+    if kan and (":" in kan or len(kan) > 40):
+        print("⚠️ Bu kanal adına benzemiyor, kanal değiştirilmedi.")
+        kan = ""
     if kan:
         a["kanal"] = kan if kan.startswith("@") or kan.lstrip("-").isdigit() else "@" + kan
     url = input("Uygulama linki (boş bırak: Play Store linki): ").strip()
