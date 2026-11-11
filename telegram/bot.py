@@ -142,7 +142,7 @@ def tr_baslik(s):
         g = w[len(on):]
         if not g:
             return w
-        if g.strip("),") in kisalt or g.rstrip(",") == "t.c.":
+        if g.strip("),") in kisalt or g.rstrip(",") in ("t.c.", "a.ş.", "a.ş"):
             return on + "".join(ust(c) for c in g)
         if j and not on and g in kucuk:
             return w
@@ -150,8 +150,8 @@ def tr_baslik(s):
     return " ".join(kelime(j, w) for j, w in enumerate(s.split(" ")))
 
 
-def ilan_metni(x):
-    bas = "🎓 <b>Akademik personel alımı</b>" if x.get("c") == "akademik" else "🏛️ <b>Yeni kamu personel alımı</b>"
+def ilan_metni(x, baslik=None):
+    bas = baslik or "🎓 <b>Akademik personel alımı</b>" if x.get("c") == "akademik" else "🏛️ <b>Yeni kamu personel alımı</b>"
     m = [bas, "", f"<b>{e(x.get('t'))}</b>"]
     yer = " · ".join(s for s in [e(tr_baslik(x.get("k"))), e(tr_baslik(x.get("il")))] if s)
     if yer:
@@ -251,12 +251,15 @@ class Bot:
         return (b <= h or h < s) if b > s else (b <= h < s)
 
     def kanal_gonder(self):
-        if self.d["duraklat"] or not self.d["kuyruk"] or self.sessiz_mi():
+        if self.d["duraklat"] or not self.d["kuyruk"]:
+            return
+        zorla = self.d["kuyruk"][0].get("zorla")
+        if self.sessiz_mi() and not zorla:
             return
         g = self.bugun()
-        if g["gonderilen"] >= self.a["gunluk_sinir"]:
+        if g["gonderilen"] >= self.a["gunluk_sinir"] and not zorla:
             return
-        if time.time() - self.d["son_kanal"] < self.a["aralik_dk"] * 60:
+        if time.time() - self.d["son_kanal"] < (60 if zorla else self.a["aralik_dk"] * 60):
             return
         m = self.d["kuyruk"].pop(0)
         try:
@@ -316,7 +319,7 @@ class Bot:
         if t == "/sahip" and not self.a["sahip"]:
             self.a["sahip"] = kim
             a = oku(AYAR, {}); a["sahip"] = kim; yaz(AYAR, a)
-            return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /test /dur /devam")
+            return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /test /tanitim /yayinla /dur /devam")
         if t in ("/start", "/yardim", "/help"):
             return self.tg.gonder(sohbet, "👋 Merhaba! Kamu personel alımlarını ve memur gündemini takip ediyorum.\n\n/ilanlar – son kamu ilanları\n/yaklasan – son başvurusu yaklaşanlar\n/haberler – memur gündemi\n/uygulama – Memur Rehberi uygulaması", self.dugme())
         if t == "/ilanlar":
@@ -339,6 +342,29 @@ class Bot:
         if sahip and t == "/devam":
             self.d["duraklat"] = False; self.kaydet()
             return self.tg.gonder(sohbet, "▶️ Kanala gönderim sürüyor.")
+        if sahip and t == "/tanitim":
+            m = ("📢 <b>Memur Alımları – Güncel İlanlar</b>\n\n"
+                 "Bu kanalda her gün:\n"
+                 "🏛️ Yeni kamu personel alım ilanları (ilan.gov.tr)\n"
+                 "⏳ Son başvurusu yaklaşan ilanlar\n"
+                 "📰 Memur maaş, mevzuat ve gündem haberleri\n"
+                 "🌙 Her akşam günün özeti\n\n"
+                 "Bildirimleri açmayı unutma 🔔\n\n"
+                 "📲 İlanları il ve mesleğe göre filtrelemek, son gün hatırlatması almak, maaş ve izin hesaplamak için <b>Memur Rehberi</b> uygulamasını indir.")
+            self.d["kuyruk"].insert(0, {"tur": "tanitim", "metin": m, "zorla": True}); self.d["son_kanal"] = 0; self.kaydet()
+            return self.tg.gonder(sohbet, "Tanıtım mesajı kanala gönderiliyor. Kanalda mesaja uzun basıp <b>Sabitle</b> de.")
+        if sahip and t == "/yayinla":
+            try:
+                n = max(1, min(40, int((msj.get("text") or "").split()[1])))
+            except Exception:
+                n = 15
+            bugun = simdi().date().isoformat()
+            aday = [x for x in il if x.get("c") == "kamu" and ((x.get("sb") or "") >= bugun or (not x.get("sb") and x.get("d", "") >= (simdi().date() - timedelta(days=10)).isoformat()))]
+            aday.sort(key=lambda x: (x.get("sb") or "9999", x.get("d", "")))
+            for x in aday[:n]:
+                self.d["kuyruk"].append({"tur": "ilan", "metin": ilan_metni(x, "📌 <b>Başvurusu devam eden ilan</b>"), "zorla": True})
+            self.kaydet()
+            return self.tg.gonder(sohbet, f"📤 Başvurusu açık {min(n, len(aday))} kamu ilanı (toplam {len(aday)}) kuyruğa eklendi; dakikada bir kanala gidecek. Daha fazlası için: /yayinla 30")
         if sahip and t == "/test":
             try:
                 self.tg.gonder(self.a["kanal"], "✅ Test mesajı: bot bu kanala yazabiliyor.", self.dugme())
