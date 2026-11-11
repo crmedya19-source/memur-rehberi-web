@@ -303,6 +303,35 @@ class Bot:
         self.kaydet()
         return None
 
+    def paylasim_metni(self):
+        """WhatsApp/Facebook'a yapıştırmaya hazır düz metin: bugünün ya da yaklaşan ilanlar + kanal linki."""
+        il = [x for x in self.son_veri["ilan"] if not x.get("x") and x.get("c") == "kamu"]
+        bugun = simdi().date().isoformat()
+        yeni = sorted([x for x in il if x.get("d") == bugun], key=lambda x: x.get("sb") or "9999")
+        if len(yeni) < 3:
+            yeni += sorted([x for x in il if x.get("d", "") >= (simdi().date() - timedelta(days=3)).isoformat() and x not in yeni], key=lambda x: x.get("d", ""), reverse=True)
+        yak = sorted([x for x in il if x.get("sb") and 0 <= (kalan_gun(x["sb"]) or -1) <= 5 and x not in yeni[:6]], key=lambda x: x["sb"])
+        kanal = str(self.a["kanal"]).lstrip("@")
+        sat = [f"🏛️ GÜNCEL KAMU PERSONEL ALIMLARI ({tarih_tr(bugun)})", ""]
+        for x in yeni[:6]:
+            sat.append("• " + str(x.get("t"))[:100] + (f" – son başvuru {tarih_tr(x['sb'])}" if x.get("sb") else ""))
+        if yak[:4]:
+            sat += ["", "⏳ Son başvurusu yaklaşanlar:"]
+            for x in yak[:4]:
+                k = kalan_gun(x["sb"])
+                sat.append("• " + str(x.get("t"))[:90] + (" – BUGÜN SON GÜN" if k == 0 else f" – {k} gün kaldı"))
+        sat += ["", "Tüm kamu ilanları ve son başvuru tarihleri her gün ücretsiz Telegram kanalımızda 👇", f"t.me/{kanal}", "", "#kpss #memuralımı #kamuilanları"]
+        return "\n".join(sat)
+
+    def paylasim_gonder(self):
+        if not self.sahip_id():
+            return
+        try:
+            self.tg.cagir("sendMessage", {"chat_id": self.sahip_id(), "text": "📋 Bugünün paylaşım metni hazır. Aşağıdaki mesaja uzun bas → Kopyala, sonra WhatsApp durumuna, gruplara ya da Facebook'a yapıştır."})
+            self.tg.cagir("sendMessage", {"chat_id": self.sahip_id(), "text": self.paylasim_metni(), "link_preview_options": {"is_disabled": True}})
+        except Exception as ex:
+            log("Paylaşım metni gönderilemedi:", ex)
+
     def ozet(self):
         if self.a["ozet_saat"] < 0 or self.d["duraklat"]:
             return
@@ -327,6 +356,7 @@ class Bot:
         if self.reklam():
             m += ["", "📲 Tüm ilanlar, il/meslek filtresi ve son gün hatırlatması: <b>Memur Rehberi</b>"]
         self.d["kuyruk"].insert(0, {"tur": "ozet", "metin": "\n".join(m)})
+        self.paylasim_gonder()
         self.d["son_kanal"] = 0
         self.kaydet()
 
@@ -365,7 +395,7 @@ class Bot:
         il = [x for x in self.son_veri["ilan"] if not x.get("x")]
         if t == "/sahip" and not self.sahip_id():
             self.sahip_yaz(kim)
-            return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /test /kanal /link /tanitim /yayinla /dur /devam")
+            return self.tg.gonder(sohbet, "✅ Artık botun sahibisin. Komutlar: /durum /paylas /test /kanal /link /tanitim /yayinla /dur /devam")
         if t in ("/start", "/yardim", "/help"):
             return self.tg.gonder(sohbet, "👋 Merhaba! Kamu personel alımlarını ve memur gündemini takip ediyorum.\n\n/ilanlar – son kamu ilanları\n/yaklasan – son başvurusu yaklaşanlar\n/haberler – memur gündemi" + ("\n/uygulama – Memur Rehberi uygulaması" if self.reklam() else ""), self.dugme())
         if t == "/ilanlar":
@@ -412,6 +442,8 @@ class Bot:
                 self.d["kuyruk"].append({"tur": "ilan", "metin": ilan_metni(x, "📌 <b>Başvurusu devam eden ilan</b>", self.reklam()), "zorla": True})
             self.kaydet()
             return self.tg.gonder(sohbet, f"📤 Başvurusu açık {min(n, len(aday))} kamu ilanı (toplam {len(aday)}) kuyruğa eklendi; " + ("botun bir sonraki çalışmalarında kanala gidecek (her çalışmada 10 ilan)." if GH else "dakikada bir kanala gidecek.") + " Daha fazlası için: /yayinla 30")
+        if sahip and t == "/paylas":
+            return self.paylasim_gonder()
         if sahip and t == "/kanal":
             parca = (msj.get("text") or "").split()
             if len(parca) < 2:
