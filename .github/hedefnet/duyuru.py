@@ -15,7 +15,7 @@ def api(m,u,b=None):
         except Exception: return e.code, {}
 DB=f"https://firestore.googleapis.com/v1/projects/{P}/databases/(default)/documents"
 def sv(v): return v.get("stringValue") or v.get("timestampValue") or ""
-sinif=gonder=hata=0; tok=None; esik=datetime.now(timezone.utc)-timedelta(hours=6)
+sinif=gonder=hata=dsinif=yeniS=0; tok=None; esik=datetime.now(timezone.utc)-timedelta(hours=6)
 while True:
     u=DB+"/hn_sinif?pageSize=300&mask.fieldPaths=duyurular&mask.fieldPaths=pushSon&mask.fieldPaths=ad"+(f"&pageToken={tok}" if tok else "")
     s,j=api("GET",u)
@@ -24,11 +24,13 @@ while True:
         sinif+=1; f=d.get("fields",{}); sid=d["name"].split("/")[-1]
         du=[x.get("mapValue",{}).get("fields",{}) for x in f.get("duyurular",{}).get("arrayValue",{}).get("values",[])]
         if not du: continue
+        dsinif+=1
         son=sv(f.get("pushSon",{}))
         # pushSon'dan sonra gelenler; ilk çalışmada yalnızca son 6 saattekiler (eski duyurular için bildirim yağmasın)
         ids=[sv(x.get("id",{})) for x in du]
         yeni=du[ids.index(son)+1:] if son in ids else [x for x in du if sv(x.get("tarih",{})) and datetime.fromisoformat(sv(x["tarih"]).replace("Z","+00:00"))>esik]
         ad=sv(f.get("ad",{}))[:40] or "Sınıf"
+        yeniS+=len(yeni)
         for x in [y for y in yeni if not y.get("bildir",{}).get("booleanValue",True)==False][-3:]:
             msg={"message":{"topic":"hn_s_"+sid,"notification":{"title":"📢 "+ad,"body":sv(x.get("metin",{}))[:240]},
                  "android":{"priority":"high","notification":{"channel_id":"duyuru","icon":"ic_stat_icon","color":"#6C4CF5"}},"data":{"tip":"duyuru","sid":sid}}}
@@ -40,4 +42,4 @@ while True:
             if s3!=200: hata+=1; print("işaret hatası", s3)
     tok=j.get("nextPageToken")
     if not tok: break
-print(f"sınıf {sinif} · bildirim {gonder} · hata {hata}")
+print(f"sınıf {sinif} · duyurulu {dsinif} · yeni duyuru {yeniS} · bildirim {gonder} · hata {hata}")
