@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
+    inputs:
+      veli_deneme:
+        description: 'Veli özetini göndermeden say (deneme)'
+        type: boolean
+        default: false
 concurrency: { group: hedefnet-duyuru, cancel-in-progress: false }
 jobs:
   gonder:
@@ -14,4 +19,5 @@ jobs:
       - run: pip install -q google-auth requests
       - env:
           FCM_SERVICE_ACCOUNT: ${{ secrets.FCM_SERVICE_ACCOUNT }}
+          VELI_DENEME: ${{ inputs.veli_deneme && '1' || '' }}
         run: python .github/hedefnet/duyuru.py

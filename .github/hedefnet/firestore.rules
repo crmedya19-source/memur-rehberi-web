@@ -64,6 +64,22 @@ service cloud.firestore {
           && request.resource.data.takma is string && request.resource.data.takma.size() <= 24;
         allow delete: if signed() && (me() == uid || ogretmenMi(sid));
       }
+      // Görevler: öğretmen verir; öğrenci yalnızca kendi tamamlama kaydını yazar, kaydı öğretmen ve öğrencinin kendisi görür
+      match /gorev/{gid} {
+        allow read: if signed() && (uye(sid) || ogretmenMi(sid));
+        allow create, update: if signed() && ogretmenMi(sid)
+          && request.resource.data.baslik is string && request.resource.data.baslik.size() <= 60
+          && request.resource.data.get('aciklama', '').size() <= 300;
+        allow delete: if signed() && ogretmenMi(sid);
+        match /yapan/{uid} {
+          allow read: if signed() && (me() == uid || ogretmenMi(sid));
+          allow create, update: if signed() && me() == uid && uye(sid)
+            && request.resource.data.keys().hasOnly(['ad','durum','miktar','tarih'])
+            && request.resource.data.ad is string && request.resource.data.ad.size() <= 40
+            && request.resource.data.durum == 'tamam';
+          allow delete: if signed() && (me() == uid || ogretmenMi(sid));
+        }
+      }
       // Ortak deneme: öğretmen tanımlar, öğrenci kendi sonucunu takma adla girer
       match /deneme/{did} {
         allow read: if signed() && (uye(sid) || ogretmenMi(sid));

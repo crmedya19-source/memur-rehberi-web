@@ -43,3 +43,60 @@ while True:
     tok=j.get("nextPageToken")
     if not tok: break
 print(f"sınıf {sinif} · duyurulu {dsinif} · yeni duyuru {yeniS} · bildirim {gonder} · hata {hata}")
+
+# ---------------- Haftalık veli özeti (pazar 19:00 sonrası, haftada bir) ----------------
+TR=timezone(timedelta(hours=3))
+simdi=datetime.now(TR)
+DENEME = os.environ.get("VELI_DENEME") == "1"   # elle deneme: gönderme, yalnızca say
+if (simdi.weekday()==6 and simdi.hour>=19) or DENEME:
+    pazartesi=(simdi.date()-timedelta(days=simdi.weekday())).isoformat()
+    def num(v): return v.get("integerValue") or v.get("doubleValue") or 0
+    def mp(v): return (v or {}).get("mapValue",{}).get("fields",{})
+    def arr(v): return (v or {}).get("arrayValue",{}).get("values",[])
+    def dkyaz(dk):
+        dk=int(round(float(dk or 0))); return f"{dk//60} sa {dk%60} dk" if dk>=60 else f"{dk} dk"
+    def netfmt(x): return (f"{x:.2f}".rstrip("0").rstrip(".")).replace(".",",")
+    ogr=gonderV=atla=hataV=0; tok=None
+    alan="&".join("mask.fieldPaths="+f for f in ["ad","ozet","denemeler","veliler","konuOz","gorevOz","veliRaporHafta"])
+    while True:
+        s,j=api("GET",DB+"/hn_ogrenci?pageSize=200&"+alan+(f"&pageToken={tok}" if tok else ""))
+        if s!=200: print("öğrenci listesi hatası", s); break
+        for d in j.get("documents",[]):
+            f=d.get("fields",{}); uid=d["name"].split("/")[-1]
+            if not arr(f.get("veliler")): continue
+            ogr+=1
+            if sv(f.get("veliRaporHafta",{}))==pazartesi and not DENEME: atla+=1; continue
+            ad=(sv(f.get("ad",{})) or "Öğrenciniz").split(" ")[0][:20]
+            oz=mp(f.get("ozet")); hf=mp(oz.get("hf"))
+            bu = sv(hf.get("h",{}))==pazartesi
+            dk=float(num(hf.get("dk",{}))) if bu else 0; soru=int(float(num(hf.get("soru",{})))) if bu else 0
+            dn=[mp(x) for x in arr(f.get("denemeler"))]
+            def toplam(x): return sum(float(num(v)) for v in mp(x.get("n")).values())
+            bu_dn=[x for x in dn if sv(x.get("d",{}))>=pazartesi]
+            parca=[]
+            if dk or soru: parca.append(f"{dkyaz(dk)} odak, {soru} soru")
+            if bu_dn:
+                x=bu_dn[0]; tur=sv(x.get("t",{})) or "TYT"; t=toplam(x)
+                onceki=[y for y in dn if sv(y.get("t",{}))==tur and sv(y.get("d",{}))<sv(x.get("d",{}))]
+                fark=f" ({'+' if t-toplam(onceki[0])>=0 else ''}{netfmt(t-toplam(onceki[0]))})" if onceki else ""
+                parca.append(f"{len(bu_dn)} deneme, son {tur} {netfmt(t)} net{fark}")
+            gr=[mp(x) for x in arr(f.get("gorevOz"))]
+            if gr: parca.append(f"görev {sum(1 for g in gr if int(float(num(g.get('t',{})) or 0)))}/{len(gr)}")
+            kron=""
+            for k in arr(f.get("konuOz")):
+                p=sv(k).split("\t")
+                if len(p)>=8:
+                    N,D,gor,kay=float(p[3] or 0),float(p[4] or 0),int(float(p[6] or 0)),int(float(p[7] or 0))
+                    if N and gor>=3 and kay>=-(-gor*2//3) and D/N<0.7 and not (D==0 and float(p[5] or 0)==0): kron=p[1][:40]; break
+            govde=("Bu hafta: "+", ".join(parca)+"." if parca else "Bu hafta Hedef Net'te çalışma kaydı görünmüyor.")+(f" Takıldığı konu: {kron}." if kron else "")+" Ayrıntılar için dokunun."
+            if DENEME: gonderV+=1; continue
+            msg={"message":{"topic":"hn_v_"+uid,"notification":{"title":f"📊 {ad} – haftalık özet","body":govde[:240]},
+                 "android":{"notification":{"channel_id":"veli","icon":"ic_stat_icon","color":"#6C4CF5"}},"data":{"tip":"veli"}}}
+            s2,j2=api("POST",f"https://fcm.googleapis.com/v1/projects/{P}/messages:send",msg)
+            if s2==200:
+                gonderV+=1
+                api("PATCH",f"{DB}/hn_ogrenci/{uid}?updateMask.fieldPaths=veliRaporHafta",{"fields":{"veliRaporHafta":{"stringValue":pazartesi}}})
+            else: hataV+=1; print("veli bildirimi hatası", s2, (j2.get("error") or {}).get("status",""))
+        tok=j.get("nextPageToken")
+        if not tok: break
+    print(f"veli özeti{' (DENEME, gönderilmedi)' if DENEME else ''}: velili öğrenci {ogr} · gönderilen {gonderV} · bu hafta zaten {atla} · hata {hataV}")
