@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-11",
+"updated": "2026-11-12",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -1264,19 +1264,6 @@
 "x": 0
 },
 {
-"id": "2271489",
-"t": "Burdur Mehmet Akif Ersoy Üniversitesi Sözleşmeli Bilişim Personeli Alım İlanı",
-"k": "BURDUR M.AKİF ERSOY ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "BURDUR",
-"d": "2026-10-28",
-"sb": "2026-11-20",
-"bb": "2026-11-16",
-"u": "https://www.ilan.gov.tr/ilan/2271489/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-burdur-mehmet-akif-ersoy-universitesi-sozlesmeli-bilisim-personeli-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
 "id": "2271463",
 "t": "Elazığ İl Özel İdaresi Sözleşmeli Personel Alım İlanı",
 "k": "ELAZIĞ İL ÖZEL İDARESİ",
@@ -1290,19 +1277,6 @@
 "x": 0
 },
 {
-"id": "2271454",
-"t": "İptal İlanı (Alanya Alaaddin Keykubat Üniversitesi Rektörlüğünden)",
-"k": "ALANYA ALAADDİN KEYKUBAT ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ANTALYA",
-"d": "2026-10-28",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2271454/kamu-akademik-personel-akademik-personel-alimlari-iptal-ilani-alanya%C2%A0alaaddin%C2%A0keykubat%C2%A0universitesi%C2%A0rektorlugunden-",
-"c": "akademik",
-"p": "",
-"x": 1
-},
-{
 "id": "2271453",
 "t": "Yeditepe Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
 "k": "YEDİTEPE ÜNİVERSİTESİ REKTÖRLÜĞÜ",
@@ -1311,32 +1285,6 @@
 "sb": "2026-11-12",
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2271453/kamu-akademik-personel-akademik-personel-alimlari-yeditepe%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2271452",
-"t": "İstinye Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "İSTİNYE ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-10-28",
-"sb": "2026-11-11",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2271452/kamu-akademik-personel-akademik-personel-alimlari-istinye-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2271445",
-"t": "İstinye Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "İSTİNYE ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-10-28",
-"sb": "2026-11-11",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2271445/kamu-akademik-personel-akademik-personel-alimlari-istinye-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
 "c": "akademik",
 "p": "",
 "x": 0
