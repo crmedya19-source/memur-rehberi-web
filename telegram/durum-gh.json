@@ -155,21 +155,24 @@
    "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNZHJmY084cE9wNTZGS1dKTy1CdXh0NjcxTC05VTFXYl94bXZEUDZfZURvRXVlQ19YSGd4NTlxRVdacWhkMFpxMG1vUkl3YWlhMnJnMlhQajRRdXdnUEphVy01a3BPc1FEcjZiVjQ1d193TUJGbW1sLTBsTzl4S1g4cDEteFEtcWNKVG9JWUltaGtiUndsY2toNHdzRXRvdGZXTU9sUV9yNXdPZk9ycENRcVBDWEROQURfMUdNS3dFNGxhVkJObjlITDZtd0dFclBKdWxueGxwNnpiMTIxSkhFbTdPbFg3THFmWjZZ?oc=5",
    "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZUpGUjdScDYzSHFhRlJDRFhpYnVMT2MxREs2UU1oVmlrbTZlVUZZOEpfZms3VDBPUlMydlpHOVNRS01hN1ZUQ2lCODFxYkNsVlBnSWhHVWxNMGZWYjN5T0QwTF9lUGJzeGVRUEZLV2VHS3hMYlhBSUplRkF1RjI0UkxDTHlEcjBxNlVuYXU1amdJWmxaTmY4UktPRHJVWGlkR0swNFVvTXEwMXItVFRyR3I4NTc?oc=5",
    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbjlrYlBzVUpXVmlUOTFQMGYtNHpaZlJ6VEtzX3B1ME5HSjc2Szk5dFp3QlJaVDRyclptVlpyNUh6M0ktV0s4MGE4bnhyZlFDN2lnMVRKbWpZU1F5Y21RSzdVQm5yMGNFOXpQa1BNYkxOVHdmblM2Q01IOEcxVjFQcnZJMHh5VmlzT2tlUVB1Ym1HYnhKNlJpUkNJYm5GTXJvRUNVcEN4UjFWNmVT0gG0AUFVX3lxTFB2ekNOOE1zRjAxNG5lWnROWVZCMjBwV3B4WWkwaUNUbnVGSDZtM2dDMmViLTNTa1UtQ1dRejJDb0Z1S0JZZm1QM09EcXFRNWMwMGNxWkttS1Vib1JUemZUZWllQ0JOYXA1ZTc5NG9Md253dFdqMFhOdGlpMnJ0Z2xNUGpKWmJRTnYtSnQzOU1zUEtUaThGZFBIU0Z3Q3lFb2NDTVFENmh5ZGFMbWp4ZjRLeDZRNQ?oc=5",
-   "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMlYtME1GMkthc2h0b3dMZUJGRG1mRVhyTHpBSm1YMWg5TUdNaEU1RktTQ0RQMmdDZkt1cGp2a093Q3l1aHlhbFlXWXNZcFNIRndjUC1fT2ViYjdzU3o2NjJaRUVQbXE4ZEpRRWJQVHFlTjJfQ0huNmFmMk9Kai1ONENrcnNyQVdTRV9Kb0FZM0VnMjlQRE80WUN1QzdPZlQ5dTJRSThvVk5ybFk4QWFOZm1feTVUM00?oc=5"
+   "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMlYtME1GMkthc2h0b3dMZUJGRG1mRVhyTHpBSm1YMWg5TUdNaEU1RktTQ0RQMmdDZkt1cGp2a093Q3l1aHlhbFlXWXNZcFNIRndjUC1fT2ViYjdzU3o2NjJaRUVQbXE4ZEpRRWJQVHFlTjJfQ0huNmFmMk9Kai1ONENrcnNyQVdTRV9Kb0FZM0VnMjlQRE80WUN1QzdPZlQ5dTJRSThvVk5ybFk4QWFOZm1feTVUM00?oc=5",
+   "https://www.memurlar.net/haber/1183900/merkez-bankasi-nin-yeni-tahmini-memur-ve-emekli-zammini-dusuruyor.html",
+   "https://www.forbes.com.tr/ekonomi/tcmb-den-2026-nin-son-raporu-enflasyon-tahminleri-yukseltildi",
+   "https://www.memurlar.net/haber/1183924/antalya-valiligi-duyurdu-kamuda-idari-izin-bir-gun-daha-uzatildi.html"
   ]
  },
  "kuyruk": [],
  "offset": 575918230,
  "gun": {
   "t": "2026-11-12",
-  "gonderilen": 8,
+  "gonderilen": 12,
   "kamu": 1,
   "akademik": 5,
-  "haber": 7,
-  "ozet": false
+  "haber": 10,
+  "ozet": true
  },
  "duraklat": false,
- "son_kanal": 0,
- "son_calisma": "2026-11-12T19:54+03:00",
+ "son_kanal": 1794505630.5927978,
+ "son_calisma": "2026-11-12T20:47+03:00",
  "sahip_x": "374577208810919338"
 }
