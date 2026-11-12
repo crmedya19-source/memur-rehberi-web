@@ -170,15 +170,15 @@
  ],
  "offset": 575918230,
  "gun": {
-  "t": "2026-11-12",
-  "gonderilen": 12,
-  "kamu": 1,
-  "akademik": 5,
-  "haber": 11,
-  "ozet": true
+  "t": "2026-11-13",
+  "gonderilen": 0,
+  "kamu": 0,
+  "akademik": 0,
+  "haber": 0,
+  "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-12T23:31+03:00",
+ "son_calisma": "2026-11-13T00:28+03:00",
  "sahip_x": "374577208810919338"
 }
