@@ -146,20 +146,11 @@
    "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ3UxOC1HOXBTRUZIbUxoUUlzQ0U0TFk5LVh0UkdhR21UanpkZ2ZXdi1zOTBJbkpxRXBFc3dhM3NUWUhTXzZLNjQ2TWdqMTc0R2xydTBEQTVEdVROYk9PWlliOWFaaExJQWprMUxVTXJMTmFaY1NuOFB2QTlEelk3NVpkQms0UExPQlk0MjJ5M3BQRXlNd0g4?oc=5"
   ]
  },
- "kuyruk": [
-  {
-   "tur": "haber",
-   "metin": "📰 <b>Öğretmenlerin Kasım Ara Tatil Seminerleri ÖBA Üzerinden Yapılacak</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPVklHM3EzUExnMEtZLVhCSUZ1SFFrRGlmUml2bTYyd3RTT3ZaUnJKSE1CemI1cDJWQWVRdkNCUmk1VkV1cGw3dzAxMlRKNjJKV0hUMk1zcEVydEU3RkhpSzZ0Smx4a2x0MjlxZzlNN2ZyY05FUHhiRlA0SUpVWVNjOWdweEtzRlRidENHOHhUNjZkbVA0S1lFeDd3?oc=5\">Haberin devamı</a> · Kamudanhaber"
-  },
-  {
-   "tur": "haber",
-   "metin": "📰 <b>Memur-Sen'den Gazze’deki çocuklar için çağrı</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ3UxOC1HOXBTRUZIbUxoUUlzQ0U0TFk5LVh0UkdhR21UanpkZ2ZXdi1zOTBJbkpxRXBFc3dhM3NUWUhTXzZLNjQ2TWdqMTc0R2xydTBEQTVEdVROYk9PWlliOWFaaExJQWprMUxVTXJMTmFaY1NuOFB2QTlEelk3NVpkQms0UExPQlk0MjJ5M3BQRXlNd0g4?oc=5\">Haberin devamı</a> · Türkiye Gazetesi"
-  }
- ],
+ "kuyruk": [],
  "offset": 575918230,
  "gun": {
   "t": "2026-11-12",
-  "gonderilen": 0,
+  "gonderilen": 2,
   "kamu": 0,
   "akademik": 0,
   "haber": 2,
@@ -167,6 +158,6 @@
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-12T07:39+03:00",
+ "son_calisma": "2026-11-12T08:43+03:00",
  "sahip_x": "374577208810919338"
 }
