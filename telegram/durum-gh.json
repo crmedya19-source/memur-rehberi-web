@@ -158,21 +158,27 @@
    "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMlYtME1GMkthc2h0b3dMZUJGRG1mRVhyTHpBSm1YMWg5TUdNaEU1RktTQ0RQMmdDZkt1cGp2a093Q3l1aHlhbFlXWXNZcFNIRndjUC1fT2ViYjdzU3o2NjJaRUVQbXE4ZEpRRWJQVHFlTjJfQ0huNmFmMk9Kai1ONENrcnNyQVdTRV9Kb0FZM0VnMjlQRE80WUN1QzdPZlQ5dTJRSThvVk5ybFk4QWFOZm1feTVUM00?oc=5",
    "https://www.memurlar.net/haber/1183900/merkez-bankasi-nin-yeni-tahmini-memur-ve-emekli-zammini-dusuruyor.html",
    "https://www.forbes.com.tr/ekonomi/tcmb-den-2026-nin-son-raporu-enflasyon-tahminleri-yukseltildi",
-   "https://www.memurlar.net/haber/1183924/antalya-valiligi-duyurdu-kamuda-idari-izin-bir-gun-daha-uzatildi.html"
+   "https://www.memurlar.net/haber/1183924/antalya-valiligi-duyurdu-kamuda-idari-izin-bir-gun-daha-uzatildi.html",
+   "https://news.google.com/rss/articles/CBMioAFBVV95cUxOQ2I3ejB6UnBqcWM2QTR1LU53MGhmSEx2dUlrdzJ6MTNpNFRsOXdJVjh5SVllTHd1ckRfcXl5a01lN1EzMXkyZlFzeS1ZS3V5Q29xajVYQ05yZkxEVTFaNC03Z0RpYlhscExBUFduZWo0RUJVVG16ZlhBajFWc09wMENncWxNeVJFSEFKVTZMM09VTW1xaTA2aXBJa19lcHg4?oc=5"
   ]
  },
- "kuyruk": [],
+ "kuyruk": [
+  {
+   "tur": "haber",
+   "metin": "📰 <b>MEB Mazeret Sınavları Takvimini Duyurdu! İşte 1. Sınav Mazeret Tarihleri</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOQ2I3ejB6UnBqcWM2QTR1LU53MGhmSEx2dUlrdzJ6MTNpNFRsOXdJVjh5SVllTHd1ckRfcXl5a01lN1EzMXkyZlFzeS1ZS3V5Q29xajVYQ05yZkxEVTFaNC03Z0RpYlhscExBUFduZWo0RUJVVG16ZlhBajFWc09wMENncWxNeVJFSEFKVTZMM09VTW1xaTA2aXBJa19lcHg4?oc=5\">Haberin devamı</a> · Kamudanhaber"
+  }
+ ],
  "offset": 575918230,
  "gun": {
   "t": "2026-11-12",
   "gonderilen": 12,
   "kamu": 1,
   "akademik": 5,
-  "haber": 10,
+  "haber": 11,
   "ozet": true
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-12T22:40+03:00",
+ "son_calisma": "2026-11-12T23:31+03:00",
  "sahip_x": "374577208810919338"
 }
