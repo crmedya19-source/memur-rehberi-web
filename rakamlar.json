@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-13",
  "donem": "Temmuz–Aralık 2026",
  "k": 1.575512,
  "nobet": [250.17, 226.72, 203.26, 156.36, 132.9, 101.63, 134.3, 114.15, 87.29],
@@ -8,8 +8,8 @@
   "tis": 5,
   "onceki": 7,
   "gercek": [["Temmuz", 1.78], ["Ağustos", 1.84], ["Eylül", 1.84], ["Ekim", 2.58]],
-  "bek": [["Kasım", 1.18], ["Aralık", 0.97]],
-  "bkay": "TCMB Piyasa Katılımcıları Anketi (Ekim 2026)"
+  "bek": [["Kasım", 1.09], ["Aralık", 0.84]],
+  "bkay": "TCMB Piyasa Katılımcıları Anketi (Kasım 2026)"
  },
  "_aciklama": "Uygulama bu dosyayı okur. k: memur aylık katsayısı. nobet: Nöbet sekmesindeki 9 unvanın saatlik brüt ücreti (sıra değişmez). zam.gercek + zam.bek toplam 6 ay olmalı; TÜİK bir ayı açıklayınca o ayı bek'ten gercek'e taşı. updated tarihini her değişiklikte ilerlet."
 }
