@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-13",
+"updated": "2026-11-14",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -11,32 +11,6 @@
 "sb": "",
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2290071/kamu-akademik-personel-akademik-personel-alimlari-iptal-ilani-erzurum-teknik-universitesi-rektorlugu-",
-"c": "akademik",
-"p": "",
-"x": 1
-},
-{
-"id": "2290061",
-"t": "İptal İlanı (Kayseri Üniversitesi Rektörlüğü)",
-"k": "KAYSERİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "KAYSERİ",
-"d": "2026-11-13",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2290061/kamu-akademik-personel-akademik-personel-alimlari-iptal-ilani-kayseri-universitesi-rektorlugu-",
-"c": "akademik",
-"p": "",
-"x": 1
-},
-{
-"id": "2290060",
-"t": "İptal İlanı (Kayseri Üniversitesi Rektörlüğü)",
-"k": "KAYSERİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "KAYSERİ",
-"d": "2026-11-13",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2290060/kamu-akademik-personel-akademik-personel-alimlari-iptal-ilani-kayseri-universitesi-rektorlugu-",
 "c": "akademik",
 "p": "",
 "x": 1
@@ -939,19 +913,6 @@
 "x": 0
 },
 {
-"id": "2280926",
-"t": "İptal İlanı (Bakırçay Üniversitesi Rektörlüğü)",
-"k": "İZMİR BAKIRÇAY ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İZMİR",
-"d": "2026-11-06",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2280926/kamu-akademik-personel-akademik-personel-alimlari-iptal-ilani-bakircay-universitesi-rektorlugu-",
-"c": "akademik",
-"p": "",
-"x": 1
-},
-{
 "id": "2276025",
 "t": "Müfettiş Yardımcılığı Giriş Sınavı Duyurusu",
 "k": "KOCAELİ BÜYÜKŞEHİR BELEDİYESİ İSU GENEL MÜDÜRLÜĞÜ",
@@ -1251,19 +1212,6 @@
 "x": 0
 },
 {
-"id": "2270609",
-"t": "Proje Teknik Elemanı Alınacak",
-"k": "MERSİN İLİ DAMIZLIK KOYUN-KEÇİ YETİŞTİRİCİLERİ BİRLİĞİ",
-"il": "MERSİN",
-"d": "2026-11-02",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2270609/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-proje%C2%A0teknik-elemani-alinacak",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
 "id": "2274518",
 "t": "Gaziosmanpaşa Belediye Başkanlığı Zabıta Memuru Alım İlanı",
 "k": "GAZİOSMANPAŞA BELEDİYE BAŞKANLIĞI",
@@ -1342,45 +1290,6 @@
 "x": 0
 },
 {
-"id": "2272947",
-"t": "Beykent Üniversitesi (Düzeltme İlanı)",
-"k": "İSTANBUL BEYKENT ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-10-30",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272947/kamu-akademik-personel-akademik-personel-alimlari-beykent-universitesi-duzeltme-ilani-",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2272900",
-"t": "Kamu İhale Kurumu Kamu İhale Uzman Yardımcılığı Giriş Sınavı İlanı",
-"k": "KAMU İHALE KURUMU BAŞKANLIĞI (KİK)",
-"il": "ANKARA",
-"d": "2026-10-30",
-"sb": "2026-11-20",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272900/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-kamu-ihale-kurumu-kamu-ihale-uzman-yardimciligi-giris-sinavi-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2272871",
-"t": "Sağlık Bakanlığı 2026 Yılı 3. Dönem İlk Defa Ve Yeniden Atama Kurası İlanı",
-"k": "T.C. SAĞLIK BAKANLIĞI",
-"il": "ANKARA",
-"d": "2026-10-30",
-"sb": "2026-11-20",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272871/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-saglik-bakanligi-2026-yili-3-donem-ilk-defa-ve-yeniden-atama-kurasi-ilani",
-"c": "kamu",
-"p": "s",
-"x": 0
-},
-{
 "id": "2272810",
 "t": "Haliç Üniversitesi Rektörlüğünden Öğretim Görevlisi Alım İlanı",
 "k": "HALİÇ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
@@ -1402,58 +1311,6 @@
 "sb": "2026-11-16",
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2272804/kamu-akademik-personel-akademik-personel-alimlari-halic%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2272803",
-"t": "Gazi Üniversitesi Rektörlüğünden Öğretim Elemanı Alım İlanı",
-"k": "GAZİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ANKARA",
-"d": "2026-10-30",
-"sb": "2026-11-13",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272803/kamu-akademik-personel-akademik-personel-alimlari-gazi%C2%A0universitesi%C2%A0rektorlugunden-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2272799",
-"t": "Gazi Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "GAZİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ANKARA",
-"d": "2026-10-30",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272799/kamu-akademik-personel-akademik-personel-alimlari-gazi%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2272795",
-"t": "Batman Üniversitesi Rektörlüğünden Öğretim Görevlisi Alım İlanı",
-"k": "BATMAN ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "BATMAN",
-"d": "2026-10-30",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272795/kamu-akademik-personel-akademik-personel-alimlari-batman%C2%A0universitesi%C2%A0rektorlugunden-ogretim-gorevlisi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2272787",
-"t": "Batman Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "BATMAN ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "BATMAN",
-"d": "2026-10-30",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272787/kamu-akademik-personel-akademik-personel-alimlari-batman%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
 "c": "akademik",
 "p": "",
 "x": 0
@@ -1481,32 +1338,6 @@
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2272779/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-nukleer-duzenleme-kurumu-sozlesmeli-bilisim-personeli-alim-ilani",
 "c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2272756",
-"t": "Kayseri Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "KAYSERİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "KAYSERİ",
-"d": "2026-10-30",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272756/kamu-akademik-personel-akademik-personel-alimlari-kayseri-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2272751",
-"t": "Kayseri Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "KAYSERİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "KAYSERİ",
-"d": "2026-10-30",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272751/kamu-akademik-personel-akademik-personel-alimlari-kayseri-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
 "p": "",
 "x": 0
 },
@@ -1641,19 +1472,6 @@
 "x": 0
 },
 {
-"id": "2254593",
-"t": "Mevlana Kalkınma Ajansı Personel Alım İlanı",
-"k": "MEVLANA KALKINMA AJANSI GENEL SEKRETERLİĞİ",
-"il": "KONYA",
-"d": "2026-10-13",
-"sb": "2026-11-13",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2254593/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-mevlana-kalkinma-ajansi-personel-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
 "id": "2254568",
 "t": "Sarıidris Belediye Başkanlığı Zabıta Memuru Alım İlanı",
 "k": "SARIİDRİS BELEDİYE BAŞKANLIĞI",
@@ -1677,19 +1495,6 @@
 "u": "https://www.ilan.gov.tr/ilan/2252974/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-istanbul-kalkinma-ajansi-personel-alim-ilani",
 "c": "kamu",
 "p": "",
-"x": 0
-},
-{
-"id": "2242996",
-"t": "Şile Belediye Başkanlığı Memur Alım İlanı",
-"k": "ŞİLE BELEDİYE BAŞKANLIĞI",
-"il": "İSTANBUL",
-"d": "2026-10-02",
-"sb": "2026-11-13",
-"bb": "2026-11-09",
-"u": "https://www.ilan.gov.tr/ilan/2242996/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-sile-belediye-baskanligi-memur-alim-ilani",
-"c": "kamu",
-"p": "g",
 "x": 0
 }
 ]
