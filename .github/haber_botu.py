@@ -13,15 +13,16 @@ UA = {"User-Agent": "MemurRehberiHaberBotu/1.0 (+https://github.com/crmedya19-so
 def gnews(q):
     return "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": q + " when:2d", "hl": "tr", "gl": "TR", "ceid": "TR:tr"})
 
-FEEDS = [gnews(q) for q in ["memur", "memur maaş zam", "kamu personeli", "memurlara idari izin", "öğretmen MEB duyuru", "ek gösterge", "toplu sözleşme memur", "Resmi Gazete memur"]]
+FEEDS = [gnews(q) for q in ["memur", "memur maaş zam", "kamu personeli", "memurlara idari izin", "öğretmen MEB duyuru", "ek gösterge", "toplu sözleşme memur", "Resmi Gazete memur", "sözleşmeli personel", "4/B sözleşmeli", "Resmi Gazete kamu personeli"]]
 FEEDS += ["https://www.memurlar.net/rss/", "https://www.memurlar.net/rss/haber/"]
 
 KEY = ["memur", "kamu personel", "kamu çalışan", "kamu görevli", "ek gösterge", "toplu sözleşme", "idari izin", "enflasyon farkı",
        "maaş katsayı", "memur emekli", "öğretmen", "meb ", "sağlık personel", "polis", "infaz koruma", "zabıta", "din görevli", "imam",
-       "görevde yükselme", "657", "kadro", "ikramiye", "ek ödeme", "nöbet ücret", "fazla mesai", "yönetmelik"]
+       "görevde yükselme", "657", "kadro", "ikramiye", "ek ödeme", "nöbet ücret", "fazla mesai", "yönetmelik",
+       "sözleşmeli", "4/b", "4-b", "resmi gazete", "resmî gazete", "maaş", "hastalık izni", "yıllık izin", "disiplin cezası", "devlet memurları kanunu"]
 EXCL = ["alımı", "alacak", "alım ilan", "iş ilanı", "personel alım", "başvuru şart", "kpss tercih", "sözleşmeli personel alı", "burç", "fal",
         "gözaltı", "tutuklan", "cinayet", "kaza", "öldü", "hayatını kaybet", "operasyon", "rüşvet", "darp", "intihar", "maç", "bahis"]
-BIG = ["zam", "maaş", "ikramiye", "ek gösterge", "idari izin", "tatil", "enflasyon farkı", "katsayı", "toplu sözleşme", "bayram", "ek ödeme", "seyyanen"]
+BIG = ["sözleşmeli", "4/b", "esaslar", "devlet memurları kanunu", "zam", "maaş", "ikramiye", "ek gösterge", "idari izin", "tatil", "enflasyon farkı", "katsayı", "toplu sözleşme", "bayram", "ek ödeme", "seyyanen"]
 CAP_NOTIFY = 3
 TRUST = ["memurlar.net", "anadolu ajansı", "aa", "trt haber", "kamudanhaber", "ntv", "hürriyet", "sabah", "milliyet", "türkiye gazetesi",
          "yeni şafak", "sözcü", "cumhuriyet", "dha", "iha", "milli gazete", "bloomberg ht", "dünya", "ekonomim", "haberler.com", "cnn türk", "star"]
