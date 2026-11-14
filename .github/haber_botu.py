@@ -106,7 +106,7 @@ def main():
             if any(similar(x["t"], y["t"]) for y in shown): continue
             shown.append(x)
             dup = any(similar(x["t"], y["t"]) for y in items)
-            print(("  (var) " if dup else "  YENI  ") + x["dt"].strftime("%d.%m %H:%M") + " | " + x["src"] + " | " + x["t"] + (" | BILDIRIM" if any(k in x["t"].lower() for k in BIG) and any(k in x["t"].lower() for k in SURE) else ""))
+            print(("  (var) " if dup else "  YENI  ") + x["dt"].strftime("%d.%m %H:%M") + " | " + x["src"] + " | " + x["t"] + " | " + x["u"] + (" | BILDIRIM" if any(k in x["t"].lower() for k in BIG) and any(k in x["t"].lower() for k in SURE) else ""))
         return
     added = []
     for x in cand:
