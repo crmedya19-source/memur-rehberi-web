@@ -119,6 +119,7 @@ def main():
     json.dump(st, open(st_path, "w", encoding="utf-8"), ensure_ascii=False)
     if not added:
         print("Yeni haber yok."); return
+    eski = list(items)
     items = added + items
     items.sort(key=lambda x: x["d"], reverse=True)
     while len(items) > 20:
@@ -133,7 +134,11 @@ def main():
     for x in added:
         if st["bildirim"] >= CAP_NOTIFY: break
         l = x["t"].lower()
-        if any(k in l for k in BIG) and any(k in l for k in SURE):
+        kw = [k for k in BIG if k in l]
+        # Aynı gün aynı konuda zaten haber varsa ikinci kez bildirim atma
+        onceki = [y["t"].lower() for y in eski if y.get("d") == x["d"]]
+        if kw and any(k in t for k in kw for t in onceki): continue
+        if kw and any(k in l for k in SURE):
             tgt = {"topic": "haberler"} if not x["p"] else {"condition": " || ".join("'meslek_%s' in topics" % c for c in x["p"][:5])}
             msgs.append((tgt, "📰 " + bildirim.short(x["t"], 70), x["src"] + " · dokun ve oku"))
             st["bildirim"] += 1
