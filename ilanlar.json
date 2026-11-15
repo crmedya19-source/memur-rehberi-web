@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-14",
+"updated": "2026-11-15",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -297,19 +297,6 @@
 "sb": "",
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2285086/kamu-akademik-personel-akademik-personel-alimlari-bahcesehir-universitesi-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2285038",
-"t": "Düzeltme İlanı (Toros Üniversitesi Rektörlüğünden)",
-"k": "TOROS ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "MERSİN",
-"d": "2026-11-10",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2285038/kamu-akademik-personel-akademik-personel-alimlari-duzeltme-ilani-toros%C2%A0universitesi%C2%A0rektorlugunden-",
 "c": "akademik",
 "p": "",
 "x": 0
@@ -664,19 +651,6 @@
 "c": "kamu",
 "p": "g",
 "x": 0
-},
-{
-"id": "2283093",
-"t": "İptal İlanı (Eleşkirt Belediye Başkanlığı)",
-"k": "ELEŞKİRT BELEDİYE BAŞKANLIĞI",
-"il": "AĞRI",
-"d": "2026-11-07",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2283093/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-iptal-ilani-eleskirt-belediye-baskanligi-",
-"c": "kamu",
-"p": "g",
-"x": 1
 },
 {
 "id": "2283080",
@@ -1235,58 +1209,6 @@
 "u": "https://www.ilan.gov.tr/ilan/2274512/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-eyyubiye-belediye-baskanligi-zabita-memuru-alim-ilani",
 "c": "kamu",
 "p": "zg",
-"x": 0
-},
-{
-"id": "2274950",
-"t": "Toros Üniversitesi Öğretim Elemanı Alım İlanı",
-"k": "TOROS ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "MERSİN",
-"d": "2026-10-31",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2274950/kamu-akademik-personel-akademik-personel-alimlari-toros-universitesi-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2274715",
-"t": "Konya İli Karatay Belediye Başkanlığı Zabıta Memuru Alım İlanı",
-"k": "KARATAY BELEDİYE BAŞKANLIĞI",
-"il": "KONYA",
-"d": "2026-10-31",
-"sb": "2026-12-18",
-"bb": "2026-12-14",
-"u": "https://www.ilan.gov.tr/ilan/2274715/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-konya-ili-karatay-belediye-baskanligi-zabita-memuru-alim-ilani",
-"c": "kamu",
-"p": "zg",
-"x": 0
-},
-{
-"id": "2274583",
-"t": "İzmir İli Karşıyaka Belediye Başkanlığı Memur Alım İlanı",
-"k": "KARŞIYAKA BELEDİYE BAŞKANLIĞI",
-"il": "İZMİR",
-"d": "2026-10-31",
-"sb": "2026-12-02",
-"bb": "2026-11-30",
-"u": "https://www.ilan.gov.tr/ilan/2274583/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-izmir-ili-karsiyaka-belediye-baskanligi-memur-alim-ilani",
-"c": "kamu",
-"p": "g",
-"x": 0
-},
-{
-"id": "2274523",
-"t": "Bitlis Eren Üniversitesi Öğretim Üyesi Alım İlanı",
-"k": "BİTLİS EREN ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "BİTLİS",
-"d": "2026-10-31",
-"sb": "2026-11-14",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2274523/kamu-akademik-personel-akademik-personel-alimlari-bitlis-eren-universitesi-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
 "x": 0
 },
 {
