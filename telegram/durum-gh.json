@@ -211,21 +211,22 @@
    "https://www.resmigazete.gov.tr/",
    "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOUo1OFpOMjljb2k4ejduY3lJLWV4WHZtUncwOXRLaFZ5dkxnVkJyUXk3c2xOVGQyU05pY3RvcHgzUU8wdS1fTFc4WlcyN3BMdHVNclROaDRXbFg2V2VyakZ6ODJMRHRVd1UzYWdZd1pzU3lPdWtiX053TmUyS0FPdFdTbmdlS2lWcmN4LVU4WWVOejJSTTBNOThDSGNCV2oyY25MYWRxUGRaeGZW?oc=5",
    "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUFRjQVF1aEgwNkQ2TjlvUnc1SDZFSzhiTm13UjZQVXRaX1ZKN2MxbFlEVmoyaTZGak4tTm45ZHBGYzh1VERTM3RLanp6ZHE0Nzd5OWVwUXlBSWxpTmFnYmwtUDE5NG5vc3NWdWhXNEtrN2hzNE1oM3oxX0s5X0VSQ2lxZU5LOUZmRmx4Z1F5dHd2R1ZvWlJnMWhMZXk1YjctTE02T1hmcmU4QTlobDJIZS1ISHdWU2dsbGZ3YlFmcUN4VElUbGc?oc=5",
-   "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTDV0WEdqN195YVZjSXBRWU45eUxGYjNUd3pxdjBJRC1faklVTUhxbVVZUFpqSHBqWVJIVDdBZmpmZTdJdjYwMnBNdTE4ZmwyTUlUU2JWeExmdjV4UW1ScjVyX1Q2UzEteHJHVkxUeFJMbkw4b2t0Y1IyR1kxOHQwQmJhZE5CQUVheF90dUFn?oc=5"
+   "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTDV0WEdqN195YVZjSXBRWU45eUxGYjNUd3pxdjBJRC1faklVTUhxbVVZUFpqSHBqWVJIVDdBZmpmZTdJdjYwMnBNdTE4ZmwyTUlUU2JWeExmdjV4UW1ScjVyX1Q2UzEteHJHVkxUeFJMbkw4b2t0Y1IyR1kxOHQwQmJhZE5CQUVheF90dUFn?oc=5",
+   "https://www.aa.com.tr/tr/gundem/saglik-bakanliginin-2027-yili-butcesi-tbmm-plan-ve-butce-komisyonunda/4126267"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-16",
-  "gonderilen": 11,
+  "gonderilen": 13,
   "kamu": 5,
   "akademik": 3,
-  "haber": 6,
-  "ozet": false
+  "haber": 7,
+  "ozet": true
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-16T19:57+03:00",
+ "son_calisma": "2026-11-16T20:58+03:00",
  "sahip_x": "374577208810919338"
 }
