@@ -141,7 +141,8 @@
    "2292309",
    "2292280",
    "2292235",
-   "2290254"
+   "2290254",
+   "2292490"
   ],
   "haber": [
    "https://www.diyanetsen.org.tr/kitaplar/8donemkazanimlar.pdf",
@@ -211,27 +212,18 @@
    "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUFRjQVF1aEgwNkQ2TjlvUnc1SDZFSzhiTm13UjZQVXRaX1ZKN2MxbFlEVmoyaTZGak4tTm45ZHBGYzh1VERTM3RLanp6ZHE0Nzd5OWVwUXlBSWxpTmFnYmwtUDE5NG5vc3NWdWhXNEtrN2hzNE1oM3oxX0s5X0VSQ2lxZU5LOUZmRmx4Z1F5dHd2R1ZvWlJnMWhMZXk1YjctTE02T1hmcmU4QTlobDJIZS1ISHdWU2dsbGZ3YlFmcUN4VElUbGc?oc=5"
   ]
  },
- "kuyruk": [
-  {
-   "tur": "haber",
-   "metin": "📰 <b>MEB'den öğretmen, öğrenci ve velilere yeni uygulama! Sınav sonuçlarında yeni dönem</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPOUo1OFpOMjljb2k4ejduY3lJLWV4WHZtUncwOXRLaFZ5dkxnVkJyUXk3c2xOVGQyU05pY3RvcHgzUU8wdS1fTFc4WlcyN3BMdHVNclROaDRXbFg2V2VyakZ6ODJMRHRVd1UzYWdZd1pzU3lPdWtiX053TmUyS0FPdFdTbmdlS2lWcmN4LVU4WWVOejJSTTBNOThDSGNCV2oyY25MYWRxUGRaeGZW?oc=5\">Haberin devamı</a> · Kamudanhaber"
-  },
-  {
-   "tur": "haber",
-   "metin": "📰 <b>MEB duyurdu: Ortak Yazılı Sınav Sistemi'nde 'Analiz ve Raporlama' modülü erişime açıldı</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNUFRjQVF1aEgwNkQ2TjlvUnc1SDZFSzhiTm13UjZQVXRaX1ZKN2MxbFlEVmoyaTZGak4tTm45ZHBGYzh1VERTM3RLanp6ZHE0Nzd5OWVwUXlBSWxpTmFnYmwtUDE5NG5vc3NWdWhXNEtrN2hzNE1oM3oxX0s5X0VSQ2lxZU5LOUZmRmx4Z1F5dHd2R1ZvWlJnMWhMZXk1YjctTE02T1hmcmU4QTlobDJIZS1ISHdWU2dsbGZ3YlFmcUN4VElUbGc?oc=5\">Haberin devamı</a> · Hürriyet"
-  }
- ],
+ "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-16",
-  "gonderilen": 7,
-  "kamu": 4,
+  "gonderilen": 10,
+  "kamu": 5,
   "akademik": 2,
   "haber": 5,
   "ozet": false
  },
  "duraklat": false,
- "son_kanal": 1794822653.9370613,
- "son_calisma": "2026-11-16T12:50+03:00",
+ "son_kanal": 0,
+ "son_calisma": "2026-11-16T14:11+03:00",
  "sahip_x": "374577208810919338"
 }
