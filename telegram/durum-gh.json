@@ -135,7 +135,13 @@
    "2289989",
    "2289988",
    "2289986",
-   "2286929"
+   "2286929",
+   "2292392",
+   "2292344",
+   "2292309",
+   "2292280",
+   "2292235",
+   "2290254"
   ],
   "haber": [
    "https://www.diyanetsen.org.tr/kitaplar/8donemkazanimlar.pdf",
@@ -200,21 +206,32 @@
    "https://www.memurlar.net/haber/1184210/emekli-duzenlemesinde-yas-ve-prim-gunu-kriteri.html",
    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMm5WNTZ2ZnFtYkhIMGRhUjBZWm9hNkVlWnhWYWpVcVpaR3JLRE9QUDlFSGlvang5Rnl4aEstNzQ2QktiajkzMkEwU1VELWxvTHNHb1dibmE2MXc5dlVEZllqWExRV0NtLWlsenlsVHNJWmVnMDlhaTFwVlY2MnFJT0VoOVBPdS1TMjVlcmF5MlRNekIyVFhLajJvX01DWWNuNkNacmg1cDRQUnhFMFRRQ2pR0gG6AUFVX3lxTE5LUHZ6VVI4UEtPXzVsTFAxZnJEU0dUX2RteXFXNy1lSHNpS2t5ZU5zNjJDaHItMVRiOGZnVlEzVDFXWGNDa0Z5dlMtd29YSGEzLWxVZFZXZkpud2xSV2c5Qmprd2hQbnQ2eG8tSW5JMUJNNUd4dFE1MzQ1aWJzSWhDSVhfb0czXzdDbnNUck5xNW92dUQyMXBNblh4eTdEZk5XdGxJXzlrOHVaUmFjT0xUSVUxenl2cDBxQQ?oc=5",
    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNeTY0akF0MHZ6dUYtVkZxNEVLelktdU8xclVacmdRRXdZZkZxUG4zUzA1Um8zZy1BRkNkLUcwMmpqSFBIeWpQN0UzY2lLX19WX1BsLWpZbnhLam9QSVMtWjVJZ0FLWUhPMFJCSmw2OUxkM1hXZm9TZklrYXlFSUxyWDNFN2IzaDNSWG9SYVhJQXpPR0twXzlPXzlocEczbG54QmZMX0RSdW9CWmp5eWwzUFJMaTRpT2c5dzFPdFdsQU16Um8?oc=5",
-   "https://www.resmigazete.gov.tr/"
+   "https://www.resmigazete.gov.tr/",
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOUo1OFpOMjljb2k4ejduY3lJLWV4WHZtUncwOXRLaFZ5dkxnVkJyUXk3c2xOVGQyU05pY3RvcHgzUU8wdS1fTFc4WlcyN3BMdHVNclROaDRXbFg2V2VyakZ6ODJMRHRVd1UzYWdZd1pzU3lPdWtiX053TmUyS0FPdFdTbmdlS2lWcmN4LVU4WWVOejJSTTBNOThDSGNCV2oyY25MYWRxUGRaeGZW?oc=5",
+   "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUFRjQVF1aEgwNkQ2TjlvUnc1SDZFSzhiTm13UjZQVXRaX1ZKN2MxbFlEVmoyaTZGak4tTm45ZHBGYzh1VERTM3RLanp6ZHE0Nzd5OWVwUXlBSWxpTmFnYmwtUDE5NG5vc3NWdWhXNEtrN2hzNE1oM3oxX0s5X0VSQ2lxZU5LOUZmRmx4Z1F5dHd2R1ZvWlJnMWhMZXk1YjctTE02T1hmcmU4QTlobDJIZS1ISHdWU2dsbGZ3YlFmcUN4VElUbGc?oc=5"
   ]
  },
- "kuyruk": [],
+ "kuyruk": [
+  {
+   "tur": "haber",
+   "metin": "📰 <b>MEB'den öğretmen, öğrenci ve velilere yeni uygulama! Sınav sonuçlarında yeni dönem</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPOUo1OFpOMjljb2k4ejduY3lJLWV4WHZtUncwOXRLaFZ5dkxnVkJyUXk3c2xOVGQyU05pY3RvcHgzUU8wdS1fTFc4WlcyN3BMdHVNclROaDRXbFg2V2VyakZ6ODJMRHRVd1UzYWdZd1pzU3lPdWtiX053TmUyS0FPdFdTbmdlS2lWcmN4LVU4WWVOejJSTTBNOThDSGNCV2oyY25MYWRxUGRaeGZW?oc=5\">Haberin devamı</a> · Kamudanhaber"
+  },
+  {
+   "tur": "haber",
+   "metin": "📰 <b>MEB duyurdu: Ortak Yazılı Sınav Sistemi'nde 'Analiz ve Raporlama' modülü erişime açıldı</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNUFRjQVF1aEgwNkQ2TjlvUnc1SDZFSzhiTm13UjZQVXRaX1ZKN2MxbFlEVmoyaTZGak4tTm45ZHBGYzh1VERTM3RLanp6ZHE0Nzd5OWVwUXlBSWxpTmFnYmwtUDE5NG5vc3NWdWhXNEtrN2hzNE1oM3oxX0s5X0VSQ2lxZU5LOUZmRmx4Z1F5dHd2R1ZvWlJnMWhMZXk1YjctTE02T1hmcmU4QTlobDJIZS1ISHdWU2dsbGZ3YlFmcUN4VElUbGc?oc=5\">Haberin devamı</a> · Hürriyet"
+  }
+ ],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-16",
-  "gonderilen": 3,
-  "kamu": 0,
-  "akademik": 0,
-  "haber": 3,
+  "gonderilen": 7,
+  "kamu": 4,
+  "akademik": 2,
+  "haber": 5,
   "ozet": false
  },
  "duraklat": false,
- "son_kanal": 0,
- "son_calisma": "2026-11-16T10:06+03:00",
+ "son_kanal": 1794822653.9370613,
+ "son_calisma": "2026-11-16T12:50+03:00",
  "sahip_x": "374577208810919338"
 }
