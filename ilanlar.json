@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-16",
+"updated": "2026-11-17",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -1199,32 +1199,6 @@
 "x": 0
 },
 {
-"id": "2274517",
-"t": "İzmir Katip Çelebi Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "İZMİR KATİP ÇELEBİ ÜNİVERSİTESİ",
-"il": "İZMİR",
-"d": "2026-11-02",
-"sb": "2026-11-17",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2274517/kamu-akademik-personel-akademik-personel-alimlari-izmir-katip-celebi-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2274513",
-"t": "İzmir Demokrasi Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "İZMİR DEMOKRASİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İZMİR",
-"d": "2026-11-02",
-"sb": "2026-11-16",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2274513/kamu-akademik-personel-akademik-personel-alimlari-izmir-demokrasi-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
 "id": "2274511",
 "t": "Doğu Karadeniz Kalkınma Ajansından (DOKA) Personel Alım İlanı",
 "k": "DOĞU KARADENİZ KALKINMA AJANSI GENEL SEKRETERLİĞİ (DOKA)",
@@ -1233,45 +1207,6 @@
 "sb": "2026-12-06",
 "bb": "2026-11-23",
 "u": "https://www.ilan.gov.tr/ilan/2274511/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-dogu%C2%A0karadeniz%C2%A0kalkinma%C2%A0ajansindan%C2%A0-doka-personel-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2274507",
-"t": "İzmir Demokrasi Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "İZMİR DEMOKRASİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İZMİR",
-"d": "2026-11-02",
-"sb": "2026-11-17",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2274507/kamu-akademik-personel-akademik-personel-alimlari-izmir-demokrasi-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2274493",
-"t": "İçişleri Bakanlığı Jandarma ve Sahil Güvenlik Akademisi Başkanlığından Memur Alım İlanı",
-"k": "JANDARMA VE SAHİL GÜVENLİK AKADEMİSİ BAŞKANLIĞI",
-"il": "ANKARA",
-"d": "2026-11-02",
-"sb": "2026-11-16",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2274493/kamu-akademik-personel-askeri-personel-alimlari-icisleri%C2%A0bakanligi%C2%A0jandarma%C2%A0ve%C2%A0sahil%C2%A0guvenlik%C2%A0akademisi%C2%A0baskanligindan-memur-alim-ilani",
-"c": "kamu",
-"p": "jg",
-"x": 0
-},
-{
-"id": "2274491",
-"t": "Yükseköğretim Kurulu Başkanlığından Bilişim Personeli Alım İlanı",
-"k": "YÜKSEKÖĞRETİM KURULU BAŞKANLIĞI (YÖK)",
-"il": "ANKARA",
-"d": "2026-11-02",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2274491/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-yuksekogretim%C2%A0kurulu%C2%A0baskanligindan-bilisim-personeli-alim-ilani",
 "c": "kamu",
 "p": "",
 "x": 0
@@ -1300,32 +1235,6 @@
 "u": "https://www.ilan.gov.tr/ilan/2274512/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-eyyubiye-belediye-baskanligi-zabita-memuru-alim-ilani",
 "c": "kamu",
 "p": "zg",
-"x": 0
-},
-{
-"id": "2272810",
-"t": "Haliç Üniversitesi Rektörlüğünden Öğretim Görevlisi Alım İlanı",
-"k": "HALİÇ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-10-30",
-"sb": "2026-11-16",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272810/kamu-akademik-personel-akademik-personel-alimlari-halic%C2%A0universitesi%C2%A0rektorlugunden-ogretim-gorevlisi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2272804",
-"t": "Haliç Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "HALİÇ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-10-30",
-"sb": "2026-11-16",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272804/kamu-akademik-personel-akademik-personel-alimlari-halic%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
 "x": 0
 },
 {
@@ -1407,19 +1316,6 @@
 "x": 0
 },
 {
-"id": "2266544",
-"t": "Kültür ve Turizm Bakanlığından 162 Sözleşmeli Kütüphaneci Alım İlanı",
-"k": "KÜLTÜR VE TURİZM BAKANLIĞI",
-"il": "ANKARA",
-"d": "2026-10-23",
-"sb": "2026-11-16",
-"bb": "2026-11-02",
-"u": "https://www.ilan.gov.tr/ilan/2266544/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-kultur%C2%A0ve%C2%A0turizm%C2%A0bakanligindan-162-sozlesmeli-kutuphaneci-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
 "id": "2265112",
 "t": "Düzeltme İlanı (Sarıidris Belediye Başkanlığı)",
 "k": "SARIİDRİS BELEDİYE BAŞKANLIĞI",
@@ -1443,19 +1339,6 @@
 "u": "https://www.ilan.gov.tr/ilan/2263556/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-doganyol-belediye-baskanligi-sozlesmeli-personel-alim-ilani",
 "c": "kamu",
 "p": "g",
-"x": 0
-},
-{
-"id": "2262386",
-"t": "Yurtdışı Türkler ve Akraba Topluluklar Başkanlığı Uzman Yardımcısı Alım İlanı",
-"k": "YURTDIŞI TÜRKLER VE AKRABA TOPLULUKLAR BAŞKANLIĞI",
-"il": "ANKARA",
-"d": "2026-10-20",
-"sb": "2026-11-16",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2262386/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-yurtdisi-turkler-ve-akraba-topluluklar-baskanligi-uzman-yardimcisi-alim-ilani",
-"c": "kamu",
-"p": "",
 "x": 0
 },
 {
