@@ -230,21 +230,24 @@
    "https://www.memurlar.net/haber/1184356/adli-tip-kurumu-personeli-gorevde-yukselme-ve-unvan-degisikligi-yonetmeliginde-degisiklik.html",
    "https://www.memurlar.net/haber/1184356/adli-tip-kurumu-personeli-gorevde-yukselme-ve-unvan-degisikligi-yonetmeliginde-degisiklik.html",
    "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVGlRSV80SFRXdjRXM3QzbEJqVjdXN0JEMGxaSGR6N0gtaEpPMEZMMXZzcnB1aE1IMjdEMXMzSTFzVmcydXBsZnJESm9zTFRoNlhSekFMREtKczhhODlWNFlEN2R3bU1ReVdiMV9HbTNEMnpteTRVajd6TDlmWnp3RVpmcVN5OEFrem00eU9KMm50a0daZzMyVnV5MGZBa2F1Q0VFc0NaVEJfTzNPSTk1VHp3WlpXcTk3ZTRLeUk1R3lib09LX19ISDhB?oc=5",
-   "https://news.google.com/rss/articles/CBMiowFBVV95cUxPbkEyX0tfNFRLX1JMQ2l4bnFNWkhINDJaakJxWjBkWDd1MmdreE0zMmo4VTgwdzdFZUdGR1BGa0tlc2R2cmRuSVNHeFNwWDd4ZDJXVW1ZbzJ5MGVxUkRtMEFUbDZYZWZ4TGJ3Q0V4VUoyTlpxSTNmWjh6eTNpUWFhQVMxSEhHNUhkMS1ZSkFnZ2JNMjJNd3ozRWtaTV90bjJtR2Vj?oc=5"
+   "https://news.google.com/rss/articles/CBMiowFBVV95cUxPbkEyX0tfNFRLX1JMQ2l4bnFNWkhINDJaakJxWjBkWDd1MmdreE0zMmo4VTgwdzdFZUdGR1BGa0tlc2R2cmRuSVNHeFNwWDd4ZDJXVW1ZbzJ5MGVxUkRtMEFUbDZYZWZ4TGJ3Q0V4VUoyTlpxSTNmWjh6eTNpUWFhQVMxSEhHNUhkMS1ZSkFnZ2JNMjJNd3ozRWtaTV90bjJtR2Vj?oc=5",
+   "https://www.kamudanhaber.net/ogretmenlere-uzman-ogretmenlik-tazminati-icin-iki-mahkemeden-emsal-karar",
+   "https://www.kamudanhaber.net/ogretmenlere-uzman-ogretmenlik-tazminati-icin-iki-mahkemeden-emsal-karar",
+   "https://www.memurlar.net/haber/1184344/memur-ek-odemesi-ve-emekli-ikramiyesinde-aym-esasa-gecti.html"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-17",
-  "gonderilen": 8,
+  "gonderilen": 12,
   "kamu": 1,
   "akademik": 9,
-  "haber": 7,
-  "ozet": false
+  "haber": 10,
+  "ozet": true
  },
  "duraklat": false,
- "son_kanal": 0,
- "son_calisma": "2026-11-17T19:55+03:00",
+ "son_kanal": 1794938193.149574,
+ "son_calisma": "2026-11-17T20:56+03:00",
  "sahip_x": "374577208810919338"
 }
