@@ -151,7 +151,9 @@
    "2293833",
    "2293815",
    "2293631",
-   "2293626"
+   "2293626",
+   "2293884",
+   "2293869"
   ],
   "haber": [
    "https://www.diyanetsen.org.tr/kitaplar/8donemkazanimlar.pdf",
@@ -234,12 +236,12 @@
   "t": "2026-11-17",
   "gonderilen": 5,
   "kamu": 0,
-  "akademik": 7,
+  "akademik": 9,
   "haber": 5,
   "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-17T12:30+03:00",
+ "son_calisma": "2026-11-17T13:40+03:00",
  "sahip_x": "374577208810919338"
 }
