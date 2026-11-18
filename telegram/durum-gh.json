@@ -233,21 +233,22 @@
    "https://news.google.com/rss/articles/CBMiowFBVV95cUxPbkEyX0tfNFRLX1JMQ2l4bnFNWkhINDJaakJxWjBkWDd1MmdreE0zMmo4VTgwdzdFZUdGR1BGa0tlc2R2cmRuSVNHeFNwWDd4ZDJXVW1ZbzJ5MGVxUkRtMEFUbDZYZWZ4TGJ3Q0V4VUoyTlpxSTNmWjh6eTNpUWFhQVMxSEhHNUhkMS1ZSkFnZ2JNMjJNd3ozRWtaTV90bjJtR2Vj?oc=5",
    "https://www.kamudanhaber.net/ogretmenlere-uzman-ogretmenlik-tazminati-icin-iki-mahkemeden-emsal-karar",
    "https://www.kamudanhaber.net/ogretmenlere-uzman-ogretmenlik-tazminati-icin-iki-mahkemeden-emsal-karar",
-   "https://www.memurlar.net/haber/1184344/memur-ek-odemesi-ve-emekli-ikramiyesinde-aym-esasa-gecti.html"
+   "https://www.memurlar.net/haber/1184344/memur-ek-odemesi-ve-emekli-ikramiyesinde-aym-esasa-gecti.html",
+   "https://www.memurlar.net/haber/1184454/bakan-ciftci-den-polislere-fazla-mesai-ucreti-ve-yeni-personel-kanunu-mujdesi.html"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-18",
-  "gonderilen": 0,
+  "gonderilen": 1,
   "kamu": 0,
   "akademik": 0,
-  "haber": 0,
+  "haber": 1,
   "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-18T08:56+03:00",
+ "son_calisma": "2026-11-18T10:05+03:00",
  "sahip_x": "374577208810919338"
 }
