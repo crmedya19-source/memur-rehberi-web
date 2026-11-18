@@ -253,15 +253,15 @@
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
-  "t": "2026-11-18",
-  "gonderilen": 7,
+  "t": "2026-11-19",
+  "gonderilen": 0,
   "kamu": 0,
-  "akademik": 6,
-  "haber": 6,
-  "ozet": true
+  "akademik": 0,
+  "haber": 0,
+  "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-18T23:46+03:00",
+ "son_calisma": "2026-11-19T00:45+03:00",
  "sahip_x": "374577208810919338"
 }
