@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-17",
+"updated": "2026-11-18",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -874,19 +874,6 @@
 "x": 0
 },
 {
-"id": "2283156",
-"t": "Cumhurbaşkanlığı Milli Saraylar İdaresi Başkanlığı Sözleşmeli Personel Alım İlanı",
-"k": "CUMHURBAŞKANLIĞI MİLLİ SARAYLAR İDARESİ BAŞKANLIĞI",
-"il": "İSTANBUL",
-"d": "2026-11-07",
-"sb": "2026-11-17",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2283156/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-cumhurbaskanligi-milli-saraylar-idaresi-baskanligi-sozlesmeli-personel-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
 "id": "2283105",
 "t": "Gündoğmuş Belediye Başkanlığı Memur Alım İlanı",
 "k": "GÜNDOĞMUŞ BELEDİYE BAŞKANLIĞI",
@@ -1238,45 +1225,6 @@
 "x": 0
 },
 {
-"id": "2276031",
-"t": "Gaziantep Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "GAZİANTEP ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "GAZİANTEP",
-"d": "2026-11-03",
-"sb": "2026-11-17",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2276031/kamu-akademik-personel-akademik-personel-alimlari-gaziantep-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2276004",
-"t": "Gaziantep Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "GAZİANTEP ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "GAZİANTEP",
-"d": "2026-11-03",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2276004/kamu-akademik-personel-akademik-personel-alimlari-gaziantep-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2275960",
-"t": "İstanbul Arel Üniversitesi Rektörlüğü Akademik Personel Alım İlanı",
-"k": "İSTANBUL AREL ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-03",
-"sb": "2026-11-17",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2275960/kamu-akademik-personel-akademik-personel-alimlari-istanbul-arel-universitesi-rektorlugu-akademik-personel-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
 "id": "2275940",
 "t": "Kültür ve Turizm Bakanlığı Türkiye Turizm Tanıtım ve Geliştirme Ajansından Personel Alım İlanı",
 "k": "KÜLTÜR VE TURİZM BAKANLIĞI TÜRKİYE TURİZM TANITIM VE GELİŞTİRME AJANSI",
@@ -1286,19 +1234,6 @@
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2275940/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-kultur%C2%A0ve%C2%A0turizm%C2%A0bakanligi%C2%A0turkiye%C2%A0turizm%C2%A0tanitim%C2%A0ve%C2%A0gelistirme%C2%A0ajansindan-personel-alim-ilani",
 "c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2275935",
-"t": "Antalya Bilim Üniversitesi Öğretim Görevlisi Alım İlanı",
-"k": "ANTALYA BİLİM ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ANTALYA",
-"d": "2026-11-03",
-"sb": "2026-11-17",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2275935/kamu-akademik-personel-akademik-personel-alimlari-antalya-bilim-universitesi-ogretim-gorevlisi-alim-ilani",
-"c": "akademik",
 "p": "",
 "x": 0
 },
@@ -1314,19 +1249,6 @@
 "c": "kamu",
 "p": "",
 "x": 0
-},
-{
-"id": "2275931",
-"t": "Posof Belediye Başkanlığı (İptal İlanı)",
-"k": "POSOF BELEDİYE BAŞKANLIĞI",
-"il": "ARDAHAN",
-"d": "2026-11-03",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2275931/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-posof-belediye-baskanligi-iptal-ilani-",
-"c": "kamu",
-"p": "g",
-"x": 1
 },
 {
 "id": "2274524",
