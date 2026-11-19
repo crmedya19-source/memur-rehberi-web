@@ -247,21 +247,22 @@
    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbXRaWTFYUUpnaTQ1aGFjSm9MM0N1dHF4bVJ4WGpPTkYyNWdHYzEzdEQzNDB5S3RhSWdaOXRhUjR5dk5DSG5HOHQ4Z0JhU1BYNi1zdWxsZ0ljSmZCUEdCbjJrMHlIdlNlN09PZm5QOEhBdVJLRGdmQWRuckJvS211LU9jRks2aGlkcmo0dHI2WDNDeFI1aFFYUHJ30gGiAUFVX3lxTFBJNjhkc2RVUWR2VE1MNGRtbDhBTVd4UUR0NzBTR3dqOTVyckpTT3N3eFJ2XzM3Q0c2V04wUmpNejRnTDF1bDhKcEh6bW9vb1Z1NktrWl9YWElPZW5pYWI4VjlsYnpTeDdWVUl6VmdYWExELTFGZnNoR2JsXzVIQ0NDUlRrZk9rRkpQUW1OYVotRXYtZ3d5Zk9ROTQtQWlwemdWdw?oc=5",
    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPTXNyb3M4S2dhbmJKZ05vUDdsMnZYMU9CTmQ3TExiX0xiUXBablRIMXp0N0IzRTZfVTNTMGR1dHRrVDZEMGcwampkcW9jZXVmUExuS2JKcEd0YTNHTjJqNXNaVmpDbF9ZQ3kzbXZmNlNkZE1ZdkZtbnlJX0RIc08yYTF2Mk1DTERHUF9DSlR1MGZBYnlVdTd5WTJrVFUwWVZPb3F2UU5kaE5fbERuUWNHZ0pQSWttV1Rfd1MyY0doRHNjam8?oc=5",
    "https://tr.euronews.com/2026/11/18/erdogan-emeklilere-yonelik-iyilestirmeyi-yil-basindan-once-hayata-gecirecegiz",
-   "https://tr.euronews.com/2026/11/18/erdogan-emeklilere-yonelik-iyilestirmeyi-yil-basindan-once-hayata-gecirecegiz"
+   "https://tr.euronews.com/2026/11/18/erdogan-emeklilere-yonelik-iyilestirmeyi-yil-basindan-once-hayata-gecirecegiz",
+   "https://www.bloomberght.com/resmi-gazete-de-bugun-19112026-3795051"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-19",
-  "gonderilen": 0,
+  "gonderilen": 1,
   "kamu": 0,
   "akademik": 0,
-  "haber": 0,
+  "haber": 1,
   "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-19T07:56+03:00",
+ "son_calisma": "2026-11-19T08:58+03:00",
  "sahip_x": "374577208810919338"
 }
