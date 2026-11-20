@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-19",
+"updated": "2026-11-20",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -1368,19 +1368,6 @@
 "x": 0
 },
 {
-"id": "2279290",
-"t": "İzmir Demokrasi Üniversitesi (İptal İlanı)",
-"k": "İZMİR DEMOKRASİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İZMİR",
-"d": "2026-11-05",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2279290/kamu-akademik-personel-akademik-personel-alimlari-izmir-demokrasi-universitesi-iptal-ilani-",
-"c": "akademik",
-"p": "",
-"x": 1
-},
-{
 "id": "2279181",
 "t": "Eleşkirt Belediye Başkanlığı İtfaiye Eri Alım İlanı",
 "k": "ELEŞKİRT BELEDİYE BAŞKANLIĞI",
@@ -1407,45 +1394,6 @@
 "x": 0
 },
 {
-"id": "2279177",
-"t": "İstanbul Kültür Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "İSTANBUL KÜLTÜR ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-05",
-"sb": "2026-11-19",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2279177/kamu-akademik-personel-akademik-personel-alimlari-istanbul%C2%A0kultur%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2279176",
-"t": "Samsun Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "SAMSUN ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "SAMSUN",
-"d": "2026-11-05",
-"sb": "2026-11-20",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2279176/kamu-akademik-personel-akademik-personel-alimlari-samsun-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2279175",
-"t": "İstanbul Kültür Üniversitesi Rektörlüğünden Araştırma Görevlisi Alım İlanı",
-"k": "İSTANBUL KÜLTÜR ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-05",
-"sb": "2026-11-19",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2279175/kamu-akademik-personel-akademik-personel-alimlari-istanbul%C2%A0kultur%C2%A0universitesi%C2%A0rektorlugunden-arastirma-gorevlisi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
 "id": "2277600",
 "t": "Zafer Kalkınma Ajansı Personel Alım İlanı",
 "k": "ZAFER KALKINMA AJANSI GENEL SEKRETERLİK",
@@ -1467,19 +1415,6 @@
 "sb": "2026-12-04",
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2275940/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-kultur%C2%A0ve%C2%A0turizm%C2%A0bakanligi%C2%A0turkiye%C2%A0turizm%C2%A0tanitim%C2%A0ve%C2%A0gelistirme%C2%A0ajansindan-personel-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2275934",
-"t": "Dokuz Eylül Üniversitesi Rektörlüğünden Sözleşmeli Personel Alım İlanı",
-"k": "DOKUZ EYLÜL ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İZMİR",
-"d": "2026-11-03",
-"sb": "2026-11-19",
-"bb": "2026-11-03",
-"u": "https://www.ilan.gov.tr/ilan/2275934/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-dokuz%C2%A0eylul%C2%A0universitesi%C2%A0rektorlugunden-sozlesmeli-personel-alim-ilani",
 "c": "kamu",
 "p": "",
 "x": 0
