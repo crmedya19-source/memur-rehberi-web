@@ -184,7 +184,11 @@
    "2298125",
    "2298117",
    "2298116",
-   "2298111"
+   "2298111",
+   "2298532",
+   "2298364",
+   "2298310",
+   "2298278"
   ],
   "haber": [
    "https://www.diyanetsen.org.tr/kitaplar/8donemkazanimlar.pdf",
@@ -289,14 +293,14 @@
  "offset": 575918231,
  "gun": {
   "t": "2026-11-20",
-  "gonderilen": 7,
-  "kamu": 1,
-  "akademik": 11,
+  "gonderilen": 8,
+  "kamu": 2,
+  "akademik": 14,
   "haber": 5,
   "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-20T13:32+03:00",
+ "son_calisma": "2026-11-20T14:38+03:00",
  "sahip_x": "374577208810919338"
 }
