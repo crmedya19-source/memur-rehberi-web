@@ -270,24 +270,11 @@
    "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQlROTUxHV2VHMlh1WWFlUHRhUnRBWTFLNG9uUENhcU9sQ1JhZHZDWU1qZ21RR2wwUTlLcHpwLW5NcUxxR1FDakd4VVl1dGR4UTRLLUU0aWI3V2k0QlFCQ3FXdWN0a2tPYTB5N1B3UnhMX1pzZ3N6c0xzZE5oZlI0Qzlla0JtelRJZ3ZZQUk2S244UF9qakItX0NZMkp6T1VLYnc?oc=5"
   ]
  },
- "kuyruk": [
-  {
-   "tur": "haber",
-   "metin": "📰 <b>MEB'den Öğretmenlere Ara Tatil Sonrası Sınav Görevi</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQRF9xQjNkVFhoeXpySHc1RlhDaEZZSVFwQ3ZlZm9qZE5GZWNVMlVFdWhkR0dQMGxxajQyQU5jQ2FoX0hmOW4xSjJreXZPWURleENUYWVOSEN6d0xlRUZRLTBpV3pvY3lNcDF2ajViaElEdzVGbEFGVDdWNGJRQTM0SDJWZGxUdw?oc=5\">Haberin devamı</a> · Kamudanhaber"
-  },
-  {
-   "tur": "haber",
-   "metin": "📰 <b>Emeklinin maaş hesabı değişiyor: SSK, Bağ-Kur ve Emekli Sandığı'na 6 kademeli ek zam tablosu | Özgün Haberler</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxNVDBobHQ2dnZMUFd5cTNsOTFJOFFIRkZ2VmZUMk15LUo0SzllSER3MGJkcGNpX19aNFVUSEtLSFQyYWFHQ0dFMENJVUM2NW9fbHlESzVxR0tueW5xaWxfVUd2c1ZpMDNCSzNSX3lyTFBvRk9JUW85eU1qQkRxeTJhcVFDOExHZnd2eEc5bktSd3gtQlJUX2lUbTVacG5rcjJLZUFHRTJtdjBuRlhIZmtidldUQjI4RFkxX2hScUNNdUJPcUpPXzJybnY5OWMzbGlDMXc?oc=5\">Haberin devamı</a> · Yeni Şafak"
-  },
-  {
-   "tur": "haber",
-   "metin": "📰 <b>KİT'te Bir İşçinin Maliyeti Memurdan Yüzde 55 Daha Fazla</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOQlROTUxHV2VHMlh1WWFlUHRhUnRBWTFLNG9uUENhcU9sQ1JhZHZDWU1qZ21RR2wwUTlLcHpwLW5NcUxxR1FDakd4VVl1dGR4UTRLLUU0aWI3V2k0QlFCQ3FXdWN0a2tPYTB5N1B3UnhMX1pzZ3N6c0xzZE5oZlI0Qzlla0JtelRJZ3ZZQUk2S244UF9qakItX0NZMkp6T1VLYnc?oc=5\">Haberin devamı</a> · Memurlar.Net"
-  }
- ],
+ "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-20",
-  "gonderilen": 0,
+  "gonderilen": 3,
   "kamu": 0,
   "akademik": 0,
   "haber": 2,
@@ -295,6 +282,6 @@
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-20T07:41+03:00",
+ "son_calisma": "2026-11-20T08:45+03:00",
  "sahip_x": "374577208810919338"
 }
