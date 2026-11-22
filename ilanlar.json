@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-21",
+"updated": "2026-11-22",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -1264,19 +1264,6 @@
 "x": 0
 },
 {
-"id": "2283080",
-"t": "İptal İlanı (Dicle Üniversitesi Rektörlüğü)",
-"k": "DİCLE ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "DİYARBAKIR",
-"d": "2026-11-07",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2283080/kamu-akademik-personel-akademik-personel-alimlari-iptal-ilani-dicle-universitesi-rektorlugu-",
-"c": "akademik",
-"p": "",
-"x": 1
-},
-{
 "id": "2281218",
 "t": "Hasan Kalyoncu Üniversitesi Rektörlüğünden Öğretim Elemanı Alım İlanı",
 "k": "HASAN KALYONCU ÜNİVERSİTESİ REKTÖRLÜĞÜ",
@@ -1312,19 +1299,6 @@
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2280968/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-sosyal-guvenlik-kurumu-baskanligi-sosyal-guvenlik-denetmen-yardimcisi-sinav-ilani",
 "c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2280929",
-"t": "Aksaray Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "AKSARAY ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "AKSARAY",
-"d": "2026-11-06",
-"sb": "2026-11-21",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2280929/kamu-akademik-personel-akademik-personel-alimlari-aksaray-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
 "p": "",
 "x": 0
 },
