@@ -3,23 +3,30 @@
  "items": [
   {
    "d": "2026-11-23",
-   "t": "Kamu-Sen'den 2027 bütçesi için ek zam, refah payı ve 3600 ek gösterge talebi",
-   "s": "",
-   "src": "Ekonomim",
-   "u": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTnc4UEtFQ1N4TnFCMkVpb3hTaWNERnJ1M0FMVnBPSzFiM1F2Y2w4NlBjWWFfVzRPVUhzMGpGMlBLcURFbGI3bE0wMWEwUTJYU1pZZ2MzcTZuQ1ZNNTEwaXdvaUUzNzJkUTliZkpQZk5zVEdOMXl0LWZ0V2dPcl9XZlVCcDlLX2pRR1RSeFotMEhiRTNLMUY0R0YxX0Z5dW5fVW9WZkp5VFp1MDBHSHZubWpHWnVhMnZPb2tRTTJB?oc=5",
-   "c": "maas",
-   "p": "",
-   "a": 1
+   "t": "📋 23 Kasım: Günün memur gündemi",
+   "s": "İçişleri 1.170 sözleşmeli personel için 7-11 Aralık'ta başvuru alacak, Jandarma'nın 9 bin uzman erbaş alımı 7 Aralık'a kadar sürüyor. Kamu-Sen ek zam, refah payı ve 3600 ek gösterge istedi; bunlar talep. Ocak zammı için kritik veri 3 Aralık'taki kasım enflasyonu.",
+   "src": "Memur Rehberi",
+   "u": "https://www.memurlar.net/haber/1185005/bakan-ciftci-10-bin-170-yeni-personel-ile-ailemizi-guclendiriyoruz.html",
+   "c": "gundem",
+   "p": ""
+  },
+  {
+   "d": "2026-11-23",
+   "t": "İçişleri 1.170 sözleşmeli personel, Jandarma 9 bin uzman erbaş alacak",
+   "s": "Bugünkü Resmî Gazete'deki ilanlara göre İçişleri Bakanlığı'nın merkez ve taşra birimleri için 1.170 sözleşmeli personel başvurusu 7-11 Aralık'ta e-Devlet'ten yapılacak, KPSS'den en az 60 puan ve sözlü sınav aranıyor. Jandarma'nın 9 bin uzman erbaş alımına başvurular 7 Aralık'a kadar sürüyor.",
+   "src": "Memurlar.Net",
+   "u": "https://www.memurlar.net/haber/1185005/bakan-ciftci-10-bin-170-yeni-personel-ile-ailemizi-guclendiriyoruz.html",
+   "c": "gundem",
+   "p": ""
   },
   {
    "d": "2026-11-23",
    "t": "Kahveci: Tutmayan enflasyon hedeflerinin bedeli kamu çalışanlarına ve emeklilere ödetilemez!",
-   "s": "",
+   "s": "Türkiye Kamu-Sen, Ankara'daki mitingde 2027 zamlarının yeniden ele alınmasını, ek zam ve refah payı verilmesini ve 3600 ek göstergenin yaygınlaştırılmasını istedi. Bunlar sendika talebi; hükümetin bu yönde bir kararı yok, ocak zammı şimdilik toplu sözleşme ve enflasyon farkına göre belirlenecek.",
    "src": "Memurlar.Net",
-   "u": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObU5odzJld1J1X2xKNmxZT0JQWU1seGl3cXdzb0lDMndwNmU2RmpMWFNFTDI0OVQyVkZfWHdNY05rczdxeVlmSlFuaGFvZG1xdlFlZXhFb2dveHByY0RiNjNkRHZONnBwOTZ1MUEyRzZwS0dUc1FMbmlYVWowNEJnR2JFZmtlMWpxMlBSZVNQM2hxa25tbkxBSDE3cHc2d045a3lZb0RlU2FJem02XzVjWXpzbG9DWWVhYmJabmRPeTNLSGxoNy1nNW1mcFFKQ0XSAdcBQVVfeXFMTURIZnR0NWJZbUlHbkxGbTV5V0Z5S1p5c2JIQXp5V3F3cEVHVlRpQXpHV0JEdWc4a3UxLWtCVkpQX3NhLTJ1ZzBXLTEwazVaSzA4VlNnekU0c1J4bUlDQVJOMmM5VC1pYVpvM19QUWNCMG9zc0JQeGZoamJkMm1vZXpUbVFrN1V2YlYtNGZ2cUMtUGxCMEF0bGFRbU1GUkpIdGZKbDQ2RENkOEJtUGllYlpKWUJwaWt0WjI2aklMSmRfVGlyeTdtdERMRXJTNkRNZmFRbF9wQjQ?oc=5",
+   "u": "https://www.memurlar.net/haber/1184990/kahveci-tutmayan-enflasyon-hedeflerinin-bedeli-kamu-calisanlarina-ve-emeklilere-odetilemez.html",
    "c": "maas",
-   "p": "",
-   "a": 1
+   "p": ""
   },
   {
    "d": "2026-11-23",
@@ -121,15 +128,6 @@
    "p": ""
   },
   {
-   "d": "2026-11-16",
-   "t": "MEB'den öğretmen, öğrenci ve velilere yeni uygulama! Sınav sonuçlarında yeni dönem",
-   "s": "Ortak yazılı sınavlarda e-Okul'a girilen soru bazlı puanlardan sistem otomatik analiz raporu üretiyor; öğretmenler sınıf ve öğrenci sonuçlarını EBA'da görebilir. Öğrenci ve veliler de soru ve kazanım bazında sonuçları inceleyebilecek.",
-   "src": "Kamudanhaber",
-   "u": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOUo1OFpOMjljb2k4ejduY3lJLWV4WHZtUncwOXRLaFZ5dkxnVkJyUXk3c2xOVGQyU05pY3RvcHgzUU8wdS1fTFc4WlcyN3BMdHVNclROaDRXbFg2V2VyakZ6ODJMRHRVd1UzYWdZd1pzU3lPdWtiX053TmUyS0FPdFdTbmdlS2lWcmN4LVU4WWVOejJSTTBNOThDSGNCV2oyY25MYWRxUGRaeGZW?oc=5",
-   "c": "egitim",
-   "p": "o"
-  },
-  {
    "d": "2026-11-14",
    "t": "4/B sözleşmeli personelde yeni kurallar yürürlüğe girdi",
    "s": "Bugünkü Resmî Gazete'deki 11982 sayılı kararla hastalık ve refakat izninde memur hükümleri uygulanacak, ücret ay başında peşin ödenecek, ilk 3 yıl dolmadan kurum içi yer değişikliğinin yolu açıldı. Sözleşmesini yenilemeyenler de artık 1 yıl dolmadan yeniden 4/B'ye alınamayacak. Disiplin, göreve başlama süresi ve eğitim kuralları da değişti; ayrıntılar Mevzuat sekmesinde.",
@@ -157,30 +155,12 @@
    "p": ""
   },
   {
-   "d": "2026-11-06",
-   "t": "Teknik hizmetlerden GİH'e geçenlerin ek göstergesi",
-   "s": "Teknik hizmetler sınıfından GİH’te 1-4. dereceli bir kadroya ilk kez atananlar, eski kadrolarının ek göstergesini kazanılmış hak derecelerine göre almaya devam ediyor. İlk atama 1-4. derece kadroya yapılmadıysa bu hak doğmuyor.",
-   "src": "Memurlar.Net",
-   "u": "https://www.memurlar.net/haber/1183178/teknik-hizmetlerden-gih-e-gecenlerin-ek-gostergesi.html",
-   "c": "maas",
-   "p": ""
-  },
-  {
    "d": "2026-11-03",
    "t": "Ekim enflasyonu %2,58: memura ilk enflasyon farkı doğdu",
    "s": "Temmuz–ekim enflasyonu yaklaşık %8,3 ile %7’lik temmuz zammını aştı ve yaklaşık %1,2 enflasyon farkı oluştu. Ocaktaki %5 toplu sözleşme artışıyla birlikte zam şimdilik %6,27; kesin oran kasım ve aralık enflasyonuyla belli olacak.",
    "src": "Memurlar.net",
    "u": "https://www.memurlar.net/haber/1182940/enflasyon-yuzde-2-58-oldu-memurun-yuzde-7-lik-zammi-asildi.html",
    "c": "maas",
-   "p": ""
-  },
-  {
-   "d": "2026-10-31",
-   "t": "Sınavsız müdür ve müdür yardımcılığına 3 yıl görev şartı geldi",
-   "s": "Görevde yükselme genel yönetmeliğine eklenen maddeyle, daha önce sınavsız yöneticilik yapanların sınava girmeden müdür veya müdür yardımcısı olabilmesi için o görevlerde kesintisiz en az 3 yıl asaleten çalışmış olması aranacak. Düzenleme atanma hakkı vermiyor; kararı kurum veriyor.",
-   "src": "Memurlar.net / Sabah",
-   "u": "https://www.memurlar.net/haber/1182623/gorevde-yukselmede-kritik-degisiklik-sinavsiz-mudurluge-3-yil-sarti.html",
-   "c": "mevzuat",
    "p": ""
   }
  ]
