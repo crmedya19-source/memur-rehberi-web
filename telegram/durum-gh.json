@@ -323,21 +323,24 @@
    "https://news.google.com/rss/articles/CBMiswFBVV95cUxObUYzdHFaQ0ZWaUU4WWdDbjZFSHVzUzVGRFlWZUo3dnhuRUlVd2oybEZVZ0hXb0RDOXBXdjdaenhlNFZtZS1qM01na2ZMQTBzdzY3UHpndnNJNVJidUZZQ1JfZ29zUUZjNTBTY1NqWEpfN1NQOTllbHd6dzk5c2YwN3Jhc0tvS2pTV0Y2UEV4cDhaUDVSZ0I5RWd5dDBxZllnYVpKamhGRTRQNEpRcnZJMEF6QQ?oc=5",
    "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZF9nWUlkUWczZG00QmR3ZG1aQmEzazdza0F6SlRXQ1Z6RW9GZGlxNVF1V002TnJtaTZqdVowc2pFaUp3ajNqYzFRTEdyZFJnZjd6MlRGVVlmUVhnSkpkdjZmeXpDYmdWTTNuQnEwdDV4UTROOU8xNUVGQlMxcTZQbVg3ai00THNGeW5UeDBEZWRYMFVrZ2d6SVgwSdIBowFBVV95cUxPU0dSekJtUUVzYno2Ty1ZS1NxYURWM3ZudjViY1EyNmRpbDk0UlJEMlZrellPRUZIbUdZandtcmFDT2lDaUhMNUFXRTRfLVlSVlBYSW04VEZmamxiV05KYTUwZEJzSEN4ako5eDg5WE4wdHcxSHd1ZGh5YXdQZ1lkakF6NmxYUl9rRExqNEU2d29oWFk3LTdFSVlHbE9hOFk3OEk4?oc=5",
    "https://news.google.com/rss/articles/CBMizwFBVV95cUxObU5odzJld1J1X2xKNmxZT0JQWU1seGl3cXdzb0lDMndwNmU2RmpMWFNFTDI0OVQyVkZfWHdNY05rczdxeVlmSlFuaGFvZG1xdlFlZXhFb2dveHByY0RiNjNkRHZONnBwOTZ1MUEyRzZwS0dUc1FMbmlYVWowNEJnR2JFZmtlMWpxMlBSZVNQM2hxa25tbkxBSDE3cHc2d045a3lZb0RlU2FJem02XzVjWXpzbG9DWWVhYmJabmRPeTNLSGxoNy1nNW1mcFFKQ0XSAdcBQVVfeXFMTURIZnR0NWJZbUlHbkxGbTV5V0Z5S1p5c2JIQXp5V3F3cEVHVlRpQXpHV0JEdWc4a3UxLWtCVkpQX3NhLTJ1ZzBXLTEwazVaSzA4VlNnekU0c1J4bUlDQVJOMmM5VC1pYVpvM19QUWNCMG9zc0JQeGZoamJkMm1vZXpUbVFrN1V2YlYtNGZ2cUMtUGxCMEF0bGFRbU1GUkpIdGZKbDQ2RENkOEJtUGllYlpKWUJwaWt0WjI2aklMSmRfVGlyeTdtdERMRXJTNkRNZmFRbF9wQjQ?oc=5",
-   "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTnc4UEtFQ1N4TnFCMkVpb3hTaWNERnJ1M0FMVnBPSzFiM1F2Y2w4NlBjWWFfVzRPVUhzMGpGMlBLcURFbGI3bE0wMWEwUTJYU1pZZ2MzcTZuQ1ZNNTEwaXdvaUUzNzJkUTliZkpQZk5zVEdOMXl0LWZ0V2dPcl9XZlVCcDlLX2pRR1RSeFotMEhiRTNLMUY0R0YxX0Z5dW5fVW9WZkp5VFp1MDBHSHZubWpHWnVhMnZPb2tRTTJB?oc=5"
+   "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTnc4UEtFQ1N4TnFCMkVpb3hTaWNERnJ1M0FMVnBPSzFiM1F2Y2w4NlBjWWFfVzRPVUhzMGpGMlBLcURFbGI3bE0wMWEwUTJYU1pZZ2MzcTZuQ1ZNNTEwaXdvaUUzNzJkUTliZkpQZk5zVEdOMXl0LWZ0V2dPcl9XZlVCcDlLX2pRR1RSeFotMEhiRTNLMUY0R0YxX0Z5dW5fVW9WZkp5VFp1MDBHSHZubWpHWnVhMnZPb2tRTTJB?oc=5",
+   "https://www.memurlar.net/haber/1185005/bakan-ciftci-10-bin-170-yeni-personel-ile-ailemizi-guclendiriyoruz.html",
+   "https://www.memurlar.net/haber/1185005/bakan-ciftci-10-bin-170-yeni-personel-ile-ailemizi-guclendiriyoruz.html",
+   "https://www.memurlar.net/haber/1184990/kahveci-tutmayan-enflasyon-hedeflerinin-bedeli-kamu-calisanlarina-ve-emeklilere-odetilemez.html"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-23",
-  "gonderilen": 10,
+  "gonderilen": 14,
   "kamu": 4,
   "akademik": 10,
-  "haber": 6,
-  "ozet": false
+  "haber": 9,
+  "ozet": true
  },
  "duraklat": false,
- "son_kanal": 0,
- "son_calisma": "2026-11-23T19:40+03:00",
+ "son_kanal": 1795455636.188949,
+ "son_calisma": "2026-11-23T20:40+03:00",
  "sahip_x": "374577208810919338"
 }
