@@ -303,21 +303,27 @@
    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOHpKXzA3c1VQUTFydmNMNG9GU3VCNHN2VlN5QzRBM05RaHJuQVdrWG9iRVV4N1dBMng5bm5rVkxHWGZUM1FrQlROZzI4VjBKdmVzdDkxbHV5N244ZjRLbHgwVURxa1VFenVjd3J0YWUxSXFPQmRjdTdYRURVREdQMU40X2J1bE9uemhOUS1VU3dycHFvZ0NBZXlTMk8tcEtKYmpydUFMR18wQdIBsgFBVV95cUxPLTZVNjVaNlZobmg4TWlPVExrcGhUb3Ytc0R0ZDBpTEJxdWw2OUl6aVRxUlVEQzRLZTJieUVmRWYxV2doVEpacTRET0Fjci1GVTMxZ0xmT0o0NG9kZHI0Y1B5QUxnY2l0SWpYbldmaXRsZUkyOUgwOHhpVlNQTkRlaGlxejhhWHRpdzdiQXNDeTlRbmpKZFpWeGpqTjlHTUx1RDZFbzF4eWl3M0cwZ0Vkd1NR?oc=5",
    "https://www.memurlar.net/haber/1184486/kdk-dava-acmayan-sendika-uyesine-de-ikramiye-farki-odenmeli.html",
    "https://www.memurlar.net/haber/1184882/zabita-memuru-ilanindaki-adrese-teslim-sarta-kdk-mudahale-etti.html",
-   "https://www.memurlar.net/haber/1184486/kdk-dava-acmayan-sendika-uyesine-de-ikramiye-farki-odenmeli.html"
+   "https://www.memurlar.net/haber/1184486/kdk-dava-acmayan-sendika-uyesine-de-ikramiye-farki-odenmeli.html",
+   "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQ1NPWjlsY3NLT1JKTXZnLW5RRzJ3eGRGTjlBdGVic0lrUnhMb05jVmhfTXV0WGpFeDYtc3BiTV9mVVhQcXo3U0VzRUo1ekpWWDM4M2lROWFlYWotQy1LNjFrSW9UN1NJTEdKc3o2a0hnSGZuZHlNQ2hYNWZmRTY5N08zeDVTQlZTRFBpcFFVcEZ4N1ZqMTdjRUlBYlllWi0zaHJRaGhLN1dTTHdQR3o4a0EyNjJ2b1Z3cVp6WmhTRjlESHpPOTV6ZXdoN05ydnZSNUE?oc=5"
   ]
  },
- "kuyruk": [],
+ "kuyruk": [
+  {
+   "tur": "haber",
+   "metin": "📰 <b>BÜRO MEMUR-SEN \"Birkaç puan yetmez\" diyor! Yeni maaşta refah payı emekli sofrasında hissedilmeli</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQ1NPWjlsY3NLT1JKTXZnLW5RRzJ3eGRGTjlBdGVic0lrUnhMb05jVmhfTXV0WGpFeDYtc3BiTV9mVVhQcXo3U0VzRUo1ekpWWDM4M2lROWFlYWotQy1LNjFrSW9UN1NJTEdKc3o2a0hnSGZuZHlNQ2hYNWZmRTY5N08zeDVTQlZTRFBpcFFVcEZ4N1ZqMTdjRUlBYlllWi0zaHJRaGhLN1dTTHdQR3o4a0EyNjJ2b1Z3cVp6WmhTRjlESHpPOTV6ZXdoN05ydnZSNUE?oc=5\">Haberin devamı</a> · Türkiye Gazetesi"
+  }
+ ],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-23",
   "gonderilen": 0,
   "kamu": 0,
   "akademik": 0,
-  "haber": 0,
+  "haber": 1,
   "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-23T03:15+03:00",
+ "son_calisma": "2026-11-23T04:51+03:00",
  "sahip_x": "374577208810919338"
 }
