@@ -200,7 +200,9 @@
    "2299648",
    "2299646",
    "2299635",
-   "2299634"
+   "2299634",
+   "2299827",
+   "2299814"
   ],
   "haber": [
    "https://www.diyanetsen.org.tr/kitaplar/8donemkazanimlar.pdf",
@@ -317,21 +319,22 @@
    "https://www.memurlar.net/haber/1184882/zabita-memuru-ilanindaki-adrese-teslim-sarta-kdk-mudahale-etti.html",
    "https://www.memurlar.net/haber/1184486/kdk-dava-acmayan-sendika-uyesine-de-ikramiye-farki-odenmeli.html",
    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQ1NPWjlsY3NLT1JKTXZnLW5RRzJ3eGRGTjlBdGVic0lrUnhMb05jVmhfTXV0WGpFeDYtc3BiTV9mVVhQcXo3U0VzRUo1ekpWWDM4M2lROWFlYWotQy1LNjFrSW9UN1NJTEdKc3o2a0hnSGZuZHlNQ2hYNWZmRTY5N08zeDVTQlZTRFBpcFFVcEZ4N1ZqMTdjRUlBYlllWi0zaHJRaGhLN1dTTHdQR3o4a0EyNjJ2b1Z3cVp6WmhTRjlESHpPOTV6ZXdoN05ydnZSNUE?oc=5",
-   "https://www.resmigazete.gov.tr/eskiler/2026/11/20261123.htm"
+   "https://www.resmigazete.gov.tr/eskiler/2026/11/20261123.htm",
+   "https://news.google.com/rss/articles/CBMiswFBVV95cUxObUYzdHFaQ0ZWaUU4WWdDbjZFSHVzUzVGRFlWZUo3dnhuRUlVd2oybEZVZ0hXb0RDOXBXdjdaenhlNFZtZS1qM01na2ZMQTBzdzY3UHpndnNJNVJidUZZQ1JfZ29zUUZjNTBTY1NqWEpfN1NQOTllbHd6dzk5c2YwN3Jhc0tvS2pTV0Y2UEV4cDhaUDVSZ0I5RWd5dDBxZllnYVpKamhGRTRQNEpRcnZJMEF6QQ?oc=5"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-23",
-  "gonderilen": 5,
-  "kamu": 3,
-  "akademik": 9,
-  "haber": 2,
+  "gonderilen": 7,
+  "kamu": 4,
+  "akademik": 10,
+  "haber": 3,
   "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-23T12:37+03:00",
+ "son_calisma": "2026-11-23T13:46+03:00",
  "sahip_x": "374577208810919338"
 }
