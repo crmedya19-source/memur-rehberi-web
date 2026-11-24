@@ -326,21 +326,22 @@
    "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTnc4UEtFQ1N4TnFCMkVpb3hTaWNERnJ1M0FMVnBPSzFiM1F2Y2w4NlBjWWFfVzRPVUhzMGpGMlBLcURFbGI3bE0wMWEwUTJYU1pZZ2MzcTZuQ1ZNNTEwaXdvaUUzNzJkUTliZkpQZk5zVEdOMXl0LWZ0V2dPcl9XZlVCcDlLX2pRR1RSeFotMEhiRTNLMUY0R0YxX0Z5dW5fVW9WZkp5VFp1MDBHSHZubWpHWnVhMnZPb2tRTTJB?oc=5",
    "https://www.memurlar.net/haber/1185005/bakan-ciftci-10-bin-170-yeni-personel-ile-ailemizi-guclendiriyoruz.html",
    "https://www.memurlar.net/haber/1185005/bakan-ciftci-10-bin-170-yeni-personel-ile-ailemizi-guclendiriyoruz.html",
-   "https://www.memurlar.net/haber/1184990/kahveci-tutmayan-enflasyon-hedeflerinin-bedeli-kamu-calisanlarina-ve-emeklilere-odetilemez.html"
+   "https://www.memurlar.net/haber/1184990/kahveci-tutmayan-enflasyon-hedeflerinin-bedeli-kamu-calisanlarina-ve-emeklilere-odetilemez.html",
+   "https://www.resmigazete.gov.tr/eskiler/2026/11/20261124.htm"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-24",
-  "gonderilen": 0,
+  "gonderilen": 1,
   "kamu": 0,
   "akademik": 0,
-  "haber": 0,
+  "haber": 1,
   "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-24T07:58+03:00",
+ "son_calisma": "2026-11-24T08:59+03:00",
  "sahip_x": "374577208810919338"
 }
