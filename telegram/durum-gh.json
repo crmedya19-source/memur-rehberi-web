@@ -350,21 +350,27 @@
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNTZ6RkhneEdQdWVCRm1OTFZMSG9iS29oZjBLZzlOSkg0NHl4eVNhbHY5RVZGWVNMRVp5UWU4eXhOaWdnNFYyeVE3NjJEOHFRNm0tM2kwa1NlRnUwR3RTTGswQ3NwUW9DQVRST3ZFS1pQX0t0TTVVNGNNSFVicnl6alVHTkhxUUJBRl9WMHdFeEI?oc=5",
    "https://www.gzt.com/ekonomi/bakan-vedat-isikhandan-emekli-maaslarina-ek-iyilestirme-aciklamasi-gelir-farkliliklari-gozetilecek-4282909",
    "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa3c5VHBrUDhHZHVjN0MxRGdVd05nYV9IQWxJaVU5eFBMbGRIVHRESGlTU3FMemxPSVVJS1JSVTREd29HdTZMWTNlNTBVSV9iWks3UThMRTJzZWQzN0NXc2RyTG9RdThYelZjamJlTjlJTnZ2ZVA5UWNJdDJERlZXV2hmSy1zcWkwSEhjNS1LeTBqN19HR2c?oc=5",
-   "https://news.google.com/rss/articles/CBMirAFBVV95cUxNc1k0cXBHdkYteTBFeEswUU5ZcEpHNm9QNnBvbjlqc3ZTbGJRdkdnVXlzU3Q1a1ExSE1HME9iM0c5Q0tuSHlwaEdDMWF4Q0JwVGNzTWlucVlHSlRvMWUtVF81OFdCV0g0QXliMWpBMnVRWGVIak4yeXZkU0hHdWFZQXJVWmZFWHBFSElORk9hMHZVeV91dTVBWkhPNFhQMXFqUVdkTjlrUkZSbUM0?oc=5"
+   "https://news.google.com/rss/articles/CBMirAFBVV95cUxNc1k0cXBHdkYteTBFeEswUU5ZcEpHNm9QNnBvbjlqc3ZTbGJRdkdnVXlzU3Q1a1ExSE1HME9iM0c5Q0tuSHlwaEdDMWF4Q0JwVGNzTWlucVlHSlRvMWUtVF81OFdCV0g0QXliMWpBMnVRWGVIak4yeXZkU0hHdWFZQXJVWmZFWHBFSElORk9hMHZVeV91dTVBWkhPNFhQMXFqUVdkTjlrUkZSbUM0?oc=5",
+   "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQQjcxYWRuQVFxV2JTMmhZTkZXRGVnU1pnMmVoemNkYmNLMnUxb0g0MTlSVGJfX0NZaW1KQlh4ZUtfSEk0emo3V2I0UFQxMWwyMnZzZzlLWHFaUW9DbmlBa29xUUx0UUl4aEJNUzhSdWFVV3FoNDliemJaNVQxbTA1ZU04SEVoWk1WZEtyRlR3OFE3UVdaN2NKUkNrdjQ1ZEVVT0k5REw2WV8wX3VxeEtSUVlOSnFEUFJVaDdjU2tPVFR0Y0tWTnVXb3RyM3p3UHlFSGU4MmRMaFpJUDFSaERFTFdLWFRVbjVRTGVCb0dTVHk0Yng1STRtSlVVR2d2QWc?oc=5"
   ]
  },
- "kuyruk": [],
+ "kuyruk": [
+  {
+   "tur": "haber",
+   "metin": "📰 <b>Nüfus müdürlüklerine 60 KPSS puanıyla memur ve temizlik görevlisi alınacak: 2026 NVİ başvuru tarihleri ve şart</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMi_wFBVV95cUxQQjcxYWRuQVFxV2JTMmhZTkZXRGVnU1pnMmVoemNkYmNLMnUxb0g0MTlSVGJfX0NZaW1KQlh4ZUtfSEk0emo3V2I0UFQxMWwyMnZzZzlLWHFaUW9DbmlBa29xUUx0UUl4aEJNUzhSdWFVV3FoNDliemJaNVQxbTA1ZU04SEVoWk1WZEtyRlR3OFE3UVdaN2NKUkNrdjQ1ZEVVT0k5REw2WV8wX3VxeEtSUVlOSnFEUFJVaDdjU2tPVFR0Y0tWTnVXb3RyM3p3UHlFSGU4MmRMaFpJUDFSaERFTFdLWFRVbjVRTGVCb0dTVHk0Yng1STRtSlVVR2d2QWc?oc=5\">Haberin devamı</a> · Yeni Şafak"
+  }
+ ],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-25",
   "gonderilen": 11,
   "kamu": 1,
   "akademik": 2,
-  "haber": 7,
+  "haber": 8,
   "ozet": true
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-25T22:41+03:00",
+ "son_calisma": "2026-11-25T23:37+03:00",
  "sahip_x": "374577208810919338"
 }
