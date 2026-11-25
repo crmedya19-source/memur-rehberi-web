@@ -347,21 +347,22 @@
    "https://www.bloomberght.com/resmi-gazete-de-bugun-25112026-3795595",
    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPaUVCLV9sWlpHZG9OT25raHpvc3Y1SXRfU0hzTnpsRkljTWJDYnVXT2ZueFRKZXdOMWdXYXRKbi1QR3JzMzRoakt1VGkxdlJrbkZnUHZVNE81Qk5sM0lGdVJqS1B2TkliWUh2V0RBaXJ1MHU0ZVpsS0VFaXhibFkyUzFGNmJJN0xvLXlfdXhSTnh0VEk0VVR3S3ZyLTZydnloQkp0VmJNNko1WFNpM0lSeVl4Y3dOZ0VoeHZURDZiTF9JbGpGR2o4ag?oc=5",
    "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWUh0Q0ZYbEJubnhZc2tLQ2FUV1BqYW5lQ09GZWlsNHlxTFVid214TDhrUFpHY1hzMGtyNTRLNkdYUDl0Sy00LUJuRDdGSFUwOE11VFB3ZU1RMWVkQWNBaVVWREJvc3dsbHdISWhxNS10SU84Y2tfeTlKbGRRcURvcXpjZjZIb1dHWmZaN0c2dzRIWGRwWnptR19GYUU?oc=5",
-   "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNTZ6RkhneEdQdWVCRm1OTFZMSG9iS29oZjBLZzlOSkg0NHl4eVNhbHY5RVZGWVNMRVp5UWU4eXhOaWdnNFYyeVE3NjJEOHFRNm0tM2kwa1NlRnUwR3RTTGswQ3NwUW9DQVRST3ZFS1pQX0t0TTVVNGNNSFVicnl6alVHTkhxUUJBRl9WMHdFeEI?oc=5"
+   "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNTZ6RkhneEdQdWVCRm1OTFZMSG9iS29oZjBLZzlOSkg0NHl4eVNhbHY5RVZGWVNMRVp5UWU4eXhOaWdnNFYyeVE3NjJEOHFRNm0tM2kwa1NlRnUwR3RTTGswQ3NwUW9DQVRST3ZFS1pQX0t0TTVVNGNNSFVicnl6alVHTkhxUUJBRl9WMHdFeEI?oc=5",
+   "https://www.gzt.com/ekonomi/bakan-vedat-isikhandan-emekli-maaslarina-ek-iyilestirme-aciklamasi-gelir-farkliliklari-gozetilecek-4282909"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-25",
-  "gonderilen": 7,
+  "gonderilen": 9,
   "kamu": 1,
   "akademik": 2,
-  "haber": 4,
-  "ozet": false
+  "haber": 5,
+  "ozet": true
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-25T19:45+03:00",
+ "son_calisma": "2026-11-25T20:46+03:00",
  "sahip_x": "374577208810919338"
 }
