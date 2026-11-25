@@ -3,6 +3,58 @@
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
+"id": "2302683",
+"t": "Rekabet Kurumu Başkanlığından Uzman Yardımcısı Alım İlanı",
+"k": "REKABET KURUMU BAŞKANLIĞI",
+"il": "ANKARA",
+"d": "2026-11-25",
+"sb": "",
+"bb": "",
+"u": "https://www.ilan.gov.tr/ilan/2302683/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-rekabet-kurumu-baskanligindan-uzman-yardimcisi-alim-ilani",
+"c": "kamu",
+"p": "",
+"x": 0
+},
+{
+"id": "2302677",
+"t": "İptal İlanı (Biruni Üniversitesi Rektörlüğü)",
+"k": "BİRUNİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
+"il": "İSTANBUL",
+"d": "2026-11-25",
+"sb": "",
+"bb": "",
+"u": "https://www.ilan.gov.tr/ilan/2302677/kamu-akademik-personel-akademik-personel-alimlari-iptal-ilani-biruni-universitesi-rektorlugu-",
+"c": "akademik",
+"p": "",
+"x": 1
+},
+{
+"id": "2302666",
+"t": "Çağ Üniversitesi Rektörlüğünden Öğretim Elemanı Alım İlanı",
+"k": "ÇAĞ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
+"il": "MERSİN",
+"d": "2026-11-25",
+"sb": "2026-12-09",
+"bb": "",
+"u": "https://www.ilan.gov.tr/ilan/2302666/kamu-akademik-personel-akademik-personel-alimlari-cag%C2%A0universitesi%C2%A0rektorlugunden-ogretim-elemani-alim-ilani",
+"c": "akademik",
+"p": "",
+"x": 0
+},
+{
+"id": "2302665",
+"t": "Manisa Celal Bayar Üniversitesi Rektörlüğü Akademik Personel Alım İlanı",
+"k": "MANİSA CELAL BAYAR ÜNİVERSİTESİ REKTÖRLÜĞÜ",
+"il": "MANİSA",
+"d": "2026-11-25",
+"sb": "2026-12-09",
+"bb": "",
+"u": "https://www.ilan.gov.tr/ilan/2302665/kamu-akademik-personel-akademik-personel-alimlari-manisa-celal-bayar-universitesi-rektorlugu-akademik-personel-alim-ilani",
+"c": "akademik",
+"p": "",
+"x": 0
+},
+{
 "id": "2301281",
 "t": "Marmara Üniversitesi Öğretim Üyesi Alım İlanı",
 "k": "MARMARA ÜNİVERSİTESİ REKTÖRLÜĞÜ",
@@ -90,19 +142,6 @@
 "bb": "",
 "u": "https://www.ilan.gov.tr/ilan/2299827/kamu-akademik-personel-akademik-personel-alimlari-tarsus-universitesi-rektorlugu-ogretim-gorevlisi-alim-ilani",
 "c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2299814",
-"t": "İçişleri Bakanlığı 1170 Sözleşmeli Personel Alım İlanı",
-"k": "İÇİŞLERİ BAKANLIĞI",
-"il": "ANKARA",
-"d": "2026-11-23",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2299814/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-icisleri-bakanligi-1170-sozlesmeli-personel-alim-ilani",
-"c": "kamu",
 "p": "",
 "x": 0
 },
