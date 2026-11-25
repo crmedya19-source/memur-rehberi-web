@@ -342,20 +342,11 @@
    "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTzFYMmVVREFTeU9mRFF0SE9HXzdobmE1Nmc4cTJqMXhOQTNkd3RYVGhfLVBZeVBQUVJmTXQ5TldUdGRwajlOcHNkT1JMeURaa1dsQmV6cFlQMVhLelJLcFFvS2RFLWJmUDlKbEZLWHhnQ0hEY3dVTGliY2huTlJiY1ZOT09JblJHTUJ0aFdwR0rSAZABQVVfeXFMUE8xWDJlVURBU3lPZkRRdEhPR183aG5hNTZnOHEyajF4TkEzZHd0WFRoXy1QWXlQUFFSZk10OU5XVHRkcGo5TnBzZE9STHlEWmtXbEJlenBZUDFYS3pSS3BRb0tkRS1iZlA5SmxGS1h4Z0NIRGN3VUxpYmNobk5SYmNWTk9PSW5SR01CdGhXcEdK?oc=5"
   ]
  },
- "kuyruk": [
-  {
-   "tur": "haber",
-   "metin": "📰 <b>Öğretmen adaylarının beklediği açıklama geldi! 30 bin öğretmen için yeni takvim</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWDhrTVp1NDFoVzhUaGxqOFNCN3o2QmUxRml2VjVNQkpEWEV4YXFXSE43N3lCdThGOVYzY1g5dXUwQTdhWmE0ekRvNzlRVVZObGw1QlJHTzhvb1c5TzBKM3hEZ0ZEOHJhNERQMW5mZ1JSM2xrQ0Q2bHF5dVItVllUd1FXYVNGMlZUUlV0UnNVQnF4aVVvNEtUQU5KbHlSTWVaNS0yMlBaUUx4Z0E?oc=5\">Haberin devamı</a> · Kamudanhaber"
-  },
-  {
-   "tur": "haber",
-   "metin": "📰 <b>2026 AGS ile 15 bin öğretmen alınacak</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQTzFYMmVVREFTeU9mRFF0SE9HXzdobmE1Nmc4cTJqMXhOQTNkd3RYVGhfLVBZeVBQUVJmTXQ5TldUdGRwajlOcHNkT1JMeURaa1dsQmV6cFlQMVhLelJLcFFvS2RFLWJmUDlKbEZLWHhnQ0hEY3dVTGliY2huTlJiY1ZOT09JblJHTUJ0aFdwR0rSAZABQVVfeXFMUE8xWDJlVURBU3lPZkRRdEhPR183aG5hNTZnOHEyajF4TkEzZHd0WFRoXy1QWXlQUFFSZk10OU5XVHRkcGo5TnBzZE9STHlEWmtXbEJlenBZUDFYS3pSS3BRb0tkRS1iZlA5SmxGS1h4Z0NIRGN3VUxpYmNobk5SYmNWTk9PSW5SR01CdGhXcEdK?oc=5\">Haberin devamı</a> · Memurlar.Net"
-  }
- ],
+ "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-25",
-  "gonderilen": 0,
+  "gonderilen": 2,
   "kamu": 0,
   "akademik": 0,
   "haber": 0,
@@ -363,6 +354,6 @@
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-25T07:20+03:00",
+ "son_calisma": "2026-11-25T08:31+03:00",
  "sahip_x": "374577208810919338"
 }
