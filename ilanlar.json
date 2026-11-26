@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-25",
+"updated": "2026-11-26",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -1160,97 +1160,6 @@
 "x": 0
 },
 {
-"id": "2286638",
-"t": "İstanbul Beykent Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "İSTANBUL BEYKENT ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-11",
-"sb": "2026-11-25",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2286638/kamu-akademik-personel-akademik-personel-alimlari-istanbul-beykent-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2286637",
-"t": "İstanbul Rumeli Üniversitesi Öğretim Üyesi Alım İlanı",
-"k": "İSTANBUL RUMELİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-11",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2286637/kamu-akademik-personel-akademik-personel-alimlari-istanbul-rumeli-universitesi-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2286636",
-"t": "Şırnak Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "ŞIRNAK ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "ŞIRNAK",
-"d": "2026-11-11",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2286636/kamu-akademik-personel-akademik-personel-alimlari-sirnak%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2285031",
-"t": "Munzur Üniversitesi Rektörlüğünden Öğretim Görevlisi Alım İlanı",
-"k": "MUNZUR ÜNİVERSİTESİ",
-"il": "TUNCELİ",
-"d": "2026-11-10",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2285031/kamu-akademik-personel-akademik-personel-alimlari-munzur%C2%A0universitesi%C2%A0rektorlugunden-ogretim-gorevlisi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2285027",
-"t": "Munzur Üniversitesi Rektörlüğünden Öğretim Üyesi Alım İlanı",
-"k": "MUNZUR ÜNİVERSİTESİ",
-"il": "TUNCELİ",
-"d": "2026-11-10",
-"sb": "2026-11-25",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2285027/kamu-akademik-personel-akademik-personel-alimlari-munzur%C2%A0universitesi%C2%A0rektorlugunden-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2285010",
-"t": "Sayıştay Başkanlığından Sözleşmeli Çözümleyici ve Programcı Alım İlanı",
-"k": "SAYIŞTAY BAŞKANLIĞI",
-"il": "ANKARA",
-"d": "2026-11-10",
-"sb": "2026-11-25",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2285010/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-sayistay%C2%A0baskanligindan-sozlesmeli-cozumleyici-ve-programci-alim-ilani",
-"c": "kamu",
-"p": "",
-"x": 0
-},
-{
-"id": "2284932",
-"t": "İstanbul Bilgi Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "İSTANBUL BİLGİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-10",
-"sb": "2026-11-25",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2284932/kamu-akademik-personel-akademik-personel-alimlari-istanbul-bilgi-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
 "id": "2276025",
 "t": "Müfettiş Yardımcılığı Giriş Sınavı Duyurusu",
 "k": "KOCAELİ BÜYÜKŞEHİR BELEDİYESİ İSU GENEL MÜDÜRLÜĞÜ",
@@ -1417,19 +1326,6 @@
 "u": "https://www.ilan.gov.tr/ilan/2274512/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-eyyubiye-belediye-baskanligi-zabita-memuru-alim-ilani",
 "c": "kamu",
 "p": "zg",
-"x": 0
-},
-{
-"id": "2272784",
-"t": "Boğaziçi Üniversitesi Rektörlüğünden Öğretim Görevlisi Alım İlanı",
-"k": "BOĞAZİÇİ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-10-30",
-"sb": "2026-11-25",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2272784/kamu-akademik-personel-akademik-personel-alimlari-bogazici%C2%A0universitesi%C2%A0rektorlugunden-ogretim-gorevlisi-alim-ilani",
-"c": "akademik",
-"p": "",
 "x": 0
 },
 {
