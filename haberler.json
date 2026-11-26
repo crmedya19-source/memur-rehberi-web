@@ -3,32 +3,30 @@
  "items": [
   {
    "d": "2026-11-26",
-   "t": "MEB Duyurdu! Uygulama Takvimi, Ders Saatleri Ve Öğretmen Görevlendirme Şartları Belli Oldu",
-   "s": "",
-   "src": "Kamudanhaber",
-   "u": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQM3l6ZzlnVVFYa2FIY1lBcjJpREc1bDNWZ3MwZDJiUWc3dlZkeDh6SDRPYTFadGdmZGsyYTVoc3ZlUE9lZG1tWVBxWU03VUxJaWdxZ2RFMWFONEV6VUg3Mm5xMkxnQXh5eElkTzB6MzZ4NHdSdjNLb0tBWjNRYnFLYmticURBaXhjQXI1NkJEdmJVcnY3d0RBTGd6S3gySlBJSmg5M1hIUVNCSU5EN2FiRGJqVHBsdE5U?oc=5",
-   "c": "egitim",
-   "p": "o",
-   "a": 1
+   "t": "📋 26 Kasım: Günün memur gündemi",
+   "s": "AYM, sağlık personelinin nöbet ücretinde aranan kesintisiz 6 saat şartını iptal etti. Cumhurbaşkanlığı, Sağlık Bakanlığı'ndan 4/B geçişlerinde bir yıllık bekleme süresine uyulmasını istedi. Bakan Tekin, 15 bin öğretmen alımının branş dağılımının hafta sonu açıklanacağını söyledi.",
+   "src": "Memur Rehberi",
+   "u": "https://www.memurlar.net/haber/1185244/aym-nobet-ucretindeki-6-saat-kesintisiz-calisma-sartini-iptal-etti.html",
+   "c": "gundem",
+   "p": ""
+  },
+  {
+   "d": "2026-11-26",
+   "t": "Nöbet ücretinde 'kesintisiz 6 saat' şartı AYM kararıyla kalktı",
+   "s": "Anayasa Mahkemesi, 657 sayılı Kanun'un ek 33. maddesinde nöbet ücreti için aranan en az 6 saat kesintisiz nöbet şartını iptal etti; karar bugünkü Resmî Gazete'de yayımlandı ve yürürlüğü ertelenmedi. Böylece daha kısa süreli nöbetler için de ücret ödenmesinin önü açılıyor; kurumunuzun uygulama talimatını takip edin.",
+   "src": "Resmî Gazete / Memurlar.Net",
+   "u": "https://www.memurlar.net/haber/1185244/aym-nobet-ucretindeki-6-saat-kesintisiz-calisma-sartini-iptal-etti.html",
+   "c": "mevzuat",
+   "p": "s"
   },
   {
    "d": "2026-11-26",
    "t": "Cumhurbaşkanlığı'ndan sözleşmeli personel atamalarında geçişlerle ilgili bakanlığa hatırlatma",
-   "s": "",
+   "s": "Cumhurbaşkanlığı, üniversite hastanelerinden Sağlık Bakanlığı'na beklenenden fazla 4/B geçişi yaşanınca Bakanlıktan 657'nin 4/B maddesindeki bir yıllık bekleme süresine uymasını, bunu alım ilanlarına açıkça yazmasını ve adayların önceki sözleşmelerini kontrol etmesini istedi. Geçiş düşünen sözleşmeli sağlık personeli kendi bekleme süresini kontrol etmeli.",
    "src": "Memurlar.Net",
    "u": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQTEJNYndMcm1VQUlKb3BWNzhmenlQaGNvMjFaQkRMaVBMWlZhbHFTWEVpRU1XaUpCVTRmSlp1bzluUUNmUER1WC1VV2FSV0VoSnZFQXlUeTd2OU5ROE9MMUVORlRNRlY0TlBaeDVJRmYxUXd0XzRacXNuT2I2ZFdsYmk3M1o1eUxBNV93UGhpdXRoX01ldG91UEhGemZqdllSOVVlMHNOUGkyVFd2ZnBDa2t4Q2dONzg0NndVbTRlU0o0MjJCR1VreVQ2RUhKa3llaldR0gHbAUFVX3lxTE4zNHExZklhTVlCaUVrcFI2cGZ5Z1dSRm94YTVwcUs3UlZKekFRV0FmNjlTWXVBT3dOWk9nSWRMb0t1Yk03cUV6ckNlQXIxemxnWm90d0QtZUFzMVRfc3A1blJKWmIzaV9ON2ktQXJkaU05ajd0SGdnUS1qYndEZFp0UmhReFZiY3hXTDZlWWpGeFBGSS1nT0Q5M2Z6VG9meEZSajZVaWM5NEtidjdwblV5d1lYek1HMmExUkQ5dVdlZFN0cWhraVQ3TU1XaDdpQmw3elZDRE5iWUZEdw?oc=5",
    "c": "gundem",
-   "p": "",
-   "a": 1
-  },
-  {
-   "d": "2026-11-26",
-   "t": "☀️ 26 Kasım: Bugün memurları neler bekliyor",
-   "s": "Bugünkü 33442 sayılı Resmî Gazete'de memur mevzuatını değiştiren bir düzenleme yok; üç üniversite merkez yönetmeliği kaldırıldı, AYM kararları yayımlandı. Ocak zammını belirleyecek sıradaki veri, TÜİK'in 3 Aralık'ta açıklayacağı kasım enflasyonu.",
-   "src": "Memur Rehberi",
-   "u": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261126.htm",
-   "c": "gundem",
-   "p": ""
+   "p": "s"
   },
   {
    "d": "2026-11-25",
@@ -40,18 +38,9 @@
    "p": ""
   },
   {
-   "d": "2026-11-25",
-   "t": "ÇAYKUR’da 150 personel memur kadrosuna geçti",
-   "s": "ÇAYKUR'da 150 personelin memur kadrosuna geçirildiği bildirildi; geçişin ayrıntıları haberde.",
-   "src": "Ekonomim",
-   "u": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa3c5VHBrUDhHZHVjN0MxRGdVd05nYV9IQWxJaVU5eFBMbGRIVHRESGlTU3FMemxPSVVJS1JSVTREd29HdTZMWTNlNTBVSV9iWks3UThMRTJzZWQzN0NXc2RyTG9RdThYelZjamJlTjlJTnZ2ZVA5UWNJdDJERlZXV2hmSy1zcWkwSEhjNS1LeTBqN19HR2c?oc=5",
-   "c": "gundem",
-   "p": ""
-  },
-  {
    "d": "2026-11-24",
    "t": "2026 AGS ile 15 bin öğretmen alınacak",
-   "s": "Habere göre 2026 AGS sonuçlarıyla 15 bin öğretmen ataması yapılacak. Branş dağılımı ve başvuru takvimi için MEB'in resmî duyurusunu takip edin.",
+   "s": "2026 AGS sonuçlarıyla 15 bin öğretmen adayı Milli Eğitim Akademisi'ne alınacak; Bakan Tekin 26 Kasım'da branş dağılımının bu hafta sonu açıklanacağını söyledi. Akademideki mevcut 10 bin aday şubat sonunda göreve başlayacak.",
    "src": "Memurlar.Net",
    "u": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTzFYMmVVREFTeU9mRFF0SE9HXzdobmE1Nmc4cTJqMXhOQTNkd3RYVGhfLVBZeVBQUVJmTXQ5TldUdGRwajlOcHNkT1JMeURaa1dsQmV6cFlQMVhLelJLcFFvS2RFLWJmUDlKbEZLWHhnQ0hEY3dVTGliY2huTlJiY1ZOT09JblJHTUJ0aFdwR0rSAZABQVVfeXFMUE8xWDJlVURBU3lPZkRRdEhPR183aG5hNTZnOHEyajF4TkEzZHd0WFRoXy1QWXlQUFFSZk10OU5XVHRkcGo5TnBzZE9STHlEWmtXbEJlenBZUDFYS3pSS3BRb0tkRS1iZlA5SmxGS1h4Z0NIRGN3VUxpYmNobk5SYmNWTk9PSW5SR01CdGhXcEdK?oc=5",
    "c": "egitim",
@@ -72,15 +61,6 @@
    "s": "Türkiye Kamu-Sen, Ankara'daki mitingde 2027 zamlarının yeniden ele alınmasını, ek zam ve refah payı verilmesini ve 3600 ek göstergenin yaygınlaştırılmasını istedi. Bunlar sendika talebi; hükümetin bu yönde bir kararı yok, ocak zammı şimdilik toplu sözleşme ve enflasyon farkına göre belirlenecek.",
    "src": "Memurlar.Net",
    "u": "https://www.memurlar.net/haber/1184990/kahveci-tutmayan-enflasyon-hedeflerinin-bedeli-kamu-calisanlarina-ve-emeklilere-odetilemez.html",
-   "c": "maas",
-   "p": ""
-  },
-  {
-   "d": "2026-11-23",
-   "t": "BÜRO MEMUR-SEN \"Birkaç puan yetmez\" diyor! Yeni maaşta refah payı emekli sofrasında hissedilmeli",
-   "s": "Büro Memur-Sen, ocak zammında birkaç puanlık refah payının yetmeyeceğini, artışın emekli memurların gelirine de belirgin yansıması gerektiğini savundu. Bu bir sendika talebi; hükümetten kesinleşmiş bir karar yok.",
-   "src": "Türkiye Gazetesi",
-   "u": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQ1NPWjlsY3NLT1JKTXZnLW5RRzJ3eGRGTjlBdGVic0lrUnhMb05jVmhfTXV0WGpFeDYtc3BiTV9mVVhQcXo3U0VzRUo1ekpWWDM4M2lROWFlYWotQy1LNjFrSW9UN1NJTEdKc3o2a0hnSGZuZHlNQ2hYNWZmRTY5N08zeDVTQlZTRFBpcFFVcEZ4N1ZqMTdjRUlBYlllWi0zaHJRaGhLN1dTTHdQR3o4a0EyNjJ2b1Z3cVp6WmhTRjlESHpPOTV6ZXdoN05ydnZSNUE?oc=5",
    "c": "maas",
    "p": ""
   },
@@ -172,15 +152,6 @@
    "src": "Resmî Gazete / Memurlar.Net",
    "u": "https://www.memurlar.net/haber/1184071/sozlesmeli-personel-calistirilmasina-iliskin-esaslarda-degisiklik.html",
    "c": "mevzuat",
-   "p": ""
-  },
-  {
-   "d": "2026-11-14",
-   "t": "Bakan Göktaş işçi ve memur izinlerindeki eşitlenmeyi açıkladı",
-   "s": "Bakan Göktaş, Mayıs'ta yürürlüğe giren 7578 sayılı Kanun'la analık izninin 24 haftaya çıktığını, işçilerin babalık izninin memurlarla eşitlenerek 10 güne yükseldiğini hatırlattı. Koruyucu aile olan çalışanlara da 10 gün izin tanınıyor.",
-   "src": "Memurlar.Net",
-   "u": "https://www.memurlar.net/haber/1184030/bakan-goktas-isci-ve-memur-izinlerindeki-esitlenmeyi-acikladi.html",
-   "c": "gundem",
    "p": ""
   }
  ]
