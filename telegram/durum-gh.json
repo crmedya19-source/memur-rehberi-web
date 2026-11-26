@@ -212,7 +212,22 @@
    "2302683",
    "2302677",
    "2302666",
-   "2302665"
+   "2302665",
+   "2304234",
+   "2304230",
+   "2304217",
+   "2304216",
+   "2304213",
+   "2304212",
+   "2304210",
+   "2304209",
+   "2304206",
+   "2304205",
+   "2304204",
+   "2304203",
+   "2304202",
+   "2304201",
+   "2304191"
   ],
   "haber": [
    "https://www.diyanetsen.org.tr/kitaplar/8donemkazanimlar.pdf",
@@ -353,21 +368,22 @@
    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNc1k0cXBHdkYteTBFeEswUU5ZcEpHNm9QNnBvbjlqc3ZTbGJRdkdnVXlzU3Q1a1ExSE1HME9iM0c5Q0tuSHlwaEdDMWF4Q0JwVGNzTWlucVlHSlRvMWUtVF81OFdCV0g0QXliMWpBMnVRWGVIak4yeXZkU0hHdWFZQXJVWmZFWHBFSElORk9hMHZVeV91dTVBWkhPNFhQMXFqUVdkTjlrUkZSbUM0?oc=5",
    "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQQjcxYWRuQVFxV2JTMmhZTkZXRGVnU1pnMmVoemNkYmNLMnUxb0g0MTlSVGJfX0NZaW1KQlh4ZUtfSEk0emo3V2I0UFQxMWwyMnZzZzlLWHFaUW9DbmlBa29xUUx0UUl4aEJNUzhSdWFVV3FoNDliemJaNVQxbTA1ZU04SEVoWk1WZEtyRlR3OFE3UVdaN2NKUkNrdjQ1ZEVVT0k5REw2WV8wX3VxeEtSUVlOSnFEUFJVaDdjU2tPVFR0Y0tWTnVXb3RyM3p3UHlFSGU4MmRMaFpJUDFSaERFTFdLWFRVbjVRTGVCb0dTVHk0Yng1STRtSlVVR2d2QWc?oc=5",
    "https://news.google.com/rss/articles/CBMifkFVX3lxTE9hNEMxd2g3c2RrZ2RRNHduaGxzZkkwc1JyRU56X01qM2hKOFpQYy1ZT2JHTmhIS2prWG5ha1UxS0NEaGswUXlCVTc1eHFzanFLWEdzeVhhTXo1V21tTnZmX3BTWldnM3FqcDY3enhWYURkeHItanlibW9pVjBiUQ?oc=5",
-   "https://www.resmigazete.gov.tr/eskiler/2026/11/20261126.htm"
+   "https://www.resmigazete.gov.tr/eskiler/2026/11/20261126.htm",
+   "https://news.google.com/rss/articles/CBMirwFBVV95cUxQcWtoaDBBRE4wMlU4TFVfbzdJaF9nZ0xWa3FlYzQwcEczSGV4M1cyaXl0Nmx5YUZURWt0SWQ3eEtXSmNqay01ckRMNUFBR2ZRNzZzSVJ3QW51RkphSGdTQmNQNUh1akxrRjhTODFhc1Jtc3hzNUg0bDRNc2dzM1AxcGJTNmxwRTFJb3NZaFF0SnRzYTFlc2Y5cWJ1a1Z3VHRPYzl3NFNVMGJ1emJVWkZB0gG3AUFVX3lxTE5mVlIwekhxaUFHUmF6ZXNaX3UzWlBQYjdheXBhUkI5RExrMTZNZ0t4RzdoZ1p4WHpQeFpDeGhxbVk0c3l5WHAxSXZSNV9icG93Y29mMEEyVmVUMTZydEJ6Z2NJdC05QmRERnJhd1VjX0J0bWphVk5ob0RnS0RSaXh0VWoyUXYxb3hjTUFrSnJnT1drOC0xdi1aaDhUVk4yTkZzVHhqalRncXl4TVRDNDNQLVRzbFVIaw?oc=5"
   ]
  },
  "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-26",
-  "gonderilen": 3,
-  "kamu": 0,
-  "akademik": 0,
-  "haber": 2,
+  "gonderilen": 7,
+  "kamu": 3,
+  "akademik": 10,
+  "haber": 3,
   "ozet": false
  },
  "duraklat": false,
- "son_kanal": 0,
- "son_calisma": "2026-11-26T09:41+03:00",
+ "son_kanal": 1795680690.4376373,
+ "son_calisma": "2026-11-26T11:11+03:00",
  "sahip_x": "374577208810919338"
 }
