@@ -354,16 +354,11 @@
    "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQQjcxYWRuQVFxV2JTMmhZTkZXRGVnU1pnMmVoemNkYmNLMnUxb0g0MTlSVGJfX0NZaW1KQlh4ZUtfSEk0emo3V2I0UFQxMWwyMnZzZzlLWHFaUW9DbmlBa29xUUx0UUl4aEJNUzhSdWFVV3FoNDliemJaNVQxbTA1ZU04SEVoWk1WZEtyRlR3OFE3UVdaN2NKUkNrdjQ1ZEVVT0k5REw2WV8wX3VxeEtSUVlOSnFEUFJVaDdjU2tPVFR0Y0tWTnVXb3RyM3p3UHlFSGU4MmRMaFpJUDFSaERFTFdLWFRVbjVRTGVCb0dTVHk0Yng1STRtSlVVR2d2QWc?oc=5"
   ]
  },
- "kuyruk": [
-  {
-   "tur": "haber",
-   "metin": "📰 <b>Nüfus müdürlüklerine 60 KPSS puanıyla memur ve temizlik görevlisi alınacak: 2026 NVİ başvuru tarihleri ve şart</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMi_wFBVV95cUxQQjcxYWRuQVFxV2JTMmhZTkZXRGVnU1pnMmVoemNkYmNLMnUxb0g0MTlSVGJfX0NZaW1KQlh4ZUtfSEk0emo3V2I0UFQxMWwyMnZzZzlLWHFaUW9DbmlBa29xUUx0UUl4aEJNUzhSdWFVV3FoNDliemJaNVQxbTA1ZU04SEVoWk1WZEtyRlR3OFE3UVdaN2NKUkNrdjQ1ZEVVT0k5REw2WV8wX3VxeEtSUVlOSnFEUFJVaDdjU2tPVFR0Y0tWTnVXb3RyM3p3UHlFSGU4MmRMaFpJUDFSaERFTFdLWFRVbjVRTGVCb0dTVHk0Yng1STRtSlVVR2d2QWc?oc=5\">Haberin devamı</a> · Yeni Şafak"
-  }
- ],
+ "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-26",
-  "gonderilen": 0,
+  "gonderilen": 1,
   "kamu": 0,
   "akademik": 0,
   "haber": 0,
@@ -371,6 +366,6 @@
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-26T07:16+03:00",
+ "son_calisma": "2026-11-26T08:32+03:00",
  "sahip_x": "374577208810919338"
 }
