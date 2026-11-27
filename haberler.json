@@ -3,13 +3,21 @@
  "items": [
   {
    "d": "2026-11-27",
+   "t": "📋 27 Kasım: Günün memur gündemi",
+   "s": "MEB, 15 bin öğretmen adayının alan kontenjanlarını açıkladı; başvurular 9-15 Aralık'ta. Ekonomistlerin kasım tahminiyle ocak memur zammı şimdilik %8,5 civarında görünüyor; kesin oran 3 Aralık'taki TÜİK verisiyle belli olacak.",
+   "src": "Memur Rehberi",
+   "u": "https://www.memurlar.net/haber/1185374/milli-egitim-akademisi-15-bin-kontenjan-dagilimi-aciklandi.html",
+   "c": "gundem",
+   "p": ""
+  },
+  {
+   "d": "2026-11-27",
    "t": "Son dakika! MEB 15 bin öğretmen ataması için başvurular başlıyor: İşte alan kontenjanları | Eğitim Haberleri",
-   "s": "",
+   "s": "MEB, Milli Eğitim Akademisi'ne alınacak 15 bin adayın alan kontenjanlarını açıkladı; en büyük paylar sınıf öğretmenliği (3.976), özel eğitim (2.842) ve İngilizce (1.101). Alanında 2026 AGS'den en az 50 alanlar 9-15 Aralık'ta akademibasvuru.meb.gov.tr'den başvurabilecek, eğitim 22 Şubat'ta başlıyor.",
    "src": "Yeni Şafak",
    "u": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVFZiLVdVdHBSc25Uck1FaldoVUxURGJsT1U3TU9OakZtbTE4d0U0U0ExQlRKWVZLU2plS3l2SEFiZzR3eVo4aENZLVlIdXppWkdMdHZ4cmt0WTJuX2NqTlhLNmx0c3hrSjM0NXlFNGw1dFZ4VjFtT0xkN2QxUGFCWkFOU2RRTjhjQnpRMlRhV0s3U1dwZFRnOWxPTllVZnAxM3RUM0E5alY5Wi1iQW0yUFBEdnR2RnJTMHRFbkZfWkJVNExycWww?oc=5",
    "c": "egitim",
-   "p": "o",
-   "a": 1
+   "p": "o"
   },
   {
    "d": "2026-11-27",
@@ -55,15 +63,6 @@
    "u": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQQjcxYWRuQVFxV2JTMmhZTkZXRGVnU1pnMmVoemNkYmNLMnUxb0g0MTlSVGJfX0NZaW1KQlh4ZUtfSEk0emo3V2I0UFQxMWwyMnZzZzlLWHFaUW9DbmlBa29xUUx0UUl4aEJNUzhSdWFVV3FoNDliemJaNVQxbTA1ZU04SEVoWk1WZEtyRlR3OFE3UVdaN2NKUkNrdjQ1ZEVVT0k5REw2WV8wX3VxeEtSUVlOSnFEUFJVaDdjU2tPVFR0Y0tWTnVXb3RyM3p3UHlFSGU4MmRMaFpJUDFSaERFTFdLWFRVbjVRTGVCb0dTVHk0Yng1STRtSlVVR2d2QWc?oc=5",
    "c": "gundem",
    "p": ""
-  },
-  {
-   "d": "2026-11-24",
-   "t": "2026 AGS ile 15 bin öğretmen alınacak",
-   "s": "2026 AGS sonuçlarıyla 15 bin öğretmen adayı Milli Eğitim Akademisi'ne alınacak; Bakan Tekin 26 Kasım'da branş dağılımının bu hafta sonu açıklanacağını söyledi. Akademideki mevcut 10 bin aday şubat sonunda göreve başlayacak.",
-   "src": "Memurlar.Net",
-   "u": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTzFYMmVVREFTeU9mRFF0SE9HXzdobmE1Nmc4cTJqMXhOQTNkd3RYVGhfLVBZeVBQUVJmTXQ5TldUdGRwajlOcHNkT1JMeURaa1dsQmV6cFlQMVhLelJLcFFvS2RFLWJmUDlKbEZLWHhnQ0hEY3dVTGliY2huTlJiY1ZOT09JblJHTUJ0aFdwR0rSAZABQVVfeXFMUE8xWDJlVURBU3lPZkRRdEhPR183aG5hNTZnOHEyajF4TkEzZHd0WFRoXy1QWXlQUFFSZk10OU5XVHRkcGo5TnBzZE9STHlEWmtXbEJlenBZUDFYS3pSS3BRb0tkRS1iZlA5SmxGS1h4Z0NIRGN3VUxpYmNobk5SYmNWTk9PSW5SR01CdGhXcEdK?oc=5",
-   "c": "egitim",
-   "p": "o"
   },
   {
    "d": "2026-11-23",
@@ -145,24 +144,6 @@
    "u": "https://www.kamudanhaber.net/ogretmenlere-uzman-ogretmenlik-tazminati-icin-iki-mahkemeden-emsal-karar",
    "c": "egitim",
    "p": "o"
-  },
-  {
-   "d": "2026-11-17",
-   "t": "Adli Tıp'ta görevde yükselmeye 6 ay hizmet şartı geldi",
-   "s": "Adli Tıp Kurumu personeli görevde yükselme ve unvan değişikliği için kurumda en az 6 ay çalışmış olmalı ve yalnızca bir kadroya başvurabilecek. Bu yolla atananlar iki yıl dolmadan yer değiştirme isteyemeyecek.",
-   "src": "Resmî Gazete / Memurlar.Net",
-   "u": "https://www.memurlar.net/haber/1184356/adli-tip-kurumu-personeli-gorevde-yukselme-ve-unvan-degisikligi-yonetmeliginde-degisiklik.html",
-   "c": "mevzuat",
-   "p": ""
-  },
-  {
-   "d": "2026-11-17",
-   "t": "Memur ek ödemesi ve emekli ikramiyesinde AYM esasa geçti",
-   "s": "Anayasa Mahkemesi, memurlara verilen ek ödeme ile emekli ikramiyesine ilişkin başvuruyu esastan incelemeye aldı. Bu bir ön aşama; henüz karar verilmedi.",
-   "src": "Memurlar.Net",
-   "u": "https://www.memurlar.net/haber/1184344/memur-ek-odemesi-ve-emekli-ikramiyesinde-aym-esasa-gecti.html",
-   "c": "maas",
-   "p": ""
   },
   {
    "d": "2026-11-14",
