@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-26",
+"updated": "2026-11-27",
 "kaynak": "ilan.gov.tr (Basın İlan Kurumu)",
 "items": [
 {
@@ -1264,84 +1264,6 @@
 "x": 0
 },
 {
-"id": "2288469",
-"t": "İzmir Katip Çelebi Üniversitesi (Düzeltme ve İptal İlanı)",
-"k": "İZMİR KATİP ÇELEBİ ÜNİVERSİTESİ",
-"il": "İZMİR",
-"d": "2026-11-12",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2288469/kamu-akademik-personel-akademik-personel-alimlari-izmir-katip-celebi-universitesi-duzeltme-ve-iptal-ilani-",
-"c": "akademik",
-"p": "",
-"x": 1
-},
-{
-"id": "2288414",
-"t": "Doğuş Üniversitesi Öğretim Üyesi Alım İlanı",
-"k": "DOĞUŞ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-12",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2288414/kamu-akademik-personel-akademik-personel-alimlari-dogus-universitesi-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2288408",
-"t": "Doğuş Üniversitesi Öğretim Elemanı Alım İlanı",
-"k": "DOĞUŞ ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-12",
-"sb": "2026-11-26",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2288408/kamu-akademik-personel-akademik-personel-alimlari-dogus-universitesi-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2288358",
-"t": "Pamukkale Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "PAMUKKALE ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "DENİZLİ",
-"d": "2026-11-12",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2288358/kamu-akademik-personel-akademik-personel-alimlari-pamukkale-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2288354",
-"t": "Acıbadem Mehmet Ali Aydınlar Üniversitesi Rektörlüğü Öğretim Elemanı Alım İlanı",
-"k": "ACIBADEM MEHMET ALİ AYDINLAR ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-12",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2288354/kamu-akademik-personel-akademik-personel-alimlari-acibadem-mehmet-ali-aydinlar-universitesi-rektorlugu-ogretim-elemani-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
-"id": "2288344",
-"t": "Acıbadem Mehmet Ali Aydınlar Üniversitesi Rektörlüğü Öğretim Üyesi Alım İlanı",
-"k": "ACIBADEM MEHMET ALİ AYDINLAR ÜNİVERSİTESİ REKTÖRLÜĞÜ",
-"il": "İSTANBUL",
-"d": "2026-11-12",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2288344/kamu-akademik-personel-akademik-personel-alimlari-acibadem-mehmet-ali-aydinlar-universitesi-rektorlugu-ogretim-uyesi-alim-ilani",
-"c": "akademik",
-"p": "",
-"x": 0
-},
-{
 "id": "2288341",
 "t": "Cumhurbaşkanlığı Savunma Sanayii Başkanlığından Sözleşmeli Personel Alım İlanı",
 "k": "T.C.CUMHURBAŞKANLIĞI SAVUNMA SANAYİİ BAŞKANLIĞI",
@@ -1548,19 +1470,6 @@
 "c": "kamu",
 "p": "g",
 "x": 0
-},
-{
-"id": "2269836",
-"t": "İptal İlanı (Doğanyol Belediye Başkanlığı)",
-"k": "DOĞANYOL BELEDİYE BAŞKANLIĞI",
-"il": "MALATYA",
-"d": "2026-10-27",
-"sb": "",
-"bb": "",
-"u": "https://www.ilan.gov.tr/ilan/2269836/kamu-akademik-personel-kamu-personel-alim-ve-sinavlari-iptal-ilani-doganyol-belediye-baskanligi-",
-"c": "kamu",
-"p": "g",
-"x": 1
 },
 {
 "id": "2266555",
