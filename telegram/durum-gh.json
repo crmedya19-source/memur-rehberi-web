@@ -374,21 +374,27 @@
    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNYUhKMC1SNDNVTFpUbFNqcVZfQU5fSmhKd3ZOaWQ2NkxLUmd5aHBjc0xrdTQtQnlDVXA4VVZpVVZFWUdUOVB4OVJYZ0VLSk1HNEhycHEtTjJDSThrQ2dZUWdFRkk4cXpabXNMRFRwd3RJb29ERHRpNmJ6enZiYTB6WGlGMld5dWRPeDhVSWtjSDBqVkl6ZUJfSEdDYjdGaHVRWTJ1alRfVU5Ca3hmU2hJVDk2Q2UwQzdDNkllNW5TUl9MblNMQ3hhdFBuc3RPMmZERnfSAdQBQVVfeXFMUEJjcnNkRjR3akl1MU9VUmp4UU9nMmZ3T2xGYjV2Tmp2ZXd4Ti1JTHJBWWhJYldNYjVwZU14RlV0aXVic2dUbUNKQnYtaDlrMXVIVWNNR2JiMUc5dEtrS2p0ekhqeWstcHhBQy0wZ0gwX3NvSzN6dVdWZER5WUlyNW4xUnJFV0ZmUHplbmVTSUF1TEI3OFE3VVpaQkFTdk9lV2I5UUY2d1prd0N2N2ZTSEw0bFN1ZHZGOWFpNVZiRlJoZXQ1SnBDU3hEbEo3TlZVdGVnb20?oc=5",
    "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQTEJNYndMcm1VQUlKb3BWNzhmenlQaGNvMjFaQkRMaVBMWlZhbHFTWEVpRU1XaUpCVTRmSlp1bzluUUNmUER1WC1VV2FSV0VoSnZFQXlUeTd2OU5ROE9MMUVORlRNRlY0TlBaeDVJRmYxUXd0XzRacXNuT2I2ZFdsYmk3M1o1eUxBNV93UGhpdXRoX01ldG91UEhGemZqdllSOVVlMHNOUGkyVFd2ZnBDa2t4Q2dONzg0NndVbTRlU0o0MjJCR1VreVQ2RUhKa3llaldR0gHbAUFVX3lxTE4zNHExZklhTVlCaUVrcFI2cGZ5Z1dSRm94YTVwcUs3UlZKekFRV0FmNjlTWXVBT3dOWk9nSWRMb0t1Yk03cUV6ckNlQXIxemxnWm90d0QtZUFzMVRfc3A1blJKWmIzaV9ON2ktQXJkaU05ajd0SGdnUS1qYndEZFp0UmhReFZiY3hXTDZlWWpGeFBGSS1nT0Q5M2Z6VG9meEZSajZVaWM5NEtidjdwblV5d1lYek1HMmExUkQ5dVdlZFN0cWhraVQ3TU1XaDdpQmw3elZDRE5iWUZEdw?oc=5",
    "https://www.memurlar.net/haber/1185244/aym-nobet-ucretindeki-6-saat-kesintisiz-calisma-sartini-iptal-etti.html",
-   "https://www.memurlar.net/haber/1185244/aym-nobet-ucretindeki-6-saat-kesintisiz-calisma-sartini-iptal-etti.html"
+   "https://www.memurlar.net/haber/1185244/aym-nobet-ucretindeki-6-saat-kesintisiz-calisma-sartini-iptal-etti.html",
+   "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZDgzZ3ozdGQ4cWFnTXBhczVjRjhiZlgwT0VPXzB0NG1GWThWWGdOT1dfSEZXQkNLTTYydy1pdEEtSE95MDJfdDloVUY3SHJLWXpFOVRCSEZzVWtWblJHNmw4QU1tT0JrY2p3LVF1SW5Mc3dqM0hnMWxDa1FfQXNCbzhVcHJXbDRFeDNUa3FRUFpVRXpmSlExb1RZWWRGTUpUaEVFSHBOdnZxT2xCQ0NGT0NSa3Y?oc=5"
   ]
  },
- "kuyruk": [],
+ "kuyruk": [
+  {
+   "tur": "haber",
+   "metin": "📰 <b>Öğretmenler atama sayısını yetersiz buldu: Gerçek ihtiyaca adil kadro!</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQZDgzZ3ozdGQ4cWFnTXBhczVjRjhiZlgwT0VPXzB0NG1GWThWWGdOT1dfSEZXQkNLTTYydy1pdEEtSE95MDJfdDloVUY3SHJLWXpFOVRCSEZzVWtWblJHNmw4QU1tT0JrY2p3LVF1SW5Mc3dqM0hnMWxDa1FfQXNCbzhVcHJXbDRFeDNUa3FRUFpVRXpmSlExb1RZWWRGTUpUaEVFSHBOdnZxT2xCQ0NGT0NSa3Y?oc=5\">Haberin devamı</a> · Cumhuriyet"
+  }
+ ],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-27",
   "gonderilen": 0,
   "kamu": 0,
   "akademik": 0,
-  "haber": 0,
+  "haber": 1,
   "ozet": false
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-27T04:00+03:00",
+ "son_calisma": "2026-11-27T05:25+03:00",
  "sahip_x": "374577208810919338"
 }
