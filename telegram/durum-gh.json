@@ -378,16 +378,11 @@
    "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZDgzZ3ozdGQ4cWFnTXBhczVjRjhiZlgwT0VPXzB0NG1GWThWWGdOT1dfSEZXQkNLTTYydy1pdEEtSE95MDJfdDloVUY3SHJLWXpFOVRCSEZzVWtWblJHNmw4QU1tT0JrY2p3LVF1SW5Mc3dqM0hnMWxDa1FfQXNCbzhVcHJXbDRFeDNUa3FRUFpVRXpmSlExb1RZWWRGTUpUaEVFSHBOdnZxT2xCQ0NGT0NSa3Y?oc=5"
   ]
  },
- "kuyruk": [
-  {
-   "tur": "haber",
-   "metin": "📰 <b>Öğretmenler atama sayısını yetersiz buldu: Gerçek ihtiyaca adil kadro!</b>\n\n🔗 <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQZDgzZ3ozdGQ4cWFnTXBhczVjRjhiZlgwT0VPXzB0NG1GWThWWGdOT1dfSEZXQkNLTTYydy1pdEEtSE95MDJfdDloVUY3SHJLWXpFOVRCSEZzVWtWblJHNmw4QU1tT0JrY2p3LVF1SW5Mc3dqM0hnMWxDa1FfQXNCbzhVcHJXbDRFeDNUa3FRUFpVRXpmSlExb1RZWWRGTUpUaEVFSHBOdnZxT2xCQ0NGT0NSa3Y?oc=5\">Haberin devamı</a> · Cumhuriyet"
-  }
- ],
+ "kuyruk": [],
  "offset": 575918231,
  "gun": {
   "t": "2026-11-27",
-  "gonderilen": 0,
+  "gonderilen": 1,
   "kamu": 0,
   "akademik": 0,
   "haber": 1,
@@ -395,6 +390,6 @@
  },
  "duraklat": false,
  "son_kanal": 0,
- "son_calisma": "2026-11-27T07:45+03:00",
+ "son_calisma": "2026-11-27T08:57+03:00",
  "sahip_x": "374577208810919338"
 }
